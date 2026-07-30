@@ -9,10 +9,11 @@ STRAWBERRY_OFFSET = 6000
 ORANGE_OFFSET = 7000
 APPLE_OFFSET = 8000
 MELON_OFFSET = 9000
+FILLER_OFFSET = 20000
 
 level_data = {
     "Pac-Village": {
-        "id": 0, #idk what the level ids are or if they exist, subject to change.
+        "id": -1,
         "Collectibles":{
            #"Cherries" : 26,
            #"Strawberries" : 29,
@@ -28,7 +29,7 @@ level_data = {
         }
     },
 "The Bear Basics": {
-        "id": 1, #idk what the level ids are or if they exist, subject to change.
+        "id": 0,
         "Collectibles":{
            #"Cherries" : 4,
            #"Strawberries" : 7,
@@ -50,7 +51,7 @@ level_data = {
         }
     },
 "Canyon Chaos": {
-        "id": 2, #idk what the level ids are or if they exist, subject to change.
+        "id": 1,
         "Collectibles":{
            #"Cherries" : 4,
            #"Strawberries" : 2,
@@ -70,7 +71,7 @@ level_data = {
         }
     },
 "Pac-Dot Pond": {
-        "id": 3, #idk what the level ids are or if they exist, subject to change.
+        "id": 2,
         "Collectibles":{
            #"Cherries" : 0,
            #"Strawberries" : 0,
@@ -90,7 +91,7 @@ level_data = {
         }
     },
 "Clyde's Frog": {
-        "id": 4, #idk what the level ids are or if they exist, subject to change.
+        "id": 3,
         "Collectibles":{
            #"Cherries" : 0,
            #"Strawberries" : 0,
