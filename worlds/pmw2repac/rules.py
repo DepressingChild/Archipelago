@@ -3,8 +3,8 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 import data
-from ...rule_builder.options import OptionFilter
-from ...rule_builder.rules import Has, HasAll, Rule
+from rule_builder.options import OptionFilter
+from rule_builder.rules import Has, HasAll, Rule
 
 if TYPE_CHECKING:
     from .world import PMW2RepacWorld
@@ -20,4 +20,4 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
 
 def set_goal(world: PMW2RepacWorld) -> None:
     #Defeat Spooky! Or Toc-Man when implementation is added.
-    i = 1
+    world.set_completion_rule(Has("Clyde's Frog"))

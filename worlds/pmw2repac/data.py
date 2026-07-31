@@ -13,7 +13,7 @@ FILLER_OFFSET = 20000
 
 level_data = {
     "Pac-Village": {
-        "id": -1,
+        "id": 0,
         "Collectibles":{
            #"Cherries" : 26,
            #"Strawberries" : 29,
@@ -25,11 +25,11 @@ level_data = {
         "Gashapons":{
         },
         "Missions":{
-            "CollectAllFruit": 0
+            "Collect All Fruit": 0
         }
     },
 "The Bear Basics": {
-        "id": 0,
+        "id": 1,
         "Collectibles":{
            #"Cherries" : 4,
            #"Strawberries" : 7,
@@ -51,7 +51,7 @@ level_data = {
         }
     },
 "Canyon Chaos": {
-        "id": 1,
+        "id": 2,
         "Collectibles":{
            #"Cherries" : 4,
            #"Strawberries" : 2,
@@ -71,7 +71,7 @@ level_data = {
         }
     },
 "Pac-Dot Pond": {
-        "id": 2,
+        "id": 3,
         "Collectibles":{
            #"Cherries" : 0,
            #"Strawberries" : 0,
@@ -91,7 +91,7 @@ level_data = {
         }
     },
 "Clyde's Frog": {
-        "id": 3,
+        "id": 4,
         "Collectibles":{
            #"Cherries" : 0,
            #"Strawberries" : 0,

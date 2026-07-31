@@ -1,8 +1,8 @@
 from __future__ import annotations
 from typing import TYPE_CHECKING
 
-from data import level_data, LEVEL_OFFSET, FILLER_OFFSET
-from ...BaseClasses import Item, ItemClassification
+from . import data
+from BaseClasses import Item, ItemClassification
 
 if TYPE_CHECKING:
     from .world import PMW2RepacWorld
@@ -12,12 +12,12 @@ class PMW2RepacItem(Item):
 
 items = {}
 
-def define_items(world: PMW2RepacWorld) -> None:
+def define_items() -> None:
 
-    for level, data in level_data.items():
-        items[level] = data["id"] + LEVEL_OFFSET
+    for level, levelData in data.level_data.items():
+        items[level] = levelData["id"] + data.LEVEL_OFFSET
 
-    items["Nothing"] = FILLER_OFFSET
+    items["Nothing"] = data.FILLER_OFFSET
 
 #Need a separate function to create a single item.
 def create_item(world: PMW2RepacWorld, name: str) -> PMW2RepacItem:
@@ -25,7 +25,7 @@ def create_item(world: PMW2RepacWorld, name: str) -> PMW2RepacItem:
 
     #Once we figure out more items to add, make an offset for them then add them here. The range for if statements is item offset <= item_id < next item offset
     #Levels are progression
-    if LEVEL_OFFSET <= item_id < FILLER_OFFSET: classification = ItemClassification.progression
+    if data.LEVEL_OFFSET <= item_id < data.FILLER_OFFSET: classification = ItemClassification.progression
 
     else: classification = ItemClassification.filler
 
@@ -37,19 +37,26 @@ def create_all_items(world: PMW2RepacWorld) -> None:
 
     itempool: list[Item] = []
 
-    for level, data in level_data.items():
-        if level not in starting_levels:
-            itempool.append(create_item(world, level))
+    for level, levelData in data.level_data.items():
+        if world.options.level_randomizer:
+            if level not in starting_levels:
+                itempool.append(world.create_item(level))
 
-    #Continue adding items
+    number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player)) - len(itempool)
+    #Continue adding items, decrement number_of_unfilled_locations when a new item is added.
 
     #At the end, add filler.
-    number_of_filler_items = len(world.multiworld.get_unfilled_locations(world.player)) - len(itempool)
-    itempool += [world.create_filler() for _ in range(number_of_filler_items)]
+    itempool += [world.create_filler() for _ in range(number_of_unfilled_locations)]
+
+    world.multiworld.itempool += itempool
 
     #Precollect starting levels
-    for level in starting_levels:
-        world.push_precollected(world.create_item(level))
+    if world.options.level_randomizer:
+        for level in starting_levels:
+            world.push_precollected(world.create_item(level))
+    else:
+        for level in data.level_data.keys():
+            world.push_precollected(world.create_item(level))
 
 def get_random_filler_item(world: PMW2RepacWorld) -> str:
     return "Nothing"
