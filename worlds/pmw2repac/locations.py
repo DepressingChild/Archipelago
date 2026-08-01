@@ -19,10 +19,10 @@ def define_locations() -> None:
             locations[level + " - Clear"] = levelData["id"] + data.LEVEL_OFFSET
 
         for gashapon, gashapon_id in levelData["Gashapons"].items():
-            locations[level + " - " + gashapon] = gashapon_id + data.GASHAPON_OFFSET
+            locations[level + " - Gashapon - " + gashapon] = gashapon_id + data.GASHAPON_OFFSET
 
         for mission, mission_id in levelData["Missions"].items():
-            locations[level + " - " + mission] = mission_id + data.MISSION_OFFSET
+            locations[level + " - Mission - " + mission] = mission_id + data.MISSION_OFFSET
 
 def create_locations(world: PMW2RepacWorld) -> None:
     for level, levelData in data.level_data.items():
