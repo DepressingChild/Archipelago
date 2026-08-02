@@ -1,5 +1,9 @@
 #offsets?
 LEVEL_OFFSET = 0
+GOLDEN_FRUIT_OFFSET = 100
+KEY_OFFSET = 200
+COSTUME_OFFSET = 300
+#Some item to collect for goal
 TIMETRIAL_OFFSET = 1000
 MISSION_OFFSET = 2000
 GASHAPON_OFFSET = 3000
@@ -43,9 +47,8 @@ level_data = {
            #"Galaxian" : 0
         },
         "Gashapons":{
-            #use actual gashapons received in levels.
-            "Pac-Knight": 0,
-            "Pac-Wizard": 1
+            "Orange Chest": 0,
+            "Melon Chest": 1
         },
         "Missions":{
              #might need reworking
@@ -65,12 +68,12 @@ level_data = {
            #"Galaxian" : 1
         },
         "Gashapons":{
-            "Stopwatch": 2,
-            "Small PAC-MAN": 3
+            "Orange Chest": 2,
+            "Melon Chest": 3
         },
         "Missions":{
             "Collect All Fruits": 4,
-            "Destroy Traps": 5,
+            "Destroy Bear Traps": 5,
             "Time Trial": 6
         }
     },
@@ -85,8 +88,8 @@ level_data = {
            #"Galaxian" : 1
         },
         "Gashapons":{
-            "Goal Coin": 4,
-            "PAC-MAN (Silver)": 5
+            "Apple Chest": 4,
+            "Melon Chest": 5
         },
         "Missions":{
             "Collect All Fruits": 7,
@@ -106,8 +109,8 @@ level_data = {
     "B-Doing Woods": {
         "id": 5,
         "Gashapons":{
-            "Help Island": 6,
-            "Mega PAC-MAN": 7
+            "Strawberry Chest": 6,
+            "Melon Chest": 7
         },
         "Missions":{
             "Collect All Fruits": 12,
@@ -118,8 +121,8 @@ level_data = {
     "Treewood Forest": {
         "id": 6,
         "Gashapons": {
-            "Golden Cherry": 8,
-            "Blinky (Gold)": 9
+            "Cherry Chest": 8,
+            "Melon Chest": 9
         },
         "Missions": {
             "Collect All Fruits": 15,
@@ -130,8 +133,8 @@ level_data = {
     "Butane Pain": {
         "id": 7,
         "Gashapons": {
-            "Pac-Buddy (Silver)": 10,
-            "Killer Frog (Gold)": 11
+            "Melon Chest": 10,
+            "Strawberry Chest": 11
         },
         "Missions": {
             "Collect All Fruits": 18,
@@ -150,8 +153,8 @@ level_data = {
     "Ice River Run": {
         "id": 9,
         "Gashapons": {
-            "Galaxian": 12,
-            "Pac-Ranger (Silver)": 13
+            "Cherry Chest": 12,
+            "Melon Chest": 13
         },
         "Missions": {
             "Collect All Fruits": 23,
@@ -162,8 +165,8 @@ level_data = {
     "Avalanche Alley": {
         "id": 10,
         "Gashapons": {
-            "Golden Strawberry": 14,
-            "Inky (Gold)": 15
+            "Melon Chest": 14,
+            "Strawberry Chest": 15
         },
         "Missions": {
             "Collect All Fruits": 26,
@@ -174,8 +177,8 @@ level_data = {
     "Blade Mountain": {
         "id": 11,
         "Gashapons": {
-            "PAC-MAN (Ice Skating)": 16,
-            "Owl Mecha (Gold)": 17
+            "Orange Chest": 16,
+            "Strawberry Chest": 17
         },
         "Missions": {
             "Collect All Fruits": 29,
@@ -194,8 +197,8 @@ level_data = {
     "Into the Volcano!": {
         "id": 13,
         "Gashapons": {
-            "Dot Chain": 18,
-            "Pac-Sis (Silver)": 19
+            "Strawberry Chest": 18,
+            "Melon Chest": 19
         },
         "Missions": {
             "Collect All Fruits": 34,
@@ -206,8 +209,8 @@ level_data = {
     "Volcanic Panic": {
         "id": 14,
         "Gashapons": {
-            "Golden Orange": 20,
-            "Pinky (Gold)": 21
+            "Cherry Chest": 20,
+            "Melon Chest": 21
         },
         "Missions": {
             "Collect All Fruits": 37,
@@ -218,8 +221,8 @@ level_data = {
     "Magma Opus": {
         "id": 15,
         "Gashapons": {
-            "Pac-Mom (Silver)": 22,
-            "Polar Bear Mecha (Gold)": 23
+            "Strawberry Chest": 22,
+            "Melon Chest": 23
         },
         "Missions": {
             "Collect All Fruits": 40,
@@ -238,8 +241,8 @@ level_data = {
     "Scuba Duba": {
         "id": 17,
         "Gashapons": {
-            "PAC-MAN (Diving)": 24,
-            "Handy-Pac (Silver)": 25
+            "Strawberry Chest": 24,
+            "Melon Chest": 25
         },
         "Missions": {
             "Collect All Fruits": 45,
@@ -250,8 +253,8 @@ level_data = {
     "Shark Attack": {
         "id": 18,
         "Gashapons": {
-            "Golden Apple": 26,
-            "Clyde (Gold)": 27
+            "Strawberry Chest": 26,
+            "Melon Chest": 27
         },
         "Missions": {
             "Collect All Fruits": 48,
@@ -262,8 +265,8 @@ level_data = {
     "Yellow Pac-Marine": {
         "id": 19,
         "Gashapons": {
-            "Pac-Boy (Silver)": 28,
-            "Spider Mecha (Gold)": 29
+            "Purple": 28,
+            "Red": 29
         },
         "Missions": {
             "Collect All Fruits": 51,
@@ -282,8 +285,8 @@ level_data = {
     "Haunted Boardwalk": {
         "id": 21,
         "Gashapons": {
-            "PAC-MAN (In-Line Skating)": 30,
-            "Clie (Silver)": 31
+            "Apple Chest": 30,
+            "Melon Chest": 31
         },
         "Missions": {
             "Collect All Fruits": 56,
@@ -294,8 +297,8 @@ level_data = {
     "Night Crawling": {
         "id": 22,
         "Gashapons": {
-            "Golden Melon": 32,
-            "Professor Pac (Silver)": 33
+            "Melon Chest": 32,
+            "Strawberry Chest": 33
         },
         "Missions": {
             "Collect All Fruits": 59,
@@ -306,8 +309,8 @@ level_data = {
     "Ghost Bayou": {
         "id": 23,
         "Gashapons": {
-            "Mega-Whale (Gold)": 34,
-            "PAC-MAN (PAC-MAN MUSEUM+)": 35
+            "Apple Chest": 34,
+            "Melon Chest": 35
         },
         "Missions": {
             "Collect All Fruits": 62,
@@ -326,105 +329,140 @@ level_data = {
     "Deadly Poisonous Meadows": {
         "id": 25,
         "Gashapons": {
+            "Apple Chest": 36,
+            "Orange Chest": 37,
+            "Melon Chest": 38
         },
         "Missions": {
-
+            "Collect All Fruits": 67,
+            "Destroy Bear Traps": 68,
+            "Time Trial": 69
         }
     },
     "A Long Poisonous Tongue": {
         "id": 26,
-        "Gashapons": {
-        },
+        "Gashapons": {},
         "Missions": {
-
+            "Don't Die": 70,
+            "Time Trial": 71
         }
     },
     "Harsh Harsh Winds": {
         "id": 27,
         "Gashapons": {
+            "Strawberry Chest": 39,
+            "Orange Chest": 40,
+            "Melon Chest": 41
         },
         "Missions": {
-
+            "Collect All Fruits": 72,
+            "Score 20,000": 73,
+            "Time Trial": 74,
         }
     },
     "Hunter of Darkness": {
         "id": 28,
-        "Gashapons": {
-        },
+        "Gashapons": {},
         "Missions": {
-
+            "Don't Die": 75,
+            "Time Trial": 76
         }
     },
     "Pro Thunder Skater": {
         "id": 29,
         "Gashapons": {
+            "Strawberry Chest": 42,
+            "Orange Chest": 43,
+            "Melon Chest": 44
         },
         "Missions": {
-
+            "Collect All Fruits": 77,
+            "Destroy Crates": 78,
+            "Time Trial": 79
         }
     },
     "Boom! Boom! Clap!": {
         "id": 30,
-        "Gashapons": {
-        },
+        "Gashapons": {},
         "Missions": {
-
+            "Don't Die": 80,
+            "Time Trial": 81
         }
     },
     "Hot! Fire Trouble": {
         "id": 31,
         "Gashapons": {
+            "Cherry Chest": 45,
+            "Apple Chest": 46,
+            "Melon Chest": 47
         },
         "Missions": {
-
+            "Collect All Fruits": 82,
+            "Score 25,000": 83,
+            "Time Trial": 84
         }
     },
     "Burning-Hot Beats": {
         "id": 32,
-        "Gashapons": {
-        },
+        "Gashapons": {},
         "Missions": {
-
+            "Don't Die": 85,
+            "Time Trial": 86
         }
     },
     "Sharks Everywhere": {
         "id": 33,
         "Gashapons": {
+            "Orange Chest": 48,
+            "Strawberry Chest": 49,
+            "Melon Chest": 50
         },
         "Missions": {
-
+            "Collect All Fruits": 87,
+            "Score 24,000": 88,
+            "Time Trial": 89
         }
     },
     "Pac-Marine Battle!": {
         "id": 34,
-        "Gashapons": {
-        },
+        "Gashapons": {},
         "Missions": {
-
+            "Don't Die": 90,
+            "Time Trial": 91
         }
     },
     "Clumsy Bayou": {
         "id": 35,
         "Gashapons": {
+            "Orange Chest": 51,
+            "Apple Chest": 52,
+            "Melon Chest": 53
         },
         "Missions": {
-
+            "Collect All Fruits": 92,
+            "Defeat Enemies": 93,
+            "Time Trial": 94
         }
     },
     "Legendary Story": {
         "id": 36,
-        "Gashapons": {
-        },
+        "Gashapons": {},
         "Missions": {
-
+            "Don't Die": 95,
+            "Time Trial": 96
         }
     },
     "Flying Dark Shadow": {
         "id": 37,
-        "Gashapons": {
-        },
+        "Gashapons": {},
         "Missions": {
-
+            "Don't Die": 97,
+            "Time Trial": 98
         }
     },
+}
+
+costume_data = {
+
+
 }

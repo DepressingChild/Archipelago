@@ -34,11 +34,11 @@ def create_locations(world: PMW2RepacWorld) -> None:
             region.locations.append(location)
 
         for gashapon, gashapon_id in levelData["Gashapons"].items():
-            location = PMW2RepacLocation(world.player, level + " - " + gashapon, gashapon_id + data.GASHAPON_OFFSET, region)
+            location = PMW2RepacLocation(world.player, level + " - Gashapon - " + gashapon, gashapon_id + data.GASHAPON_OFFSET, region)
             region.locations.append(location)
 
         for mission, mission_id in levelData["Missions"].items():
-            location = PMW2RepacLocation(world.player, level + " - "  + mission, mission_id + data.MISSION_OFFSET, region)
+            location = PMW2RepacLocation(world.player, level + " - Mission - "  + mission, mission_id + data.MISSION_OFFSET, region)
             region.locations.append(location)
 
 
