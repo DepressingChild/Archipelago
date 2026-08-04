@@ -34,6 +34,7 @@ def define_items() -> None:
 
     #Add item for goal level unlocks
 
+    #Define single item for each unique filler/trap
     items["Nothing"] = data.FILLER_OFFSET
 
 #Need a separate function to create a single item.
@@ -60,12 +61,23 @@ def create_item(world: PMW2RepacWorld, name: str) -> PMW2RepacItem:
 
 def create_all_items(world: PMW2RepacWorld) -> None:
 
-    starting_levels = ["Pac-Village"]
+    starting_levels = {"Pac-Village"}
 
     itempool: list[Item] = []
 
-    for level, levelData in data.level_data.items():
-        if world.options.level_randomizer:
+    if world.options.level_randomizer:
+        excluded_levels = {"Pac-Village", "Spooky", "Legendary Story", "Flying Dark Shadow"}
+        if world.options.goal_boss == 0:
+            for level in data.level_data.keys():
+                if data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
+                    excluded_levels.add(level)
+
+        level_names = sorted(set(data.level_data.keys()) - excluded_levels)
+        world.random.shuffle(level_names)
+        for _ in range(world.options.random_starting_levels - 1):
+            starting_levels.add(level_names.pop())
+
+        for level, levelData in data.level_data.items():
             if level not in starting_levels:
                 itempool.append(world.create_item(level))
 
@@ -86,7 +98,9 @@ def create_all_items(world: PMW2RepacWorld) -> None:
             number_of_unfilled_locations -= 1
 
     if world.options.move_randomizer:
-        for move in world.options.moves_to_randomize.keys():
+        for move in world.options.moves_to_randomize:
+            if move == "Butt Bounce" or move == "Super Butt Bounce":
+                move = "Progressive Butt Bounce"
             itempool.append(world.create_item(move))
             number_of_unfilled_locations -= 1
 
@@ -99,26 +113,19 @@ def create_all_items(world: PMW2RepacWorld) -> None:
 
     world.multiworld.itempool += itempool
 
-    #Below needs reworking
-
     #Precollect starting levels
     if world.options.level_randomizer:
-        excluded_levels = ["Pac-Village", "Spooky", "Legendary Story", "Flying Dark Shadow"]
-        level_names = sorted(data.level_data.keys() - excluded_levels)
-        world.random.shuffle(level_names)
-        for _ in range(world.options.random_starting_levels + 0):
-            starting_levels.append(level_names.pop())
-
         for level in starting_levels:
             world.push_precollected(world.create_item(level))
-    else:
-        i = 1
+    # else:
         # for level in data.level_data.keys():
         #     if data.level_data[level]["id"] <= data.level_data["Clyde's Frog"]["id"]:
         #         world.push_precollected(world.create_item(level))
 
     if world.options.move_randomizer:
-        for move in world.options.moves_to_randomize.keys() - data.movement_data.keys():
+        for move in world.options.moves_to_randomize - data.movement_data.keys() - {"Butt Bounce", "Super Butt Bounce"}:
+            if move == "Butt Bounce" or move == "Super Butt Bounce":
+                move = "Progressive Butt Bounce"
             world.push_precollected(world.create_item(move))
 
     if world.options.fruit_switches:

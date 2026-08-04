@@ -529,10 +529,9 @@ fruit_switch_data = {
 }
 
 movement_data = {
-    "Butt Bounce": 0,
-    "Super Butt Bounce": 1,
-    "Flip Kick": 2,
-    "Rev Roll": 3,
-    "Pac-Dot Attack": 4,
-    "Flutter": 5
+    "Progressive Butt Bounce": 0,
+    "Flip Kick": 1,
+    "Rev Roll": 2,
+    "Pac-Dot Attack": 3,
+    "Flutter": 4
 }
