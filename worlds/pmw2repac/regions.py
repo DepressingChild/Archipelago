@@ -17,5 +17,4 @@ def create_regions(world: PMW2RepacWorld) -> None:
         region = Region(level, world.player, world.multiworld)
         world.multiworld.regions.append(region)
 
-        #Also sets a rule to make sure the stage is out of logic if you don't have it unlocked.
-        world_map.connect(region, "World Map to " + level, lambda state, l=level: state.has(l, world.player))
+        world_map.connect(region, "World Map to " + level)

@@ -25,7 +25,7 @@ class PMW2RepacWorld(World):
 
     def create_regions(self) -> None:
         regions.create_regions(self)
-        locations.create_locations(self)
+        locations.create_all_locations(self)
 
     def set_rules(self) -> None:
         rules.set_all_rules(self)

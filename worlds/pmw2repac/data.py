@@ -3,7 +3,10 @@ LEVEL_OFFSET = 0
 GOLDEN_FRUIT_OFFSET = 100
 KEY_OFFSET = 200
 COSTUME_OFFSET = 300
+FRUIT_SWITCH_OFFSET = 400
+MOVEMENT_OFFSET = 500
 #Some item to collect for goal
+
 TIMETRIAL_OFFSET = 1000
 MISSION_OFFSET = 2000
 GASHAPON_OFFSET = 3000
@@ -462,7 +465,74 @@ level_data = {
     },
 }
 
+golden_fruit_data = {
+    "Golden Cherry": 0,
+    "Golden Strawberry": 1,
+    "Golden Apple": 2,
+    "Golden Orange": 3,
+    "Golden Melon": 4
+}
+
+key_data = {
+    "Windy Woods Key": 0,
+    "Thunder Snow Mountain Key": 1,
+    "Fiery Caverns Key": 2,
+    "Dim Underwaters Key": 3,
+    "Ghost Island Key": 4
+}
+
 costume_data = {
+    "Hunter (Green)": 1,
+    "Hunter (Brown)": 2,
+    "Hunter (Blue)": 3,
+    "Street (Blue)": 4,
+    "Street (Red)": 5,
+    "Street (Pink)": 6,
+    "Cowboy (Brown)": 7,
+    "Cowboy (Red)": 8,
+    "Cowboy (Pink)": 9,
+    "Ushanka (Brown)": 10,
+    "Ushanka (Red)": 11,
+    "Ushanka (Blue)": 12,
+    "Explorer (White)": 13,
+    "Explorer (Green)": 14,
+    "Explorer (Pink)": 15,
+    "Diver (Blue)": 16,
+    "Diver (Green)": 17,
+    "Diver (Pink)": 18,
+    "Blinky": 19,
+    "Inky": 20,
+    "Clyde": 21,
+    "Pinky": 22,
+    "Magician (Black)": 23,
+    "Magician (Purple)": 24,
+    "Magician (Green)": 25,
+    "Pac-Knight": 26,
+    "Toc-Man": 27, #Do we remove this because you need re-pac 1?
+    "Pac-Wizard": 28,
+    "Orson": 29,
+    "Pac-Land": 30, #Do we remove this because pre-order bonus?
+    "Spooky": 31,
+    #No sonic dlc for you
+    "Holiday (Red)": 33,
+    "Holiday (Green)": 34,
+    "Holiday (Blue)": 35,
+    "Birthday Hat": 36
+}
 
+fruit_switch_data = {
+    "Cherry Switch": 0,
+    "Strawberry Switch": 1,
+    "Orange Switch": 2,
+    "Apple Switch": 3,
+    "Melon Switch": 4
+}
 
+movement_data = {
+    "Butt Bounce": 0,
+    "Super Butt Bounce": 1,
+    "Flip Kick": 2,
+    "Rev Roll": 3,
+    "Pac-Dot Attack": 4,
+    "Flutter": 5
 }
