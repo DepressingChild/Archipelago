@@ -34,8 +34,11 @@ def define_items() -> None:
 
     #Add item for goal level unlocks
 
-    #Define single item for each unique filler/trap
-    items["Nothing"] = data.FILLER_OFFSET
+    for filler, filler_id in data.filler_data.items():
+        items[filler] = filler_id + data.FILLER_OFFSET
+
+    for trap, trap_id in data.trap_data.items():
+        items[trap] = trap_id + data.TRAP_OFFSET
 
 #Need a separate function to create a single item.
 def create_item(world: PMW2RepacWorld, name: str) -> PMW2RepacItem:
@@ -55,7 +58,9 @@ def create_item(world: PMW2RepacWorld, name: str) -> PMW2RepacItem:
 
     elif data.MOVEMENT_OFFSET <= item_id < data.FILLER_OFFSET: classification = ItemClassification.progression
 
-    else: classification = ItemClassification.filler
+    elif data.FILLER_OFFSET <= item_id < data.TRAP_OFFSET: classification = ItemClassification.filler
+
+    else: classification = ItemClassification.trap
 
     return PMW2RepacItem(name, classification, item_id, world.player)
 
@@ -134,6 +139,30 @@ def create_all_items(world: PMW2RepacWorld) -> None:
         world.push_precollected(world.create_item(fruit_switches.pop()))
 
 def get_random_filler_item(world: PMW2RepacWorld) -> str:
+
+    if world.random.randint(0, 99) < world.options.trap_weight:
+        chance = 100 / len(data.trap_data)
+        return world.random.choices(population=list(data.trap_data.keys()))[0]
+
+    #Could change to make these individual option choices
+
+    pacdot1 = world.options.pac_dot_weight * 0.5
+    pacdot5 = world.options.pac_dot_weight * 0.3
+    pacdot10 = world.options.pac_dot_weight * 0.2
+
+    score100 = world.options.points_weight * .4
+    score200 = world.options.points_weight * .3
+    score500 = world.options.points_weight * .2
+    score1000 = world.options.points_weight * .1
+
+    weights = pacdot1 + pacdot5 + pacdot10 + score100 + score200 + score500 + score1000
+
+    # If trap chance fails, send a filler item.
+    if weights > 0:
+        return world.random.choices(population=list(data.filler_data.keys()), weights=[pacdot1, pacdot5, pacdot10, score100, score200, score500, score1000], k=1)[0]
+
+
+    # If all chances fail, send nothing.
     return "Nothing"
 
 

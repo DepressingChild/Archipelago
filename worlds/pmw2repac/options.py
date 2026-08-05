@@ -64,6 +64,36 @@ class FruitSwitches(Toggle):
 
     #display_name = "Fruitsanity"
 
+class PacDotWeight(Range):
+    """
+    Chance that unfilled locations have Pac-Dots.
+    """
+
+    display_name = "Pac-Dot Weight"
+    range_start = 0
+    range_end = 100
+    default = 35
+
+class PointsWeight(Range):
+    """
+    Chance that unfilled locations have Points.
+    """
+
+    display_name = "Points Weight"
+    range_start = 0
+    range_end = 100
+    default = 60
+
+class TrapWeight(Range):
+    """
+    Chance that unfilled locations have a trap.
+    """
+
+    display_name = "Trap Weight"
+    range_start = 0
+    range_end = 100
+    default = 5
+
 @dataclass
 class PMW2RepacOptions(PerGameCommonOptions):
     goal_boss: GoalBoss
@@ -73,6 +103,9 @@ class PMW2RepacOptions(PerGameCommonOptions):
     moves_to_randomize: MovesToRandomize
     fruit_switches: FruitSwitches
     #fruitsanity: Fruitsanity
+    pac_dot_weight: PacDotWeight
+    points_weight: PointsWeight
+    trap_weight: TrapWeight
 
 #Stuff below is for the website.
 options_groups = [

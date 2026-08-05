@@ -16,7 +16,8 @@ STRAWBERRY_OFFSET = 6000
 ORANGE_OFFSET = 7000
 APPLE_OFFSET = 8000
 MELON_OFFSET = 9000
-FILLER_OFFSET = 20000
+FILLER_OFFSET = 10000
+TRAP_OFFSET = 11000
 
 #Need to figure out how to hash fruits as unique items. Ignoring them for now.
 
@@ -534,4 +535,18 @@ movement_data = {
     "Rev Roll": 2,
     "Pac-Dot Attack": 3,
     "Flutter": 4
+}
+
+filler_data = {
+    "1 Pac-Dot": 0,
+    "5 Pac-Dots": 1,
+    "10 Pac-Dots": 2,
+    "100 Points": 3,
+    "200 Points": 4,
+    "500 Points": 5,
+    "1000 Points": 6,
+}
+
+trap_data = {
+    "Voice line Trap": 0
 }
