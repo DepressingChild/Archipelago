@@ -18,7 +18,7 @@ def define_items() -> None:
         items[level] = levelData["id"] + data.LEVEL_OFFSET
 
     for costume, costume_id in data.costume_data.items():
-        items[costume] = costume_id + data.COSTUME_OFFSET
+        items[costume + " costume"] = costume_id + data.COSTUME_OFFSET
 
     for golden_fruit, golden_fruit_id in data.golden_fruit_data.items():
         items[golden_fruit] = golden_fruit_id + data.GOLDEN_FRUIT_OFFSET
@@ -126,7 +126,7 @@ def create_all_items(world: PMW2RepacWorld) -> None:
             number_of_unfilled_locations -= 1
 
     for costume in data.costume_data.keys():
-        itempool.append(world.create_item(costume))
+        itempool.append(world.create_item(costume + " costume"))
         number_of_unfilled_locations -= 1
 
     #At the end, add filler.

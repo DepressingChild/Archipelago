@@ -64,5 +64,9 @@ def set_goal(world: PMW2RepacWorld) -> None:
     #Change when we have to collect a goal item
     if world.options.goal_boss.value == 0:
         world.set_completion_rule(HasAll("Golden Cherry", "Golden Strawberry", "Golden Apple", "Golden Orange", "Golden Melon"))
+        if world.options.level_randomizer:
+            world.set_completion_rule(Has("Spooky"))
     else:
         world.set_completion_rule(HasAll("Golden Cherry", "Golden Strawberry", "Golden Apple", "Golden Orange", "Golden Melon")) #use events for this
+        if world.options.level_randomizer:
+            world.set_completion_rule(HasAll("Spooky", "Legendary Story", "Flying Dark Shadow"))
