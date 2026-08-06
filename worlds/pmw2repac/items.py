@@ -66,7 +66,7 @@ def create_item(world: PMW2RepacWorld, name: str) -> PMW2RepacItem:
 
 def create_all_items(world: PMW2RepacWorld) -> None:
 
-    starting_levels = ["Pac-Village"]
+    starting_levels = {"Pac-Village"}
 
     itempool: list[Item] = []
 
@@ -76,18 +76,29 @@ def create_all_items(world: PMW2RepacWorld) -> None:
         # Running this same segment in a separate Python script does NOT produce these issues. Why? idfk.
 
         #Exclude levels from random starting levels
-        excluded_levels = ["Pac-Village", "Spooky", "Legendary Story", "Flying Dark Shadow"]
+        excluded_levels = {"Pac-Village", "Spooky", "Legendary Story", "Flying Dark Shadow"}
         if world.options.goal_boss == 0:
             for level in data.level_data.keys():
                 if data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
-                    excluded_levels.append(level)
+                    excluded_levels.add(level)
         #Shuffle levels and add starting levels
-        level_names = sorted([item for item in data.level_data.keys() if item not in excluded_levels])
-        world.random.shuffle(level_names)
+        level_names = set(sorted(data.level_data.keys()))
+        temp_names = level_names.copy()
+        for level in level_names:
+            if level in excluded_levels:
+                temp_names.remove(level)
+        level_names = temp_names
+        world.random.shuffle(list(level_names))
         for i in range(world.options.random_starting_levels - 1):
-            starting_levels.append(level_names[i])
+            if i not in excluded_levels:
+                if i not in starting_levels:
+                    starting_levels.add(level_names.pop())
+                else:
+                    i -= 1
+            else:
+                i -= 1
 
-        for level, levelData in data.level_data.items():
+        for level in set(data.level_data.keys()):
             if level not in starting_levels:
                 itempool.append(world.create_item(level))
 
