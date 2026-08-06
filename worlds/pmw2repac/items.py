@@ -66,21 +66,26 @@ def create_item(world: PMW2RepacWorld, name: str) -> PMW2RepacItem:
 
 def create_all_items(world: PMW2RepacWorld) -> None:
 
-    starting_levels = {"Pac-Village"}
+    starting_levels = ["Pac-Village"]
 
     itempool: list[Item] = []
 
     if world.options.level_randomizer:
-        excluded_levels = {"Pac-Village", "Spooky", "Legendary Story", "Flying Dark Shadow"}
+
+        # For whatever reason, this segment has a chance to create a duplicate level AND/OR give excluded levels as a starting level.
+        # Running this same segment in a separate Python script does NOT produce these issues. Why? idfk.
+
+        #Exclude levels from random starting levels
+        excluded_levels = ["Pac-Village", "Spooky", "Legendary Story", "Flying Dark Shadow"]
         if world.options.goal_boss == 0:
             for level in data.level_data.keys():
                 if data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
-                    excluded_levels.add(level)
-
-        level_names = sorted(set(data.level_data.keys()) - excluded_levels)
+                    excluded_levels.append(level)
+        #Shuffle levels and add starting levels
+        level_names = sorted([item for item in data.level_data.keys() if item not in excluded_levels])
         world.random.shuffle(level_names)
-        for _ in range(world.options.random_starting_levels - 1):
-            starting_levels.add(level_names.pop())
+        for i in range(world.options.random_starting_levels - 1):
+            starting_levels.append(level_names[i])
 
         for level, levelData in data.level_data.items():
             if level not in starting_levels:
@@ -122,16 +127,17 @@ def create_all_items(world: PMW2RepacWorld) -> None:
     if world.options.level_randomizer:
         for level in starting_levels:
             world.push_precollected(world.create_item(level))
-    # else:
-        # for level in data.level_data.keys():
-        #     if data.level_data[level]["id"] <= data.level_data["Clyde's Frog"]["id"]:
-        #         world.push_precollected(world.create_item(level))
 
     if world.options.move_randomizer:
-        for move in world.options.moves_to_randomize - data.movement_data.keys() - {"Butt Bounce", "Super Butt Bounce"}:
-            if move == "Butt Bounce" or move == "Super Butt Bounce":
-                move = "Progressive Butt Bounce"
-            world.push_precollected(world.create_item(move))
+        moves = set(data.movement_data.keys())
+        moves.remove("Progressive Butt Bounce")
+        moves.add("Butt Bounce")
+        moves.add("Super Butt Bounce")
+        for move in moves:
+            if move not in world.options.moves_to_randomize:
+                if move == "Butt Bounce" or move == "Super Butt Bounce":
+                    move = "Progressive Butt Bounce"
+                world.push_precollected(world.create_item(move))
 
     if world.options.fruit_switches:
         fruit_switches = sorted(data.level_data.keys())

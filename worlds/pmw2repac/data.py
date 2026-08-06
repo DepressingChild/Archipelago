@@ -463,7 +463,7 @@ level_data = {
             "Don't Die": 97,
             "Time Trial": 98
         }
-    },
+    }
 }
 
 golden_fruit_data = {
