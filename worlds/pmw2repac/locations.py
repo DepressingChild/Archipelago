@@ -22,31 +22,52 @@ def define_locations() -> None:
         if levelData["id"] > 0:
             locations[level + " - Clear"] = levelData["id"] + data.LEVEL_OFFSET
 
-        for gashapon, gashapon_id in levelData["Gashapons"].items():
-            locations[level + " - Gashapon - " + gashapon] = gashapon_id + data.GASHAPON_OFFSET
+        for collectible, collectibleData in levelData["Collectibles"].items():
+            offset = 0
+            match collectible:
+                case "Galaxian":
+                    offset = data.GALAXIAN_OFFSET
 
-        for mission, mission_id in levelData["Missions"].items():
-            locations[level + " - Mission - " + mission] = mission_id + data.MISSION_OFFSET
+            if "id" in collectibleData:
+                locations[level + " - " + collectible] = collectibleData["id"] + offset
+
+        for gashapon, gashaponData in levelData["Gashapons"].items():
+            locations[level + " - Gashapon - " + gashapon] = gashaponData["id"] + data.GASHAPON_OFFSET
+
+        for mission, missionData in levelData["Missions"].items():
+            locations[level + " - Mission - " + mission] = missionData["id"] + data.MISSION_OFFSET
 
 def create_locations(world: PMW2RepacWorld) -> None:
     for level, levelData in data.level_data.items():
-
-        region = world.get_region(level)
         if world.options.goal_boss == 0 and levelData["id"] > data.level_data["Spooky"]["id"]:
             break
+
+        region = world.get_region(level)
 
         if levelData["id"] > 0:
 
             location = PMW2RepacLocation(world.player, level + " - Clear", levelData["id"] + data.LEVEL_OFFSET, region)
             region.locations.append(location)
 
-        for gashapon, gashapon_id in levelData["Gashapons"].items():
-                location = PMW2RepacLocation(world.player, level + " - Gashapon - " + gashapon, gashapon_id + data.GASHAPON_OFFSET, region)
+        for collectible, collectibleData in levelData["Collectibles"].items():
+            offset = 0
+            match collectible:
+                case "Galaxian":
+                    offset = data.GALAXIAN_OFFSET
+
+            if "id" in collectibleData:
+                location = PMW2RepacLocation(world.player, level + " - " + collectible, collectibleData["id"] + offset, region)
                 region.locations.append(location)
 
-        for mission, mission_id in levelData["Missions"].items():
-            location = PMW2RepacLocation(world.player, level + " - Mission - "  + mission, mission_id + data.MISSION_OFFSET, region)
-            region.locations.append(location)
+        for gashapon, gashaponData in levelData["Gashapons"].items():
+            if "id" in gashaponData:
+                location = PMW2RepacLocation(world.player, level + " - Gashapon - " + gashapon, gashaponData["id"] + data.GASHAPON_OFFSET, region)
+                region.locations.append(location)
+
+        for mission, missionData in levelData["Missions"].items():
+            if "id" in missionData:
+                location = PMW2RepacLocation(world.player, level + " - Mission - "  + mission, missionData["id"] + data.MISSION_OFFSET, region)
+                region.locations.append(location)
 
         #Add galaxian locations
 

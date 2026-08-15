@@ -26,442 +26,1660 @@ TRAP_OFFSET = 11000
 level_data = {
     "Pac-Village": {
         "id": 0,
-        "Collectibles":{
+        "Collectibles": {
            #"Cherries" : 26,
            #"Strawberries" : 29,
            #"Oranges" : 17,
            #"Apples" : 0,
            #"Melons" : 0,
-           #"Galaxian" : 0
+           "Galaxian": {}
         },
-        "Gashapons":{
-        },
-        "Missions":{
-            "Collect All Fruit": 0
+        "Gashapons": {},
+        "Missions": {
+            "Collect All Fruits":{
+                "id": 0,
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "sbb&rr",
+                "ag_rules": ""
+            }
         }
     },
     "The Bear Basics": {
         "id": 1,
-        "Collectibles":{
+        "Clear": {
+            "fm_rules": "bb",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {
            #"Cherries" : 4,
            #"Strawberries" : 7,
            #"Oranges" : 3,
            #"Apples" : 7,
            #"Melons" : 4,
-           #"Galaxian" : 0
+           "Galaxian": {}
         },
-        "Gashapons":{
-            "Orange Chest": 0,
-            "Melon Chest": 1
+        "Gashapons": {
+            "Orange Chest": {
+                "id": 0,
+                "fm_rules": "bb",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 1,
+                "fm_rules": "bb&fk | bb&dt",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
-        "Missions":{
+        "Missions": {
              #might need reworking
-            "Clear Stage": 1,
-            "Score 10,000": 2,
-            "Collect All Fruits": 3
+            "Clear Stage": {
+                "id": 1,
+                "fm_rules": "bb",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Score 10,000": {
+                "id": 2,
+                "fm_rules": "bb",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Collect All Fruits": {
+                "id": 3,
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "bb&fk | bb&dt",
+                "ag_rules": ""
+            }
         }
     },
     "Canyon Chaos": {
         "id": 2,
+        "Clear": {
+            "fm_rules": "bb",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles":{
            #"Cherries" : 4,
            #"Strawberries" : 2,
            #"Oranges" : 3,
            #"Apples" : 4,
            #"Melons" : 6,
-           #"Galaxian" : 1
+           "Galaxian" : {
+               "id": 51,
+                "fm_rules": "fk | rr | dt",
+                "am_rules": "sbb",
+                "ag_rules": ""
+
+           }
         },
-        "Gashapons":{
-            "Orange Chest": 2,
-            "Melon Chest": 3
+        "Gashapons": {
+            "Orange Chest": {
+                "id": 2,
+                "fm_rules": "fk | dt",
+                "am_rules": "bb",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 3,
+                "fm_rules": "sbb",
+                "am_rules": "bb&fk | bb&dt | bb&f",
+                "ag_rules": ""
+            }
         },
-        "Missions":{
-            "Collect All Fruits": 4,
-            "Destroy Bear Traps": 5,
-            "Time Trial": 6
+        "Missions": {
+            "Collect All Fruits": {
+                "id": 4,
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Destroy Bear Traps": {
+                "id": 5,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 6,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Pac-Dot Pond": {
         "id": 3,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles":{
            #"Cherries" : 0,
            #"Strawberries" : 0,
            #"Oranges" : 0,
            #"Apples" : 0,
            #"Melons" : 0,
-           #"Galaxian" : 1
+           "Galaxian" :{
+               "id": 32,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+
+           }
         },
         "Gashapons":{
-            "Apple Chest": 4,
-            "Melon Chest": 5
+            "Apple Chest": {
+                "id": 4,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 5,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions":{
-            "Collect All Fruits": 7,
-            "Defeat All Enemies": 8,
-            "Time Trial": 9
+            "Collect All Fruits": {
+                "id": 7,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Defeat All Enemies": {
+                "id": 8,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 9,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Clyde's Frog": {
         "id": 4,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles":{},
         "Gashapons":{},
         "Missions":{
-            "Don't Die": 10,
-            "Time Trial": 11
+            "Don't Die": {
+                "id": 10,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 11,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "B-Doing Woods": {
         "id": 5,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 0,
+           #"Strawberries" : 0,
+           #"Oranges" : 0,
+           #"Apples" : 0,
+           #"Melons" : 0,
+           "Galaxian" :{
+               "id": 119,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+
+           }
+        },
         "Gashapons":{
-            "Strawberry Chest": 6,
-            "Melon Chest": 7
+            "Strawberry Chest": {
+                "id": 6,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 7,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions":{
-            "Collect All Fruits": 12,
-            "Score 20,000": 13,
-            "Time Trial": 14
+            "Collect All Fruits": {
+                "id": 12,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Score 20,000": {
+                "id": 13,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 14,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Treewood Forest": {
         "id": 6,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 0,
+           #"Strawberries" : 0,
+           #"Oranges" : 0,
+           #"Apples" : 0,
+           #"Melons" : 0,
+           "Galaxian" :{
+               "id": 54,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+
+           }
+        },
         "Gashapons": {
-            "Cherry Chest": 8,
-            "Melon Chest": 9
+            "Cherry Chest": {
+                "id": 8,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 9,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 15,
-            "Destroy Crates": 16,
-            "Time Trial": 17
+            "Collect All Fruits": {
+                "id": 15,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Destroy Crates": {
+                "id": 16,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 17,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Butane Pain": {
         "id": 7,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 0,
+           #"Strawberries" : 0,
+           #"Oranges" : 0,
+           #"Apples" : 0,
+           #"Melons" : 0,
+           "Galaxian" :{
+               "id": 57,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+
+           }
+        },
         "Gashapons": {
-            "Melon Chest": 10,
-            "Strawberry Chest": 11
+            "Melon Chest": {
+                "id": 10,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Strawberry Chest": {
+                "id": 11,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 18,
-            "Defeat Enemies": 19,
-            "Time Trial": 20
+            "Collect All Fruits": {
+                "id": 18,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Defeat Enemies": {
+                "id": 19,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 20,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Inky's Whimsy": {
         "id": 8,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{},
         "Gashapons": {},
         "Missions": {
-            "Don't Die": 21,
-            "Time Trial": 22
+            "Don't Die": {
+                "id": 21,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 22,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Ice River Run": {
         "id": 9,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 0,
+           #"Strawberries" : 0,
+           #"Oranges" : 0,
+           #"Apples" : 0,
+           #"Melons" : 0,
+           "Galaxian" :{
+               "id": 10,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+           }
+        },
         "Gashapons": {
-            "Cherry Chest": 12,
-            "Melon Chest": 13
+            "Cherry Chest": {
+                "id": 12,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 13,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 23,
-            "Destroy Crates": 24,
-            "Time Trial": 25
+            "Collect All Fruits": {
+                "id": 23,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Destroy Crates": {
+                "id": 24,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 25,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+
+            }
         }
     },
     "Avalanche Alley": {
         "id": 10,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 0,
+           #"Strawberries" : 0,
+           #"Oranges" : 0,
+           #"Apples" : 0,
+           #"Melons" : 0,
+           "Galaxian" :{
+               "id": 25,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+           }
+        },
         "Gashapons": {
-            "Melon Chest": 14,
-            "Strawberry Chest": 15
+            "Melon Chest": {
+                "id": 14,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Strawberry Chest": {
+                "id": 15,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 26,
-            "Defeat Enemies": 27,
-            "Time Trial": 28
+            "Collect All Fruits": {
+                "id": 26,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Defeat Enemies": {
+                "id": 27,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 28,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Blade Mountain": {
         "id": 11,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 0,
+           #"Strawberries" : 0,
+           #"Oranges" : 0,
+           #"Apples" : 0,
+           #"Melons" : 0,
+           "Galaxian" :{
+               "id": 53,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+
+           }
+        },
         "Gashapons": {
-            "Orange Chest": 16,
-            "Strawberry Chest": 17
+            "Orange Chest": {
+                "id": 16,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Strawberry Chest": {
+                "id": 17,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 29,
-            "Destroy Crates": 30,
-            "Time Trial": 31
+            "Collect All Fruits": {
+                "id": 29,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Destroy Crates": {
+                "id": 30,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 31,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Pinky's Revenge": {
         "id": 12,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{},
         "Gashapons": {},
         "Missions": {
-            "Don't Die": 32,
-            "Time Trial": 33
+            "Don't Die": {
+                "id": 32,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 33,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Into the Volcano!": {
         "id": 13,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 0,
+           #"Strawberries" : 0,
+           #"Oranges" : 0,
+           #"Apples" : 0,
+           #"Melons" : 0,
+           "Galaxian" :{
+               "id": 8,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+
+           }
+        },
         "Gashapons": {
-            "Strawberry Chest": 18,
-            "Melon Chest": 19
+            "Strawberry Chest": {
+                "id": 18,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 19,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 34,
-            "Never hang off an edge": 35, #Should maybe change to mention only in that one room.
-            "Time Trial": 36
+            "Collect All Fruits": {
+                "id": 34,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Never hang off an edge": { #Should maybe change to mention only in that one room.
+                "id": 35,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 36,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Volcanic Panic": {
         "id": 14,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 0,
+           #"Strawberries" : 0,
+           #"Oranges" : 0,
+           #"Apples" : 0,
+           #"Melons" : 0,
+           "Galaxian" :{
+               "id": 29,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+
+           }
+        },
         "Gashapons": {
-            "Cherry Chest": 20,
-            "Melon Chest": 21
+            "Cherry Chest": {
+                "id": 20,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 21,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 37,
-            "Defeat Enemies": 38,
-            "Time Trial": 39
+            "Collect All Fruits": {
+                "id": 37,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Defeat Enemies": {
+                "id": 38,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 39,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Magma Opus": {
         "id": 15,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 0,
+           #"Strawberries" : 0,
+           #"Oranges" : 0,
+           #"Apples" : 0,
+           #"Melons" : 0,
+           "Galaxian" :{
+               "id": 56,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+
+           }
+        },
         "Gashapons": {
-            "Strawberry Chest": 22,
-            "Melon Chest": 23
+            "Strawberry Chest": {
+                "id": 22,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 23,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 40,
-            "Never fall down a slope": 41,
-            "Time Trial": 42
+            "Collect All Fruits": {
+                "id": 40,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Never fall down a slope": {
+                "id": 41,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 42,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Blinky in the Caldera": {
         "id": 16,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {},
         "Gashapons": {},
         "Missions": {
-            "Don't Die": 43,
-            "Time Trial": 44
+            "Don't Die": {
+                "id": 43,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 44,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Scuba Duba": {
         "id": 17,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 0,
+           #"Strawberries" : 0,
+           #"Oranges" : 0,
+           #"Apples" : 0,
+           #"Melons" : 0,
+           "Galaxian" :{
+               "id": 27,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+
+           }
+        },
         "Gashapons": {
-            "Strawberry Chest": 24,
-            "Melon Chest": 25
+            "Strawberry Chest": {
+                "id": 24,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 25,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 45,
-            "Destroy Crates": 46,
-            "Time Trial": 47
+            "Collect All Fruits": {
+                "id": 45,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Destroy Crates": {
+                "id": 46,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 47,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Shark Attack": {
         "id": 18,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 0,
+           #"Strawberries" : 0,
+           #"Oranges" : 0,
+           #"Apples" : 0,
+           #"Melons" : 0,
+           "Galaxian" :{
+               "id": 60,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+
+           }
+        },
         "Gashapons": {
-            "Strawberry Chest": 26,
-            "Melon Chest": 27
+            "Strawberry Chest": {
+                "id": 26,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 27,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 48,
-            "Never get caught by the Wild Shark": 49,
-            "Time Trial": 50
+            "Collect All Fruits": {
+                "id": 48,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Never get caught by the Wild Shark": {
+                "id": 49,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 50,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Yellow Pac-Marine": {
         "id": 19,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 4,
+           #"Strawberries" : 7,
+           #"Oranges" : 3,
+           #"Apples" : 7,
+           #"Melons" : 4,
+           "Galaxian" : {}
+        },
         "Gashapons": {
-            "Purple": 28,
-            "Red": 29
+            "Purple": {
+                "id": 28,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Red": {
+                "id": 29,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 51,
-            "Defeat Enemies": 52,
-            "Don't Die": 53
+            "Collect All Fruits": {
+                "id": 51,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Defeat Enemies": {
+                "id": 52,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Don't Die": {
+                "id": 53,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Whale on a Sub": {
         "id": 20,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {},
         "Gashapons": {},
         "Missions": {
-            "Don't Die": 54,
-            "Time Trial": 55
+            "Don't Die": {
+                "id": 54,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 55,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Haunted Boardwalk": {
         "id": 21,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 0,
+           #"Strawberries" : 0,
+           #"Oranges" : 0,
+           #"Apples" : 0,
+           #"Melons" : 0,
+           "Galaxian" :{
+               "id": 42,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+
+           }
+        },
         "Gashapons": {
-            "Apple Chest": 30,
-            "Melon Chest": 31
+            "Apple Chest": {
+                "id": 30,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 31,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 56,
-            "Score 11,000": 57,
-            "Time Trial": 58
+            "Collect All Fruits": {
+                "id": 56,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Score 11,000": {
+                "id": 57,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 58,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Night Crawling": {
         "id": 22,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {
+            # "Cherries" : 4,
+            # "Strawberries" : 7,
+            # "Oranges" : 3,
+            # "Apples" : 7,
+            # "Melons" : 4,
+            "Galaxian": {}
+        },
         "Gashapons": {
-            "Melon Chest": 32,
-            "Strawberry Chest": 33
+            "Melon Chest": {
+                "id": 32,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Strawberry Chest": {
+                "id": 33,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 59,
-            "Destroy Crates": 60,
-            "Time Trial": 61
+            "Collect All Fruits": {
+                "id": 59,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Destroy Crates": {
+                "id": 60,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 61,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Ghost Bayou": {
         "id": 23,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles":{
+           #"Cherries" : 0,
+           #"Strawberries" : 0,
+           #"Oranges" : 0,
+           #"Apples" : 0,
+           #"Melons" : 0,
+           "Galaxian" :{
+               "id": 173,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+
+           }
+        },
         "Gashapons": {
-            "Apple Chest": 34,
-            "Melon Chest": 35
+            "Apple Chest": {
+                "id": 34,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 35,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 62,
-            "Defeat Enemies": 63,
-            "Time Trial": 64
+            "Collect All Fruits": {
+                "id": 62,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Defeat Enemies": {
+                "id": 63,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 64,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Spooky": {
         "id": 24,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {},
         "Gashapons": {},
         "Missions": {
-            "Don't Die": 65,
-            "Time Trial": 66
+            "Don't Die": {
+                "id": 65,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 66,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Deadly Poisonous Meadows": {
         "id": 25,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {
+            # "Cherries" : 4,
+            # "Strawberries" : 7,
+            # "Oranges" : 3,
+            # "Apples" : 7,
+            # "Melons" : 4,
+            "Galaxian": {}
+        },
         "Gashapons": {
-            "Apple Chest": 36,
-            "Orange Chest": 37,
-            "Melon Chest": 38
+            "Apple Chest": {
+                "id": 36,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Orange Chest": {
+                "id": 37,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 38,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 67,
-            "Destroy Bear Traps": 68,
-            "Time Trial": 69
+            "Collect All Fruits": {
+                "id": 67,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Destroy Bear Traps": {
+                "id": 68,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 69,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "A Long Poisonous Tongue": {
         "id": 26,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {},
         "Gashapons": {},
         "Missions": {
-            "Don't Die": 70,
-            "Time Trial": 71
+            "Don't Die": {
+                "id": 70,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 71,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Harsh Harsh Winds": {
         "id": 27,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {
+            # "Cherries" : 4,
+            # "Strawberries" : 7,
+            # "Oranges" : 3,
+            # "Apples" : 7,
+            # "Melons" : 4,
+            "Galaxian": {}
+        },
         "Gashapons": {
-            "Strawberry Chest": 39,
-            "Orange Chest": 40,
-            "Melon Chest": 41
+            "Strawberry Chest": {
+                "id": 39,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Orange Chest": {
+                "id": 40,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 41,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 72,
-            "Score 20,000": 73,
-            "Time Trial": 74,
+            "Collect All Fruits": {
+                "id": 72,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Score 20,000": {
+                "id": 73,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 74,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
         }
     },
     "Hunter of Darkness": {
         "id": 28,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {},
         "Gashapons": {},
         "Missions": {
-            "Don't Die": 75,
-            "Time Trial": 76
+            "Don't Die": {
+                "id": 75,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 76,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Pro Thunder Skater": {
         "id": 29,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {
+            # "Cherries" : 4,
+            # "Strawberries" : 7,
+            # "Oranges" : 3,
+            # "Apples" : 7,
+            # "Melons" : 4,
+            "Galaxian": {}
+        },
         "Gashapons": {
-            "Strawberry Chest": 42,
-            "Orange Chest": 43,
-            "Melon Chest": 44
+            "Strawberry Chest": {
+                "id": 42,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Orange Chest": {
+                "id": 43,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 44,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 77,
-            "Destroy Crates": 78,
-            "Time Trial": 79
+            "Collect All Fruits": {
+                "id": 77,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Destroy Crates": {
+                "id": 78,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 79,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Boom! Boom! Clap!": {
         "id": 30,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {},
         "Gashapons": {},
         "Missions": {
-            "Don't Die": 80,
-            "Time Trial": 81
+            "Don't Die": {
+                "id": 80,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 81,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Hot! Fire Trouble": {
         "id": 31,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {
+            # "Cherries" : 4,
+            # "Strawberries" : 7,
+            # "Oranges" : 3,
+            # "Apples" : 7,
+            # "Melons" : 4,
+            "Galaxian": {}
+        },
         "Gashapons": {
-            "Cherry Chest": 45,
-            "Apple Chest": 46,
-            "Melon Chest": 47
+            "Cherry Chest": {
+                "id": 45,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Apple Chest": {
+                "id": 46,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 47,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 82,
-            "Score 25,000": 83,
-            "Time Trial": 84
+            "Collect All Fruits": {
+                "id": 82,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Score 25,000": {
+                "id": 83,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 84,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Burning-Hot Beats": {
         "id": 32,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {},
         "Gashapons": {},
         "Missions": {
-            "Don't Die": 85,
-            "Time Trial": 86
+            "Don't Die": {
+                "id": 85,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 86,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Sharks Everywhere": {
         "id": 33,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {
+            # "Cherries" : 4,
+            # "Strawberries" : 7,
+            # "Oranges" : 3,
+            # "Apples" : 7,
+            # "Melons" : 4,
+            "Galaxian": {}
+        },
         "Gashapons": {
-            "Orange Chest": 48,
-            "Strawberry Chest": 49,
-            "Melon Chest": 50
+            "Orange Chest": {
+                "id": 48,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Strawberry Chest": {
+                "id": 49,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 50,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 87,
-            "Score 24,000": 88,
-            "Time Trial": 89
+            "Collect All Fruits": {
+                "id": 87,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Score 24,000": {
+                "id": 88,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 89,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Pac-Marine Battle!": {
         "id": 34,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {},
         "Gashapons": {},
         "Missions": {
-            "Don't Die": 90,
-            "Time Trial": 91
+            "Don't Die": {
+                "id": 90,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 91,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Clumsy Bayou": {
         "id": 35,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {
+            # "Cherries" : 4,
+            # "Strawberries" : 7,
+            # "Oranges" : 3,
+            # "Apples" : 7,
+            # "Melons" : 4,
+            "Galaxian": {}
+        },
         "Gashapons": {
-            "Orange Chest": 51,
-            "Apple Chest": 52,
-            "Melon Chest": 53
+            "Orange Chest": {
+                "id": 51,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Apple Chest": {
+                "id": 52,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Melon Chest": {
+                "id": 53,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         },
         "Missions": {
-            "Collect All Fruits": 92,
-            "Defeat Enemies": 93,
-            "Time Trial": 94
+            "Collect All Fruits": {
+                "id": 92,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Defeat Enemies": {
+                "id": 93,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 94,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Legendary Story": {
         "id": 36,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {},
         "Gashapons": {},
         "Missions": {
-            "Don't Die": 95,
-            "Time Trial": 96
+            "Don't Die": {
+                "id": 95,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 96,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     },
     "Flying Dark Shadow": {
         "id": 37,
+        "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Collectibles": {},
         "Gashapons": {},
         "Missions": {
-            "Don't Die": 97,
-            "Time Trial": 98
+            "Don't Die": {
+                "id": 97,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            },
+            "Time Trial": {
+                "id": 98,
+                "fm_rules": "",
+                "am_rules": "",
+                "ag_rules": ""
+            }
         }
     }
 }

@@ -8,8 +8,8 @@ class GoalBoss(Choice):
     """
 
     display_name = "Goal Boss"
-    option_Spooky = 0
-    option_TocMan = 1
+    option_spooky = 0
+    option_toc_man = 1
 
 class LevelRandomizer(Toggle):
     """
@@ -49,6 +49,21 @@ class MovesToRandomize(OptionSet):
 
     display_name = "Moves to Randomize"
     default = ["Super Butt Bounce", "Flip Kick", "Rev Roll", "Pac-Dot Attack", "Flutter"]
+
+class MoveRandomizerLogicDifficulty(Choice):
+    """
+    If move_randomizer is enabled, choose how difficult the logic will be. Does not reflect in-game difficulty selection.
+
+    Fairy Mode: Mostly intended logic. Some thinking required.
+    Adventure Mode: Mostly unintended logic. Includes difficult tricks, glitches, and restart/death abuse.
+    Anything goes: Unfun logic. Includes the hardest tricks and glitches.
+    """
+
+    display_name = "Move Randomizer Logic Difficulty"
+    option_fairy_mode = 0
+    option_adventure_mode = 1
+    option_anything_goes = 2
+
 
 class FruitSwitches(Toggle):
     """
@@ -101,6 +116,7 @@ class PMW2RepacOptions(PerGameCommonOptions):
     random_starting_levels: RandomStartingLevels
     move_randomizer: MoveRandomizer
     moves_to_randomize: MovesToRandomize
+    logic_difficulty: MoveRandomizerLogicDifficulty
     fruit_switches: FruitSwitches
     #fruitsanity: Fruitsanity
     pac_dot_weight: PacDotWeight

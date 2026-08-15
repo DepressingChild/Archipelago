@@ -149,11 +149,21 @@ def create_all_items(world: PMW2RepacWorld) -> None:
                 if move == "Butt Bounce" or move == "Super Butt Bounce":
                     move = "Progressive Butt Bounce"
                 world.push_precollected(world.create_item(move))
+    else:
+        moves = set(data.movement_data.keys())
+        moves.remove("Progressive Butt Bounce")
+        for move in moves:
+            world.push_precollected(world.create_item(move))
+        world.push_precollected(world.create_item("Progressive Butt Bounce"))
+        world.push_precollected(world.create_item("Progressive Butt Bounce"))
 
     if world.options.fruit_switches:
         fruit_switches = sorted(data.level_data.keys())
         world.random.shuffle(fruit_switches)
         world.push_precollected(world.create_item(fruit_switches.pop()))
+    else:
+        for switch in data.fruit_switch_data.keys():
+            world.push_precollected(world.create_item(switch))
 
 def get_random_filler_item(world: PMW2RepacWorld) -> str:
 
