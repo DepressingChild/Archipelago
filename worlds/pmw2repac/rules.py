@@ -125,13 +125,25 @@ def set_rule_with_strings(world: PMW2RepacWorld, rules: str, rules_type: str, lo
         single_rule = True_()
         if is_all_fruits:
             single_rule = hasAllFruitSwitches
+        if location.__contains__("Gashapon"):
+            if location.__contains__("Cherry"):
+                rule += "&cs"
+            elif location.__contains__("Strawberry"):
+                rule += "&ss"
+            elif location.__contains__("Orange"):
+                rule += "&os"
+            elif location.__contains__("Apple"):
+                rule += "&as"
+            elif location.__contains__("Melon"):
+                rule += "&ms"
         moves = rule.split("&")
         for move in moves:
             if move == "": continue
             single_rule = single_rule & rule_convert[move]
+
         single_rules.append(single_rule)
 
-    if "NONE" in single_rules: return
+    #if "NONE" in single_rules: return
     for rule in single_rules:
         final_rule = final_rule | rule
     # print(location)

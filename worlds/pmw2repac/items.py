@@ -72,7 +72,7 @@ def create_all_items(world: PMW2RepacWorld) -> None:
 
     if world.options.level_randomizer:
 
-        # For whatever reason, this segment has a chance to create a duplicate level AND/OR give excluded levels as a starting level.
+        # For whatever reason, this segment has a chance to create a duplicate level
         # Running this same segment in a separate Python script does NOT produce these issues. Why? idfk.
 
         #Exclude levels from random starting levels

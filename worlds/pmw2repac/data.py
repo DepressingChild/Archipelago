@@ -125,8 +125,8 @@ level_data = {
             },
             "Melon Chest": {
                 "id": 3,
-                "fm_rules": "sbb",
-                "am_rules": "bb&fk | bb&dt | bb&f",
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "bb&fk | bb&dt | bb&rr | bb&f | sbb",
                 "ag_rules": ""
             }
         },
@@ -134,18 +134,18 @@ level_data = {
             "Collect All Fruits": {
                 "id": 4,
                 "fm_rules": "sbb&fk | sbb&dt",
-                "am_rules": "",
+                "am_rules": "bb&fk | sbb",
                 "ag_rules": ""
             },
             "Destroy Bear Traps": {
                 "id": 5,
-                "fm_rules": "",
+                "fm_rules": "bb&fk | bb&dt | sbb",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 6,
-                "fm_rules": "",
+                "fm_rules": "bb",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -154,8 +154,8 @@ level_data = {
     "Pac-Dot Pond": {
         "id": 3,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&rr",
+            "am_rules": "sbb",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -166,8 +166,8 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 32,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "sbb",
                 "ag_rules": ""
 
            }
@@ -175,34 +175,34 @@ level_data = {
         "Gashapons":{
             "Apple Chest": {
                 "id": 4,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&fk",
+                "am_rules": "sbb",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 5,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&fk",
+                "am_rules": "sbb",
                 "ag_rules": ""
             }
         },
         "Missions":{
             "Collect All Fruits": {
                 "id": 7,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&fk",
+                "am_rules": "sbb",
                 "ag_rules": ""
             },
             "Defeat All Enemies": {
                 "id": 8,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&fk",
+                "am_rules": "sbb",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 9,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "sbb",
                 "ag_rules": ""
             }
         }
@@ -210,7 +210,7 @@ level_data = {
     "Clyde's Frog": {
         "id": 4,
         "Clear": {
-            "fm_rules": "",
+            "fm_rules": "bb | fk | dt | rr",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -219,13 +219,13 @@ level_data = {
         "Missions":{
             "Don't Die": {
                 "id": 10,
-                "fm_rules": "",
+                "fm_rules": "bb | fk | dt | rr",
                 "am_rules": "",
                 "ag_rules": ""
             },
-            "Time Trial": {
+            "Clear Stage": {
                 "id": 11,
-                "fm_rules": "",
+                "fm_rules": "bb | fk | dt | rr",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -234,8 +234,8 @@ level_data = {
     "B-Doing Woods": {
         "id": 5,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&fk | bb&dt | bb&f | sbb",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -246,8 +246,8 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 119,
-                "fm_rules": "",
-                "am_rules": "",
+               "fm_rules": "bb&rr&as",
+               "am_rules": "bb&fk&as | bb&dt&as | bb&f&as | sbb&as",
                 "ag_rules": ""
 
            }
@@ -255,34 +255,34 @@ level_data = {
         "Gashapons":{
             "Strawberry Chest": {
                 "id": 6,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "bb&fk | bb&dt",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 7,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | sbb&rr&dt",
+                "am_rules": "bb&fk | bb&dt",
                 "ag_rules": ""
             }
         },
         "Missions":{
             "Collect All Fruits": {
                 "id": 12,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | sbb&rr&dt",
+                "am_rules": "bb&fk | bb&dt",
                 "ag_rules": ""
             },
             "Score 20,000": {
                 "id": 13,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&fk | bb&dt | bb&f | sbb",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 14,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&fk | bb&dt | bb&f | sbb",
                 "ag_rules": ""
             }
         }
@@ -290,8 +290,8 @@ level_data = {
     "Treewood Forest": {
         "id": 6,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&fk&f | bb&dt",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -302,8 +302,8 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 54,
-                "fm_rules": "",
-                "am_rules": "",
+               "fm_rules": "bb&rr&os",
+               "am_rules": "bb&fk&os | bb&dt&os",
                 "ag_rules": ""
 
            }
@@ -311,34 +311,34 @@ level_data = {
         "Gashapons": {
             "Cherry Chest": {
                 "id": 8,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&fk&f | bb&dt",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 9,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&fk&f | bb&dt",
                 "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 15,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&fk&f | bb&dt",
                 "ag_rules": ""
             },
             "Destroy Crates": {
                 "id": 16,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&fk&f | bb&dt",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 17,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&fk&f | bb&dt",
                 "ag_rules": ""
             }
         }
@@ -346,8 +346,8 @@ level_data = {
     "Butane Pain": {
         "id": 7,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -358,8 +358,8 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 57,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&as",
+                "am_rules": "bb&fk&f&as | sbb&f&as",
                 "ag_rules": ""
 
            }
@@ -367,34 +367,34 @@ level_data = {
         "Gashapons": {
             "Melon Chest": {
                 "id": 10,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&fk",
+                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
                 "ag_rules": ""
             },
             "Strawberry Chest": {
                 "id": 11,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&f | bb&rr&dt | sbb&rr",
+                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
                 "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 18,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&fk",
+                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
                 "ag_rules": ""
             },
             "Defeat Enemies": {
                 "id": 19,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&fk",
+                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&rr",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 20,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
                 "ag_rules": ""
             }
         }
@@ -402,8 +402,8 @@ level_data = {
     "Inky's Whimsy": {
         "id": 8,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&fk",
+            "am_rules": "sbb&dt",
             "ag_rules": ""
         },
         "Collectibles":{},
@@ -411,14 +411,14 @@ level_data = {
         "Missions": {
             "Don't Die": {
                 "id": 21,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&fk",
+                "am_rules": "sbb&dt",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 22,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&fk",
+                "am_rules": "sbb&dt",
                 "ag_rules": ""
             }
         }
@@ -438,36 +438,36 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 10,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&fk | bb&dt | bb&rr",
+                "am_rules": "sbb",
                 "ag_rules": ""
            }
         },
         "Gashapons": {
             "Cherry Chest": {
                 "id": 12,
-                "fm_rules": "",
+                "fm_rules": "sbb | fk | dt",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 13,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "sbb&fk | sbb&dt | sbb&rr",
+                "am_rules": "bb&fk | bb&dt | bb&rr | sbb",
                 "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 23,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "bb&fk | bb&dt | sbb",
                 "ag_rules": ""
             },
             "Destroy Crates": {
                 "id": 24,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "sbb",
+                "am_rules": "fk | dt",
                 "ag_rules": ""
             },
             "Time Trial": {
@@ -482,8 +482,8 @@ level_data = {
     "Avalanche Alley": {
         "id": 10,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&f | bb&dt",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -494,42 +494,42 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 25,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk&os | bb&rr&dt&os",
+                "am_rules": "bb&f&fk | bb&dt",
                 "ag_rules": ""
            }
         },
         "Gashapons": {
             "Melon Chest": {
                 "id": 14,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "bb&f&fk | bb&dt",
                 "ag_rules": ""
             },
             "Strawberry Chest": {
                 "id": 15,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "bb&f&fk | bb&dt",
                 "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 26,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "bb&f&fk | bb&dt",
                 "ag_rules": ""
             },
             "Defeat Enemies": {
                 "id": 27,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk",
+                "am_rules": "bb&f&fk",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 28,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&f | bb&dt",
                 "ag_rules": ""
             }
         }
@@ -549,7 +549,7 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 53,
-                "fm_rules": "",
+                "fm_rules": "fk&ms | dt&ms",
                 "am_rules": "",
                 "ag_rules": ""
 
@@ -558,13 +558,13 @@ level_data = {
         "Gashapons": {
             "Orange Chest": {
                 "id": 16,
-                "fm_rules": "",
+                "fm_rules": "fk | dt",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Strawberry Chest": {
                 "id": 17,
-                "fm_rules": "",
+                "fm_rules": "fk | dt",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -572,13 +572,13 @@ level_data = {
         "Missions": {
             "Collect All Fruits": {
                 "id": 29,
-                "fm_rules": "",
+                "fm_rules": "fk | dt",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Destroy Crates": {
                 "id": 30,
-                "fm_rules": "",
+                "fm_rules": "fk | dt",
                 "am_rules": "",
                 "ag_rules": ""
             },
@@ -593,7 +593,7 @@ level_data = {
     "Pinky's Revenge": {
         "id": 12,
         "Clear": {
-            "fm_rules": "",
+            "fm_rules": "bb&fk",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -602,13 +602,13 @@ level_data = {
         "Missions": {
             "Don't Die": {
                 "id": 32,
-                "fm_rules": "",
+                "fm_rules": "bb&fk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 33,
-                "fm_rules": "",
+                "fm_rules": "bb&fk",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -617,8 +617,8 @@ level_data = {
     "Into the Volcano!": {
         "id": 13,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&f",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -629,8 +629,8 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 8,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&f",
                 "ag_rules": ""
 
            }
@@ -638,34 +638,34 @@ level_data = {
         "Gashapons": {
             "Strawberry Chest": {
                 "id": 18,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&dt | sbb&rr",
+                "am_rules": "bb&f&fk | bb&f&dt | sbb&f",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 19,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "sbb&rr&fk",
+                "am_rules": "sbb&f&dt | sbb&f&fk | sbb&rr&dt",
                 "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 34,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "sbb&rr&fk",
+                "am_rules": "sbb&f&fk | sbb&f&dt | sbb&rr&dt",
                 "ag_rules": ""
             },
             "Never hang off an edge": { #Should maybe change to mention only in that one room.
                 "id": 35,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&f",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 36,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&f",
                 "ag_rules": ""
             }
         }
@@ -673,8 +673,8 @@ level_data = {
     "Volcanic Panic": {
         "id": 14,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&rr",
+            "am_rules": "sbb&f | bb&fk&f",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -685,43 +685,43 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 29,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "fm_rules": "bb&rr&fk&as | bb&rr&dt&as",
+                "am_rules": "sbb&rr&as | sbb&f&as | bb&fk&f&as",
+                "ag_rules": "rr&fk&as | rr&dt&as | rr&sbb&as"
 
            }
         },
         "Gashapons": {
             "Cherry Chest": {
                 "id": 20,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "bb&fk&f | sbb&dt&f",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 21,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | sbb&rr&dt | bb&rr&dt&f",
+                "am_rules": "bb&fk&f | sbb&dt&f",
                 "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 37,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | sbb&rr&dt",
+                "am_rules": "sbb&dt&f | bb&fk&f",
                 "ag_rules": ""
             },
             "Defeat Enemies": {
                 "id": 38,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&dt",
+                "am_rules": "sbb&f | bb&fk&f",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 39,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "sbb&f | bb&fk&f",
                 "ag_rules": ""
             }
         }
@@ -729,7 +729,7 @@ level_data = {
     "Magma Opus": {
         "id": 15,
         "Clear": {
-            "fm_rules": "",
+            "fm_rules": "sbb",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -741,7 +741,7 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 56,
-                "fm_rules": "",
+                "fm_rules": "sbb&fk&cs | sbb&dt&cs",
                 "am_rules": "",
                 "ag_rules": ""
 
@@ -750,13 +750,13 @@ level_data = {
         "Gashapons": {
             "Strawberry Chest": {
                 "id": 22,
-                "fm_rules": "",
+                "fm_rules": "sbb&fk | sbb&dt",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 23,
-                "fm_rules": "",
+                "fm_rules": "sbb&fk | sbb&dt",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -764,19 +764,19 @@ level_data = {
         "Missions": {
             "Collect All Fruits": {
                 "id": 40,
-                "fm_rules": "",
+                "fm_rules": "sbb&fk | sbb&dt",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Never fall down a slope": {
                 "id": 41,
-                "fm_rules": "",
+                "fm_rules": "sbb",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 42,
-                "fm_rules": "",
+                "fm_rules": "sbb",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -785,7 +785,7 @@ level_data = {
     "Blinky in the Caldera": {
         "id": 16,
         "Clear": {
-            "fm_rules": "",
+            "fm_rules": "bb",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -794,13 +794,13 @@ level_data = {
         "Missions": {
             "Don't Die": {
                 "id": 43,
-                "fm_rules": "",
+                "fm_rules": "bb",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 44,
-                "fm_rules": "",
+                "fm_rules": "bb",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -1007,38 +1007,38 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 42,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "fm_rules": "fk&ss | dt&ss",
+                "am_rules": "sbb&f&ss",
+                "ag_rules": "sbb&ss"
 
            }
         },
         "Gashapons": {
             "Apple Chest": {
                 "id": 30,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "fm_rules": "fk | dt",
+                "am_rules": "sbb&f",
+                "ag_rules": "sbb"
             },
             "Melon Chest": {
                 "id": 31,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "fm_rules": "fk | dt",
+                "am_rules": "sbb&f",
+                "ag_rules": "sbb"
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 56,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "fm_rules": "fk | dt",
+                "am_rules": "sbb&f",
+                "ag_rules": "sbb"
             },
             "Score 11,000": {
                 "id": 57,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "fm_rules": "fk | dt",
+                "am_rules": "sbb&f",
+                "ag_rules": "sbb"
             },
             "Time Trial": {
                 "id": 58,
@@ -1051,8 +1051,8 @@ level_data = {
     "Night Crawling": {
         "id": 22,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&dt",
             "ag_rules": ""
         },
         "Collectibles": {
@@ -1066,34 +1066,34 @@ level_data = {
         "Gashapons": {
             "Melon Chest": {
                 "id": 32,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
+                "am_rules": "bb&rr&fk | bb&dt",
                 "ag_rules": ""
             },
             "Strawberry Chest": {
                 "id": 33,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "bb&dt | sbb&rr",
                 "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 59,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
+                "am_rules": "bb&dt | bb&rr&fk",
                 "ag_rules": ""
             },
             "Destroy Crates": {
                 "id": 60,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
+                "am_rules": "bb&dt | bb&rr&fk",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 61,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&dt",
                 "ag_rules": ""
             }
         }
@@ -1101,8 +1101,8 @@ level_data = {
     "Ghost Bayou": {
         "id": 23,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&dt",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -1113,7 +1113,7 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 173,
-                "fm_rules": "",
+                "fm_rules": "bb&fk&os | bb&dt&os",
                 "am_rules": "",
                 "ag_rules": ""
 
@@ -1122,34 +1122,34 @@ level_data = {
         "Gashapons": {
             "Apple Chest": {
                 "id": 34,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&dt | bb&fk&f | bb&dt&f",
+                "am_rules": "bb&fk | sbb | bb&dt",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 35,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "sbb&rr&fk | sbb&rr&dt&f",
+                "am_rules": "bb&dt | bb&fk",
                 "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 62,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "fm_rules": "sbb&rr&fk | sbb&rr&dt&f",
+                "am_rules": "bb&rr&fk",
+                "ag_rules": "bb&dt"
             },
             "Defeat Enemies": {
                 "id": 63,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "sbb&rr",
+                "ag_rules": "bb&dt"
             },
             "Time Trial": {
                 "id": 64,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&dt",
                 "ag_rules": ""
             }
         }
@@ -1157,7 +1157,7 @@ level_data = {
     "Spooky": {
         "id": 24,
         "Clear": {
-            "fm_rules": "",
+            "fm_rules": "sbb&fk&rr | sbb&dt&rr",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -1166,13 +1166,13 @@ level_data = {
         "Missions": {
             "Don't Die": {
                 "id": 65,
-                "fm_rules": "",
+                "fm_rules": "sbb&fk&rr | sbb&dt&rr",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 66,
-                "fm_rules": "",
+                "fm_rules": "sbb&fk&rr | sbb&dt&rr",
                 "am_rules": "",
                 "ag_rules": ""
             }
