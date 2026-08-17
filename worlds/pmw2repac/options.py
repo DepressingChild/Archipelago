@@ -11,6 +11,27 @@ class GoalBoss(Choice):
     option_spooky = 0
     option_toc_man = 1
 
+class MissionChecks(Toggle):
+    """
+    Debug purposes
+    """
+
+    display_name = "Mission Checks"
+
+class GashaponChecks(Toggle):
+    """
+    Debug purposes
+    """
+
+    display_name = "Gashapon Checks"
+
+class GalaxianChecks(Toggle):
+    """
+    Debug purposes
+    """
+
+    display_name = "Galaxian Checks"
+
 class LevelRandomizer(Toggle):
     """
     Levels get randomized into the item pool instead of unlocking them with Golden Fruits or Keys.
@@ -112,6 +133,9 @@ class TrapWeight(Range):
 @dataclass
 class PMW2RepacOptions(PerGameCommonOptions):
     goal_boss: GoalBoss
+    mission_checks: MissionChecks
+    gashapon_checks: GashaponChecks
+    galaxian_checks: GalaxianChecks
     level_randomizer: LevelRandomizer
     random_starting_levels: RandomStartingLevels
     move_randomizer: MoveRandomizer

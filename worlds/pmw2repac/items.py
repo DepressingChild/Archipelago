@@ -126,6 +126,7 @@ def create_all_items(world: PMW2RepacWorld) -> None:
             number_of_unfilled_locations -= 1
 
     for costume in data.costume_data.keys():
+        if number_of_unfilled_locations == 0: break
         itempool.append(world.create_item(costume + " costume"))
         number_of_unfilled_locations -= 1
 
