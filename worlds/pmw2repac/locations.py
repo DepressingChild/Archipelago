@@ -69,8 +69,6 @@ def create_locations(world: PMW2RepacWorld) -> None:
                 location = PMW2RepacLocation(world.player, level + " - Mission - "  + mission, missionData["id"] + data.MISSION_OFFSET, region)
                 region.locations.append(location)
 
-        #Add galaxian locations
-
         #Add fruit locations
 
 def create_events(world: PMW2RepacWorld) -> None:
@@ -79,5 +77,12 @@ def create_events(world: PMW2RepacWorld) -> None:
     #spooky.add_event("Defeat Spooky", "Spooky Defeated", location_type=PMW2RepacLocation, item_type=items.PMW2RepacItem)
     #spooky2 = world.get_region("Legendary Story")
     #spooky2.add_event("Defeat Spooky 2", "Spooky 2 Defeated", location_type=PMW2RepacLocation, item_type=items.PMW2RepacItem)
+    # if world.options.level_randomizer == 0:
+    #     for level, levelData in data.level_data.items():
+    #         region = world.get_region(level)
+    #         loc = PMW2RepacLocation(world.player, "Clear " + level, None, region)
+    #         region.locations.append(loc)
+    #
+    #         loc.place_locked_item(items.PMW2RepacItem("Cleared" + level, ItemClassification.progression, None, world.player))
 
 

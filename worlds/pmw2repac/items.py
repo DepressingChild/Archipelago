@@ -66,7 +66,7 @@ def create_item(world: PMW2RepacWorld, name: str) -> PMW2RepacItem:
 
 def create_all_items(world: PMW2RepacWorld) -> None:
 
-    starting_levels = {"Pac-Village"}
+    starting_levels = ["Pac-Village"]
 
     itempool: list[Item] = []
 
@@ -76,29 +76,40 @@ def create_all_items(world: PMW2RepacWorld) -> None:
         # Running this same segment in a separate Python script does NOT produce these issues. Why? idfk.
 
         #Exclude levels from random starting levels
-        excluded_levels = {"Pac-Village", "Spooky", "Legendary Story", "Flying Dark Shadow"}
-        if world.options.goal_boss == 0:
-            for level in data.level_data.keys():
-                if data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
-                    excluded_levels.add(level)
-        #Shuffle levels and add starting levels
-        level_names = set(sorted(data.level_data.keys()))
-        temp_names = level_names.copy()
-        for level in level_names:
-            if level in excluded_levels:
-                temp_names.remove(level)
-        level_names = temp_names
-        world.random.shuffle(list(level_names))
-        for i in range(world.options.random_starting_levels - 1):
-            if i not in excluded_levels:
-                if i not in starting_levels:
-                    starting_levels.add(level_names.pop())
-                else:
-                    i -= 1
-            else:
-                i -= 1
+        beatable_starting_levels = []
 
-        for level in set(data.level_data.keys()):
+        if world.options.move_randomizer:
+            beatable_starting_levels = ["Ice River Run", "Blade Mountain", "Yellow Pac-Marine", "Whale on a Sub", "Haunted Boardwalk", "Pro Thunder Skater", "Pac-Marine Battle!"]
+            if world.options.moves_to_randomize.__contains__("Butt Bounce") or world.options.moves_to_randomize.__contains__("Super Butt Bounce"):
+                beatable_starting_levels = ["The Bear Basics", "Canyon Chaos", "Clyde's Frog", "Ice River Run", "Blade Mountain", "Blinky in the Caldera", "Yellow Pac-Marine", "Whale on a Sub", "Haunted Boardwalk", "A Long Poisonous Tongue", "Pro Thunder Skater", "Burning-Hot Beats", "Pac-Marine Battle!"]
+        else:
+            excluded_levels = ["Pac-Village", "Spooky", "Legendary Story", "Flying Dark Shadow"]
+            if world.options.goal_boss == 0:
+                for level in data.level_data.keys():
+                    if data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
+                        excluded_levels.append(level)
+            beatable_starting_levels = list(set(data.level_data.keys()) - set(excluded_levels))
+        #Shuffle levels and add starting levels
+            # level_names = (sorted(data.level_data.keys()))
+            # temp_names = level_names.copy()
+            # for level in level_names:
+            #     if level in excluded_levels:
+            #         temp_names.remove(level)
+            # level_names = temp_names
+            # world.random.shuffle(level_names)
+            # beatable_starting_levels = level_names
+
+        for level in beatable_starting_levels:
+            if world.options.goal_boss == 0 and data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
+                beatable_starting_levels.remove(level)
+
+        world.random.shuffle(beatable_starting_levels)
+        for _ in range(world.options.random_starting_levels - 1):
+            starting_levels.append(beatable_starting_levels.pop())
+
+        for level in data.level_data.keys():
+            if world.options.goal_boss == 0 and data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
+                continue
             if level not in starting_levels:
                 itempool.append(world.create_item(level))
 
@@ -125,9 +136,12 @@ def create_all_items(world: PMW2RepacWorld) -> None:
             itempool.append(world.create_item(move))
             number_of_unfilled_locations -= 1
 
-    for costume in data.costume_data.keys():
+    leftover_costumes = list(data.costume_data.keys())
+    world.random.shuffle(leftover_costumes)
+    for costume in leftover_costumes:
         if number_of_unfilled_locations == 0: break
         itempool.append(world.create_item(costume + " costume"))
+        leftover_costumes.remove(costume)
         number_of_unfilled_locations -= 1
 
     #At the end, add filler.
@@ -165,6 +179,9 @@ def create_all_items(world: PMW2RepacWorld) -> None:
     else:
         for switch in data.fruit_switch_data.keys():
             world.push_precollected(world.create_item(switch))
+
+    for costume in leftover_costumes:
+        world.push_precollected(world.create_item(costume + " costume"))
 
 def get_random_filler_item(world: PMW2RepacWorld) -> str:
 

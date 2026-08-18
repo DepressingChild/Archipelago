@@ -20,4 +20,8 @@ def create_regions(world: PMW2RepacWorld) -> None:
         region = Region(level, world.player, world.multiworld)
         world.multiworld.regions.append(region)
 
-        world_map.connect(region, "World Map to " + level)
+        entrance = "World Map to " + level
+        world_map.connect(region, entrance)
+
+        if world.options.level_randomizer == 0:
+            world.multiworld.register_indirect_condition(region, entrance)
