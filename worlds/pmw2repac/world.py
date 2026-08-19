@@ -40,4 +40,4 @@ class PMW2RepacWorld(World):
         return items.get_random_filler_item(self)
 
     def fill_slot_data(self) -> Mapping[str, Any]:
-        return self.options.as_dict("goal_boss", "mission_checks", "gashapon_checks", "galaxian_checks", "level_randomizer", "random_starting_levels", "move_randomizer", "moves_to_randomize", "logic_difficulty", "fruit_switches", "pac_dot_weight", "points_weight", "trap_weight")
+        return self.options.as_dict("goal_boss", "mission_checks", "gashapon_checks", "galaxian_checks", "level_randomizer", "random_starting_levels", "move_randomizer", "moves_to_randomize", "logic_difficulty", "fruit_switches", "exclude_goal_locations", "pac_dot_weight", "points_weight", "trap_weight")

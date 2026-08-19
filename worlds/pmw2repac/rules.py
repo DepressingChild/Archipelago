@@ -140,11 +140,11 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
 
             for check, ruleData in checkData.items():
                 rules_string = ""
-                location = level + " - "
+                loc = level + " - "
                 if checkSet == "Collectibles":
-                    location += check
+                    loc += check
                 else:
-                    location += checkSet[:-1] + " - " + check
+                    loc += checkSet[:-1] + " - " + check
 
                 is_all_fruits = check == "Collect All Fruits"
 
@@ -160,8 +160,8 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
                     if rules_string == "": continue
 
                 try:
-                    loc = world.get_location(location)
-                    world.set_rule(loc, create_rule_with_strings(world, rules_string, location, is_all_fruits))
+                    location = world.get_location(loc)
+                    world.set_rule(location, create_rule_with_strings(world, rules_string, loc, is_all_fruits))
                 except KeyError:
                     pass
 
@@ -179,8 +179,9 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
             if rules_string == "": continue
 
         try:
-            location = world.get_location(level + " - Clear")
-            world.set_rule(location, create_rule_with_strings(world, rules_string, level + " - Clear", False))
+            loc = level + " - Clear"
+            location = world.get_location(loc)
+            world.set_rule(location, create_rule_with_strings(world, rules_string, loc, False))
         except KeyError:
             pass
 

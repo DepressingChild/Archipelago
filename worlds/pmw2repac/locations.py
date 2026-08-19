@@ -69,6 +69,13 @@ def create_locations(world: PMW2RepacWorld) -> None:
                 location = PMW2RepacLocation(world.player, level + " - Mission - "  + mission, missionData["id"] + data.MISSION_OFFSET, region)
                 region.locations.append(location)
 
+    if world.options.exclude_goal_locations:
+        world.options.exclude_locations.value.update(
+            ["Spooky - Clear", "Spooky - Mission - Don't Die", "Spooky - Mission - Time Trial",
+            "Legendary Story - Clear", "Legendary Story - Mission - Don't Die", "Legendary Story - Mission - Time Trial",
+            "Flying Dark Shadow - Clear", "Flying Dark Shadow - Mission - Don't Die", "Flying Dark Shadow - Mission - Time Trial"])
+        if world.options.goal_boss == 0:
+            world.options.exclude_locations.value.update(["Pac-Village - Mission - Collect All Fruits"])
         #Add fruit locations
 
 def create_events(world: PMW2RepacWorld) -> None:

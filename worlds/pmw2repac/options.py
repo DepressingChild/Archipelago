@@ -100,6 +100,14 @@ class FruitSwitches(Toggle):
 
     #display_name = "Fruitsanity"
 
+class ExcludeGoalLocations(Toggle):
+    """
+    Prevents important items from appearing in locations that require most/all goal items.
+    Includes goal level locations and Pac-Village mission with Spooky goal.
+    """
+
+    display_name = "Exclude Goal Locations"
+
 class PacDotWeight(Range):
     """
     Chance that unfilled locations have Pac-Dots.
@@ -143,6 +151,7 @@ class PMW2RepacOptions(PerGameCommonOptions):
     logic_difficulty: MoveRandomizerLogicDifficulty
     fruit_switches: FruitSwitches
     #fruitsanity: Fruitsanity
+    exclude_goal_locations: ExcludeGoalLocations
     pac_dot_weight: PacDotWeight
     points_weight: PointsWeight
     trap_weight: TrapWeight
