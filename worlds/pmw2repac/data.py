@@ -809,7 +809,7 @@ level_data = {
     "Scuba Duba": {
         "id": 17,
         "Clear": {
-            "fm_rules": "",
+            "fm_rules": "dk",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -821,7 +821,7 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 27,
-                "fm_rules": "",
+                "fm_rules": "dk&as",
                 "am_rules": "",
                 "ag_rules": ""
 
@@ -830,13 +830,13 @@ level_data = {
         "Gashapons": {
             "Strawberry Chest": {
                 "id": 24,
-                "fm_rules": "",
+                "fm_rules": "dk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 25,
-                "fm_rules": "",
+                "fm_rules": "dk",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -844,19 +844,19 @@ level_data = {
         "Missions": {
             "Collect All Fruits": {
                 "id": 45,
-                "fm_rules": "",
+                "fm_rules": "dk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Destroy Crates": {
                 "id": 46,
-                "fm_rules": "",
+                "fm_rules": "dk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 47,
-                "fm_rules": "",
+                "fm_rules": "dk",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -865,7 +865,7 @@ level_data = {
     "Shark Attack": {
         "id": 18,
         "Clear": {
-            "fm_rules": "",
+            "fm_rules": "fk | dk",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -877,7 +877,7 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 60,
-                "fm_rules": "",
+                "fm_rules": "fk&os | dk&os",
                 "am_rules": "",
                 "ag_rules": ""
 
@@ -886,13 +886,13 @@ level_data = {
         "Gashapons": {
             "Strawberry Chest": {
                 "id": 26,
-                "fm_rules": "",
+                "fm_rules": "fk | dk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 27,
-                "fm_rules": "",
+                "fm_rules": "fk | dk",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -900,19 +900,19 @@ level_data = {
         "Missions": {
             "Collect All Fruits": {
                 "id": 48,
-                "fm_rules": "",
+                "fm_rules": "fk | dk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Never get caught by the Wild Shark": {
                 "id": 49,
-                "fm_rules": "",
+                "fm_rules": "fk | dk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 50,
-                "fm_rules": "",
+                "fm_rules": "fk | dk",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -1181,8 +1181,8 @@ level_data = {
     "Deadly Poisonous Meadows": {
         "id": 25,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&rr",
+            "am_rules": "bb | rr",
             "ag_rules": ""
         },
         "Collectibles": {
@@ -1196,40 +1196,40 @@ level_data = {
         "Gashapons": {
             "Apple Chest": {
                 "id": 36,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&fk | bb&dt | rr&fk | rr&dt",
+                "am_rules": "sbb&f | rr",
                 "ag_rules": ""
             },
             "Orange Chest": {
                 "id": 37,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&fk | bb&dt | bb&rr",
+                "am_rules": "sbb",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 38,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
+                "am_rules": "bb&fk | bb&dt",
                 "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 67,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
+                "am_rules": "bb&fk | bb&dt",
                 "ag_rules": ""
             },
             "Destroy Bear Traps": {
                 "id": 68,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&fk | bb&dt | sbb",
+                "am_rules": "rr&fk | rr&dt",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 69,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb | rr",
                 "ag_rules": ""
             }
         }
@@ -1237,7 +1237,7 @@ level_data = {
     "A Long Poisonous Tongue": {
         "id": 26,
         "Clear": {
-            "fm_rules": "",
+            "fm_rules": "bb | rr | fk",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -1246,13 +1246,13 @@ level_data = {
         "Missions": {
             "Don't Die": {
                 "id": 70,
-                "fm_rules": "",
+                "fm_rules": "bb | rr | fk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 71,
-                "fm_rules": "",
+                "fm_rules": "bb | rr | fk",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -1261,8 +1261,8 @@ level_data = {
     "Harsh Harsh Winds": {
         "id": 27,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&rr",
+            "am_rules": "sbb&fk&f | sbb&dt&f",
             "ag_rules": ""
         },
         "Collectibles": {
@@ -1276,40 +1276,40 @@ level_data = {
         "Gashapons": {
             "Strawberry Chest": {
                 "id": 39,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "sbb&fk&f | sbb&dt&f",
                 "ag_rules": ""
             },
             "Orange Chest": {
                 "id": 40,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "sbb&fk&f | sbb&dt&f",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 41,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "sbb&rr&fk | sbb&rr&fk",
+                "am_rules": "sbb&fk&f | sbb&dt&f",
                 "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 72,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "sbb&rr&fk | sbb&rr&fk",
+                "am_rules": "sbb&fk&f | sbb&dt&f",
                 "ag_rules": ""
             },
             "Score 20,000": {
                 "id": 73,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "sbb&rr",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 74,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "sbb&fk&f | sbb&dt&f",
                 "ag_rules": ""
             },
         }
@@ -1317,8 +1317,8 @@ level_data = {
     "Hunter of Darkness": {
         "id": 28,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&fk",
+            "am_rules": "sbb&dt",
             "ag_rules": ""
         },
         "Collectibles": {},
@@ -1326,14 +1326,14 @@ level_data = {
         "Missions": {
             "Don't Die": {
                 "id": 75,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&fk",
+                "am_rules": "sbb&dt",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 76,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&fk",
+                "am_rules": "sbb&dt",
                 "ag_rules": ""
             }
         }
@@ -1356,19 +1356,19 @@ level_data = {
         "Gashapons": {
             "Strawberry Chest": {
                 "id": 42,
-                "fm_rules": "",
+                "fm_rules": "fk | dt",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Orange Chest": {
                 "id": 43,
-                "fm_rules": "",
+                "fm_rules": "fk | dt",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 44,
-                "fm_rules": "",
+                "fm_rules": "fk | dt",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -1376,19 +1376,19 @@ level_data = {
         "Missions": {
             "Collect All Fruits": {
                 "id": 77,
-                "fm_rules": "",
+                "fm_rules": "fk | dt",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Destroy Crates": {
                 "id": 78,
-                "fm_rules": "",
+                "fm_rules": "fk | dt",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 79,
-                "fm_rules": "",
+                "fm_rules": "fk | dt",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -1397,7 +1397,7 @@ level_data = {
     "Boom! Boom! Clap!": {
         "id": 30,
         "Clear": {
-            "fm_rules": "",
+            "fm_rules": "bb&fk",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -1406,13 +1406,13 @@ level_data = {
         "Missions": {
             "Don't Die": {
                 "id": 80,
-                "fm_rules": "",
+                "fm_rules": "bb&fk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 81,
-                "fm_rules": "",
+                "fm_rules": "bb&fk",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -1421,8 +1421,8 @@ level_data = {
     "Hot! Fire Trouble": {
         "id": 31,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&rr",
+            "am_rules": "sbb&f | bb&fk&f",
             "ag_rules": ""
         },
         "Collectibles": {
@@ -1436,40 +1436,40 @@ level_data = {
         "Gashapons": {
             "Cherry Chest": {
                 "id": 45,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "sbb&dt&f | bb&fk&f",
                 "ag_rules": ""
             },
             "Apple Chest": {
                 "id": 46,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "sbb&dt&f | bb&fk&f",
+                "ag_rules": "rr&fk | rr&dt"
             },
             "Melon Chest": {
                 "id": 47,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "sbb&dt&f | bb&fk&f",
                 "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 82,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "sbb&dt&f | bb&fk&f",
                 "ag_rules": ""
             },
             "Score 25,000": {
                 "id": 83,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr&dt | bb&rr&fk",
+                "am_rules": "bb&rr | sbb&f | bb&fk&f",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 84,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "sbb&f | bb&fk&f",
                 "ag_rules": ""
             }
         }
@@ -1477,7 +1477,7 @@ level_data = {
     "Burning-Hot Beats": {
         "id": 32,
         "Clear": {
-            "fm_rules": "",
+            "fm_rules": "bb",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -1486,13 +1486,13 @@ level_data = {
         "Missions": {
             "Don't Die": {
                 "id": 85,
-                "fm_rules": "",
+                "fm_rules": "bb",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 86,
-                "fm_rules": "",
+                "fm_rules": "bb",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -1501,7 +1501,7 @@ level_data = {
     "Sharks Everywhere": {
         "id": 33,
         "Clear": {
-            "fm_rules": "",
+            "fm_rules": "dk | fk",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -1516,19 +1516,19 @@ level_data = {
         "Gashapons": {
             "Orange Chest": {
                 "id": 48,
-                "fm_rules": "",
+                "fm_rules": "dk | fk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Strawberry Chest": {
                 "id": 49,
-                "fm_rules": "",
+                "fm_rules": "dk | fk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 50,
-                "fm_rules": "",
+                "fm_rules": "dk | fk",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -1536,19 +1536,19 @@ level_data = {
         "Missions": {
             "Collect All Fruits": {
                 "id": 87,
-                "fm_rules": "",
+                "fm_rules": "dk | fk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Score 24,000": {
                 "id": 88,
-                "fm_rules": "",
+                "fm_rules": "dk | fk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 89,
-                "fm_rules": "",
+                "fm_rules": "dk | fk",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -1581,8 +1581,8 @@ level_data = {
     "Clumsy Bayou": {
         "id": 35,
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&dt",
             "ag_rules": ""
         },
         "Collectibles": {
@@ -1596,40 +1596,40 @@ level_data = {
         "Gashapons": {
             "Orange Chest": {
                 "id": 51,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&fk | bb&dt",
+                "am_rules": "sbb",
                 "ag_rules": ""
             },
             "Apple Chest": {
                 "id": 52,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "fm_rules": "bb&rr&fk | bb&rr&dt",
+                "am_rules": "bb&fk | bb&dt&f | sbb&dt",
+                "ag_rules": "bb&dt"
             },
             "Melon Chest": {
                 "id": 53,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
+                "am_rules": "bb&rr&fk | bb&rr&dt&f",
+                "ag_rules": "bb&dt"
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 92,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
+                "am_rules": "bb&rr&fk | bb&rr&dt&f",
+                "ag_rules": "bb&dt"
             },
             "Defeat Enemies": {
                 "id": 93,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
+                "am_rules": "bb&rr&fk | bb&rr&dt&f",
+                "ag_rules": "bb&dt"
             },
             "Time Trial": {
                 "id": 94,
-                "fm_rules": "",
-                "am_rules": "",
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&dt",
                 "ag_rules": ""
             }
         }
@@ -1637,7 +1637,7 @@ level_data = {
     "Legendary Story": {
         "id": 36,
         "Clear": {
-            "fm_rules": "",
+            "fm_rules": "sbb&fk&rr | sbb&dt&rr",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -1646,13 +1646,13 @@ level_data = {
         "Missions": {
             "Don't Die": {
                 "id": 95,
-                "fm_rules": "",
+                "fm_rules": "sbb&fk&rr | sbb&dt&rr",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 96,
-                "fm_rules": "",
+                "fm_rules": "sbb&fk&rr | sbb&dt&rr",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -1661,7 +1661,7 @@ level_data = {
     "Flying Dark Shadow": {
         "id": 37,
         "Clear": {
-            "fm_rules": "",
+            "fm_rules": "sbb&fk",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -1670,13 +1670,13 @@ level_data = {
         "Missions": {
             "Don't Die": {
                 "id": 97,
-                "fm_rules": "",
+                "fm_rules": "sbb&fk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 98,
-                "fm_rules": "",
+                "fm_rules": "sbb&fk",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -1752,7 +1752,8 @@ movement_data = {
     "Flip Kick": 1,
     "Rev Roll": 2,
     "Pac-Dot Attack": 3,
-    "Flutter": 4
+    "Flutter": 4,
+    "Progressive Dolphin Kick": 5
 }
 
 filler_data = {

@@ -19,6 +19,8 @@ rule_convert = {
     "rr": Has("Rev Roll"),
     "dt": Has("Pac-Dot Attack"),
     "f": Has("Flutter"),
+    "dk": Has("Progressive Dolphin Kick"),
+    "sdk": Has("Progressive Dolphin Kick", count=2),
 
     "cs": Has("Cherry Switch"),
     "ss": Has("Strawberry Switch"),

@@ -133,6 +133,8 @@ def create_all_items(world: PMW2RepacWorld) -> None:
         for move in world.options.moves_to_randomize:
             if move == "Butt Bounce" or move == "Super Butt Bounce":
                 move = "Progressive Butt Bounce"
+            if move == "Dolphin Kick" or move == "Super Dolphin Kick":
+                move = "Progressive Dolphin Kick"
             itempool.append(world.create_item(move))
             number_of_unfilled_locations -= 1
 
@@ -157,20 +159,28 @@ def create_all_items(world: PMW2RepacWorld) -> None:
     if world.options.move_randomizer:
         moves = set(data.movement_data.keys())
         moves.remove("Progressive Butt Bounce")
+        moves.remove("Progressive Dolphin Kick")
         moves.add("Butt Bounce")
         moves.add("Super Butt Bounce")
+        moves.add("Dolphin Kick")
+        moves.add("Super Dolphin Kick")
         for move in moves:
             if move not in world.options.moves_to_randomize:
                 if move == "Butt Bounce" or move == "Super Butt Bounce":
                     move = "Progressive Butt Bounce"
+                if move == "Dolphin Kick" or move == "Super Dolphin Kick":
+                    move = "Progressive Dolphin Kick"
                 world.push_precollected(world.create_item(move))
     else:
         moves = set(data.movement_data.keys())
         moves.remove("Progressive Butt Bounce")
+        moves.remove("Progressive Dolphin Kick")
         for move in moves:
             world.push_precollected(world.create_item(move))
-        world.push_precollected(world.create_item("Progressive Butt Bounce"))
-        world.push_precollected(world.create_item("Progressive Butt Bounce"))
+        for _ in range(2):
+            world.push_precollected(world.create_item("Progressive Butt Bounce"))
+            world.push_precollected(world.create_item("Progressive Dolphin Kick"))
+
 
     if world.options.fruit_switches:
         fruit_switches = sorted(data.level_data.keys())

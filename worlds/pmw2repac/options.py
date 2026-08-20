@@ -69,7 +69,7 @@ class MovesToRandomize(OptionSet):
     """
 
     display_name = "Moves to Randomize"
-    default = ["Super Butt Bounce", "Flip Kick", "Rev Roll", "Pac-Dot Attack", "Flutter"]
+    default = ["Super Butt Bounce", "Flip Kick", "Rev Roll", "Pac-Dot Attack", "Flutter", "Dolphin Kick", "Super Dolphin Kick"]
 
 class MoveRandomizerLogicDifficulty(Choice):
     """
