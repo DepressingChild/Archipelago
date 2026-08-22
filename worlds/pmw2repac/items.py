@@ -89,22 +89,13 @@ def create_all_items(world: PMW2RepacWorld) -> None:
                     if data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
                         excluded_levels.append(level)
             beatable_starting_levels = list(set(data.level_data.keys()) - set(excluded_levels))
-        #Shuffle levels and add starting levels
-            # level_names = (sorted(data.level_data.keys()))
-            # temp_names = level_names.copy()
-            # for level in level_names:
-            #     if level in excluded_levels:
-            #         temp_names.remove(level)
-            # level_names = temp_names
-            # world.random.shuffle(level_names)
-            # beatable_starting_levels = level_names
 
         for level in beatable_starting_levels:
             if world.options.goal_boss == 0 and data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
                 beatable_starting_levels.remove(level)
 
         world.random.shuffle(beatable_starting_levels)
-        for _ in range(world.options.random_starting_levels - 1):
+        for _ in range(world.options.random_starting_levels):
             starting_levels.append(beatable_starting_levels.pop())
 
         for level in data.level_data.keys():
@@ -141,7 +132,7 @@ def create_all_items(world: PMW2RepacWorld) -> None:
     leftover_costumes = list(data.costume_data.keys())
     world.random.shuffle(leftover_costumes)
     for costume in leftover_costumes:
-        if number_of_unfilled_locations == 0: break
+        if number_of_unfilled_locations <= 0: break
         itempool.append(world.create_item(costume + " costume"))
         leftover_costumes.remove(costume)
         number_of_unfilled_locations -= 1
@@ -183,7 +174,7 @@ def create_all_items(world: PMW2RepacWorld) -> None:
 
 
     if world.options.fruit_switches:
-        fruit_switches = sorted(data.level_data.keys())
+        fruit_switches = sorted(data.fruit_switch_data.keys())
         world.random.shuffle(fruit_switches)
         world.push_precollected(world.create_item(fruit_switches.pop()))
     else:

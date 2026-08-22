@@ -69,7 +69,7 @@ def set_entrance_rules(world: PMW2RepacWorld) -> None:
             elif levelData["id"] > data.level_data["Burning-Hot Beats"]["id"]:
                 item_rule = Has("Dim Underwaters Key")
             elif levelData["id"] > data.level_data["Boom! Boom! Clap!"]["id"]:
-                item_rule = Has("Fiery Caverns")
+                item_rule = Has("Fiery Caverns Key")
             elif levelData["id"] > data.level_data["Hunter of Darkness"]["id"]:
                 item_rule = Has("Thunder Snow Mountain Key")
             elif levelData["id"] > data.level_data["A Long Poisonous Tongue"]["id"]:

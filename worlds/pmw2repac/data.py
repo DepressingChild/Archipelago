@@ -68,8 +68,8 @@ level_data = {
             },
             "Melon Chest": {
                 "id": 1,
-                "fm_rules": "bb&fk | bb&dt",
-                "am_rules": "",
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "bb&fk | bb&dt | bb&rr",
                 "ag_rules": ""
             }
         },
@@ -90,7 +90,7 @@ level_data = {
             "Collect All Fruits": {
                 "id": 3,
                 "fm_rules": "sbb&fk | sbb&dt",
-                "am_rules": "bb&fk | bb&dt",
+                "am_rules": "bb&fk | bb&dt | bb&rr",
                 "ag_rules": ""
             }
         }
@@ -98,7 +98,7 @@ level_data = {
     "Canyon Chaos": {
         "id": 2,
         "Clear": {
-            "fm_rules": "bb",
+            "fm_rules": "bb | fk | dt | rr",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -119,8 +119,8 @@ level_data = {
         "Gashapons": {
             "Orange Chest": {
                 "id": 2,
-                "fm_rules": "fk | dt",
-                "am_rules": "bb",
+                "fm_rules": "bb | fk | dt",
+                "am_rules": "",
                 "ag_rules": ""
             },
             "Melon Chest": {
@@ -145,7 +145,7 @@ level_data = {
             },
             "Time Trial": {
                 "id": 6,
-                "fm_rules": "bb",
+                "fm_rules": "bb | fk | dt | rr",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -700,15 +700,15 @@ level_data = {
             },
             "Melon Chest": {
                 "id": 21,
-                "fm_rules": "bb&rr&fk | sbb&rr&dt | bb&rr&dt&f",
-                "am_rules": "bb&fk&f | sbb&dt&f",
+                "fm_rules": "sbb&rr&fk | sbb&rr&dt | bb&rr&dt&f",
+                "am_rules": "bb&rr&fk | bb&fk&f | sbb&dt&f",
                 "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 37,
-                "fm_rules": "bb&rr&fk | sbb&rr&dt",
+                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
                 "am_rules": "sbb&dt&f | bb&fk&f",
                 "ag_rules": ""
             },
