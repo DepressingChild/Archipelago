@@ -109,7 +109,7 @@ level_data = {
            #"Apples" : 4,
            #"Melons" : 6,
            "Galaxian" : {
-               "id": 51,
+               "id": 0,
                 "fm_rules": "fk | rr | dt",
                 "am_rules": "sbb",
                 "ag_rules": ""
@@ -165,7 +165,7 @@ level_data = {
            #"Apples" : 0,
            #"Melons" : 0,
            "Galaxian" :{
-               "id": 32,
+               "id": 1,
                 "fm_rules": "bb&rr",
                 "am_rules": "sbb",
                 "ag_rules": ""
@@ -245,7 +245,7 @@ level_data = {
            #"Apples" : 0,
            #"Melons" : 0,
            "Galaxian" :{
-               "id": 119,
+               "id": 2,
                "fm_rules": "bb&rr&as",
                "am_rules": "bb&fk&as | bb&dt&as | bb&f&as | sbb&as",
                 "ag_rules": ""
@@ -301,7 +301,7 @@ level_data = {
            #"Apples" : 0,
            #"Melons" : 0,
            "Galaxian" :{
-               "id": 54,
+               "id": 3,
                "fm_rules": "bb&rr&os",
                "am_rules": "bb&fk&os | bb&dt&os",
                 "ag_rules": ""
@@ -357,7 +357,7 @@ level_data = {
            #"Apples" : 0,
            #"Melons" : 0,
            "Galaxian" :{
-               "id": 57,
+               "id": 4,
                 "fm_rules": "bb&rr&as",
                 "am_rules": "bb&fk&f&as | sbb&f&as",
                 "ag_rules": ""
@@ -437,7 +437,7 @@ level_data = {
            #"Apples" : 0,
            #"Melons" : 0,
            "Galaxian" :{
-               "id": 10,
+               "id": 5,
                 "fm_rules": "bb&fk | bb&dt | bb&rr",
                 "am_rules": "sbb",
                 "ag_rules": ""
@@ -493,7 +493,7 @@ level_data = {
            #"Apples" : 0,
            #"Melons" : 0,
            "Galaxian" :{
-               "id": 25,
+               "id": 6,
                 "fm_rules": "bb&rr&fk&os | bb&rr&dt&os",
                 "am_rules": "bb&f&fk | bb&dt",
                 "ag_rules": ""
@@ -548,7 +548,7 @@ level_data = {
            #"Apples" : 0,
            #"Melons" : 0,
            "Galaxian" :{
-               "id": 53,
+               "id": 7,
                 "fm_rules": "fk&ms | dt&ms",
                 "am_rules": "",
                 "ag_rules": ""
@@ -684,7 +684,7 @@ level_data = {
            #"Apples" : 0,
            #"Melons" : 0,
            "Galaxian" :{
-               "id": 29,
+               "id": 9,
                 "fm_rules": "bb&rr&fk&as | bb&rr&dt&as",
                 "am_rules": "sbb&rr&as | sbb&f&as | bb&fk&f&as",
                 "ag_rules": "rr&fk&as | rr&dt&as | rr&sbb&as"
@@ -740,7 +740,7 @@ level_data = {
            #"Apples" : 0,
            #"Melons" : 0,
            "Galaxian" :{
-               "id": 56,
+               "id": 10,
                 "fm_rules": "sbb&fk&cs | sbb&dt&cs",
                 "am_rules": "",
                 "ag_rules": ""
@@ -820,7 +820,7 @@ level_data = {
            #"Apples" : 0,
            #"Melons" : 0,
            "Galaxian" :{
-               "id": 27,
+               "id": 11,
                 "fm_rules": "dk&as",
                 "am_rules": "",
                 "ag_rules": ""
@@ -876,7 +876,7 @@ level_data = {
            #"Apples" : 0,
            #"Melons" : 0,
            "Galaxian" :{
-               "id": 60,
+               "id": 12,
                 "fm_rules": "fk&os | dk&os",
                 "am_rules": "",
                 "ag_rules": ""
@@ -1006,7 +1006,7 @@ level_data = {
            #"Apples" : 0,
            #"Melons" : 0,
            "Galaxian" :{
-               "id": 42,
+               "id": 13,
                 "fm_rules": "fk&ss | dt&ss",
                 "am_rules": "sbb&f&ss",
                 "ag_rules": "sbb&ss"
@@ -1112,7 +1112,7 @@ level_data = {
            #"Apples" : 0,
            #"Melons" : 0,
            "Galaxian" :{
-               "id": 173,
+               "id": 14,
                 "fm_rules": "bb&fk&os | bb&dt&os",
                 "am_rules": "",
                 "ag_rules": ""
