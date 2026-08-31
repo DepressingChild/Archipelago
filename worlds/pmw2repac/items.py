@@ -76,11 +76,12 @@ def create_all_items(world: PMW2RepacWorld) -> None:
         # Running this same segment in a separate Python script does NOT produce these issues. Why? idfk.
 
         #Exclude levels from random starting levels
-        beatable_starting_levels = []
+        #beatable_starting_levels = []
 
         if world.options.move_randomizer:
-            beatable_starting_levels = ["Ice River Run", "Blade Mountain", "Yellow Pac-Marine", "Whale on a Sub", "Haunted Boardwalk", "Pro Thunder Skater", "Pac-Marine Battle!"]
-            if world.options.moves_to_randomize.__contains__("Butt Bounce") or world.options.moves_to_randomize.__contains__("Super Butt Bounce"):
+            if world.options.moves_to_randomize.__contains__("Butt Bounce") and world.options.moves_to_randomize.__contains__("Super Butt Bounce"):
+                beatable_starting_levels = ["Ice River Run", "Blade Mountain", "Yellow Pac-Marine", "Whale on a Sub", "Haunted Boardwalk", "Pro Thunder Skater", "Pac-Marine Battle!"]
+            else:
                 beatable_starting_levels = ["The Bear Basics", "Canyon Chaos", "Clyde's Frog", "Ice River Run", "Blade Mountain", "Blinky in the Caldera", "Yellow Pac-Marine", "Whale on a Sub", "Haunted Boardwalk", "A Long Poisonous Tongue", "Pro Thunder Skater", "Burning-Hot Beats", "Pac-Marine Battle!"]
         else:
             excluded_levels = ["Pac-Village", "Spooky", "Legendary Story", "Flying Dark Shadow"]
@@ -90,19 +91,30 @@ def create_all_items(world: PMW2RepacWorld) -> None:
                         excluded_levels.append(level)
             beatable_starting_levels = list(set(data.level_data.keys()) - set(excluded_levels))
 
-        for level in beatable_starting_levels:
-            if world.options.goal_boss == 0 and data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
-                beatable_starting_levels.remove(level)
+        # for level in beatable_starting_levels:
+        #     if world.options.goal_boss == 0 and data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
+        #         beatable_starting_levels.remove(level)
 
+        # Loop above does not work. idk why.
         world.random.shuffle(beatable_starting_levels)
-        for _ in range(world.options.random_starting_levels):
-            starting_levels.append(beatable_starting_levels.pop())
+        i = 0
+        for level in beatable_starting_levels:
+            if i >= world.options.random_starting_levels: break
+            if world.options.goal_boss == 0 and data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
+                continue
+            else:
+                starting_levels.append(level)
+                i += 1
 
         for level in data.level_data.keys():
             if world.options.goal_boss == 0 and data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
                 continue
             if level not in starting_levels:
                 itempool.append(world.create_item(level))
+    else:
+        if world.options.move_randomizer:
+            if world.options.moves_to_randomize.__contains__("Butt Bounce") and world.options.moves_to_randomize.__contains__("Super Butt Bounce"):
+                world.options.moves_to_randomize.value.remove("Butt Bounce")
 
     number_of_unfilled_locations = len(world.multiworld.get_unfilled_locations(world.player)) - len(itempool)
     #Continue adding items, decrement number_of_unfilled_locations when a new item is added.

@@ -22,6 +22,9 @@ def define_locations() -> None:
         if levelData["id"] > 0:
             locations[level + " - Clear"] = levelData["id"] + data.LEVEL_OFFSET
 
+            if levelData["id"] != data.level_data["Yellow Pac-Marine"]["id"]:
+                locations[level + " - Gold Medal"] = levelData["id"] + data.TIMETRIAL_OFFSET
+
         for collectible, collectibleData in levelData["Collectibles"].items():
             offset = 0
             match collectible:
@@ -49,6 +52,10 @@ def create_locations(world: PMW2RepacWorld) -> None:
             location = PMW2RepacLocation(world.player, level + " - Clear", levelData["id"] + data.LEVEL_OFFSET, region)
             region.locations.append(location)
 
+            if levelData["id"] != data.level_data["Yellow Pac-Marine"]["id"]:
+                location = PMW2RepacLocation(world.player, level + " - Gold Medal", levelData["id"] + data.TIMETRIAL_OFFSET, region)
+                region.locations.append(location)
+
         for collectible, collectibleData in levelData["Collectibles"].items():
             offset = 0
             match collectible:
@@ -71,9 +78,9 @@ def create_locations(world: PMW2RepacWorld) -> None:
 
     if world.options.exclude_goal_locations:
         world.options.exclude_locations.value.update(
-            ["Spooky - Clear", "Spooky - Mission - Don't Die", "Spooky - Mission - Time Trial",
-            "Legendary Story - Clear", "Legendary Story - Mission - Don't Die", "Legendary Story - Mission - Time Trial",
-            "Flying Dark Shadow - Clear", "Flying Dark Shadow - Mission - Don't Die", "Flying Dark Shadow - Mission - Time Trial"])
+            ["Spooky - Clear", "Spooky - Gold Medal", "Spooky - Mission - Don't Die", "Spooky - Mission - Time Trial",
+            "Legendary Story - Clear", "Legendary Story - Gold Medal", "Legendary Story - Mission - Don't Die", "Legendary Story - Mission - Time Trial",
+            "Flying Dark Shadow - Clear", "Flying Dark Shadow - Gold Medal", "Flying Dark Shadow - Mission - Don't Die", "Flying Dark Shadow - Mission - Time Trial"])
         if world.options.goal_boss == 0:
             world.options.exclude_locations.value.update(["Pac-Village - Mission - Collect All Fruits"])
         #Add fruit locations

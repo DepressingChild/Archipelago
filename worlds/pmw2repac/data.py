@@ -51,6 +51,11 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "bb",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles": {
            #"Cherries" : 4,
            #"Strawberries" : 7,
@@ -100,6 +105,11 @@ level_data = {
         "Clear": {
             "fm_rules": "bb | fk | dt | rr",
             "am_rules": "",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
+            "fm_rules": "bb&fk | bb&dt",
+            "am_rules": "bb&rr",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -154,6 +164,11 @@ level_data = {
     "Pac-Dot Pond": {
         "id": 3,
         "Clear": {
+            "fm_rules": "bb&rr",
+            "am_rules": "sbb",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
             "fm_rules": "bb&rr",
             "am_rules": "sbb",
             "ag_rules": ""
@@ -214,6 +229,11 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "bb | fk | dt | rr",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles":{},
         "Gashapons":{},
         "Missions":{
@@ -236,6 +256,11 @@ level_data = {
         "Clear": {
             "fm_rules": "bb&rr",
             "am_rules": "bb&fk | bb&dt | bb&f | sbb",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
+            "fm_rules": "bb&rr&fk",
+            "am_rules": "sbb&f | bb&dt",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -290,6 +315,11 @@ level_data = {
     "Treewood Forest": {
         "id": 6,
         "Clear": {
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&fk&f | bb&dt",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
             "fm_rules": "bb&rr",
             "am_rules": "bb&fk&f | bb&dt",
             "ag_rules": ""
@@ -350,6 +380,11 @@ level_data = {
             "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
+            "ag_rules": ""
+        },
         "Collectibles":{
            #"Cherries" : 0,
            #"Strawberries" : 0,
@@ -406,6 +441,11 @@ level_data = {
             "am_rules": "sbb&dt",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "bb&fk",
+            "am_rules": "sbb&dt",
+            "ag_rules": ""
+        },
         "Collectibles":{},
         "Gashapons": {},
         "Missions": {
@@ -428,6 +468,11 @@ level_data = {
         "Clear": {
             "fm_rules": "",
             "am_rules": "",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
+            "fm_rules": "rr",
+            "am_rules": "NONE",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -486,6 +531,11 @@ level_data = {
             "am_rules": "bb&f | bb&dt",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&fk&f | bb&fk&dt",
+            "ag_rules": ""
+        },
         "Collectibles":{
            #"Cherries" : 0,
            #"Strawberries" : 0,
@@ -538,6 +588,11 @@ level_data = {
         "id": 11,
         "Clear": {
             "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
+            "fm_rules": "fk | dt",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -597,6 +652,11 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "bb&fk",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles":{},
         "Gashapons": {},
         "Missions": {
@@ -619,6 +679,11 @@ level_data = {
         "Clear": {
             "fm_rules": "bb&rr",
             "am_rules": "bb&f",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
+            "fm_rules": "bb&rr&fk | bb&rr&dt",
+            "am_rules": "bb&fk&f | bb&dt&f",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -673,6 +738,11 @@ level_data = {
     "Volcanic Panic": {
         "id": 14,
         "Clear": {
+            "fm_rules": "bb&rr",
+            "am_rules": "sbb&f | bb&fk&f",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
             "fm_rules": "bb&rr",
             "am_rules": "sbb&f | bb&fk&f",
             "ag_rules": ""
@@ -733,6 +803,11 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "sbb",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles":{
            #"Cherries" : 0,
            #"Strawberries" : 0,
@@ -789,6 +864,11 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "bb&rr",
+            "am_rules": "bb",
+            "ag_rules": ""
+        },
         "Collectibles": {},
         "Gashapons": {},
         "Missions": {
@@ -809,6 +889,11 @@ level_data = {
     "Scuba Duba": {
         "id": 17,
         "Clear": {
+            "fm_rules": "dk",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
             "fm_rules": "dk",
             "am_rules": "",
             "ag_rules": ""
@@ -869,6 +954,11 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "fk | dk",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles":{
            #"Cherries" : 0,
            #"Strawberries" : 0,
@@ -925,6 +1015,7 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {},
         "Collectibles":{
            #"Cherries" : 4,
            #"Strawberries" : 7,
@@ -975,6 +1066,11 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles": {},
         "Gashapons": {},
         "Missions": {
@@ -995,6 +1091,11 @@ level_data = {
     "Haunted Boardwalk": {
         "id": 21,
         "Clear": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
             "fm_rules": "",
             "am_rules": "",
             "ag_rules": ""
@@ -1055,6 +1156,11 @@ level_data = {
             "am_rules": "bb&dt",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&dt",
+            "ag_rules": ""
+        },
         "Collectibles": {
             # "Cherries" : 4,
             # "Strawberries" : 7,
@@ -1101,6 +1207,11 @@ level_data = {
     "Ghost Bayou": {
         "id": 23,
         "Clear": {
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&dt",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
             "fm_rules": "bb&rr",
             "am_rules": "bb&dt",
             "ag_rules": ""
@@ -1161,6 +1272,11 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "sbb&fk&rr | sbb&dt&rr",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles": {},
         "Gashapons": {},
         "Missions": {
@@ -1181,6 +1297,11 @@ level_data = {
     "Deadly Poisonous Meadows": {
         "id": 25,
         "Clear": {
+            "fm_rules": "bb&rr",
+            "am_rules": "bb | rr",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
             "fm_rules": "bb&rr",
             "am_rules": "bb | rr",
             "ag_rules": ""
@@ -1241,6 +1362,11 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "bb | rr | fk",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles": {},
         "Gashapons": {},
         "Missions": {
@@ -1262,7 +1388,12 @@ level_data = {
         "id": 27,
         "Clear": {
             "fm_rules": "bb&rr",
-            "am_rules": "sbb&fk&f | sbb&dt&f",
+            "am_rules": "bb&fk&dt&f | sbb&fk&f | sbb&dt&f",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&fk&dt&f | sbb&fk&f | sbb&dt&f",
             "ag_rules": ""
         },
         "Collectibles": {
@@ -1321,6 +1452,11 @@ level_data = {
             "am_rules": "sbb&dt",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "bb&fk",
+            "am_rules": "sbb&dt",
+            "ag_rules": ""
+        },
         "Collectibles": {},
         "Gashapons": {},
         "Missions": {
@@ -1342,6 +1478,11 @@ level_data = {
         "id": 29,
         "Clear": {
             "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
+            "fm_rules": "fk | dt",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -1401,6 +1542,11 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "bb&fk",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles": {},
         "Gashapons": {},
         "Missions": {
@@ -1421,6 +1567,11 @@ level_data = {
     "Hot! Fire Trouble": {
         "id": 31,
         "Clear": {
+            "fm_rules": "bb&rr",
+            "am_rules": "sbb&f | bb&fk&f",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
             "fm_rules": "bb&rr",
             "am_rules": "sbb&f | bb&fk&f",
             "ag_rules": ""
@@ -1481,6 +1632,11 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "bb&rr",
+            "am_rules": "bb",
+            "ag_rules": ""
+        },
         "Collectibles": {},
         "Gashapons": {},
         "Missions": {
@@ -1501,6 +1657,11 @@ level_data = {
     "Sharks Everywhere": {
         "id": 33,
         "Clear": {
+            "fm_rules": "dk | fk",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
             "fm_rules": "dk | fk",
             "am_rules": "",
             "ag_rules": ""
@@ -1561,6 +1722,11 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles": {},
         "Gashapons": {},
         "Missions": {
@@ -1581,6 +1747,11 @@ level_data = {
     "Clumsy Bayou": {
         "id": 35,
         "Clear": {
+            "fm_rules": "bb&rr",
+            "am_rules": "bb&dt",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
             "fm_rules": "bb&rr",
             "am_rules": "bb&dt",
             "ag_rules": ""
@@ -1641,6 +1812,11 @@ level_data = {
             "am_rules": "",
             "ag_rules": ""
         },
+        "Gold Medal": {
+            "fm_rules": "sbb&fk&rr | sbb&dt&rr",
+            "am_rules": "",
+            "ag_rules": ""
+        },
         "Collectibles": {},
         "Gashapons": {},
         "Missions": {
@@ -1661,7 +1837,12 @@ level_data = {
     "Flying Dark Shadow": {
         "id": 37,
         "Clear": {
-            "fm_rules": "sbb&fk",
+            "fm_rules": "sbb&rr&fk",
+            "am_rules": "",
+            "ag_rules": ""
+        },
+        "Gold Medal": {
+            "fm_rules": "sbb&rr&fk",
             "am_rules": "",
             "ag_rules": ""
         },
@@ -1670,13 +1851,13 @@ level_data = {
         "Missions": {
             "Don't Die": {
                 "id": 97,
-                "fm_rules": "sbb&fk",
+                "fm_rules": "sbb&rr&fk",
                 "am_rules": "",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 98,
-                "fm_rules": "sbb&fk",
+                "fm_rules": "sbb&rr&fk",
                 "am_rules": "",
                 "ag_rules": ""
             }

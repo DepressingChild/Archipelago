@@ -32,6 +32,11 @@ class GalaxianChecks(Toggle):
 
     display_name = "Galaxian Checks"
 
+class GoldMedalChecks(Toggle):
+    """
+    Makes each gold time trial medal a check. Adds 23 or 36 checks depending on goal.
+    """
+
 class LevelRandomizer(Toggle):
     """
     Levels get randomized into the item pool instead of unlocking them with Golden Fruits or Keys.
@@ -144,6 +149,7 @@ class PMW2RepacOptions(PerGameCommonOptions):
     mission_checks: MissionChecks
     gashapon_checks: GashaponChecks
     galaxian_checks: GalaxianChecks
+    gold_medal_checks: GoldMedalChecks
     level_randomizer: LevelRandomizer
     random_starting_levels: RandomStartingLevels
     move_randomizer: MoveRandomizer

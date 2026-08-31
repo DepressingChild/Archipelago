@@ -33,7 +33,7 @@ hasAllGoldenFruits = HasAll("Golden Cherry", "Golden Strawberry", "Golden Apple"
 hasAllKeys = HasAll("Windy Woods Key", "Thunder Snow Mountain Key", "Fiery Caverns Key", "Dim Underwaters Key", "Ghost Island Key")
 hasAllFruitSwitches = HasAll("Cherry Switch", "Strawberry Switch", "Orange Switch", "Apple Switch", "Melon Switch")
 canBeatSpooky = (rule_convert["sbb"] & rule_convert["rr"] & rule_convert["fk"]) | (rule_convert["sbb"] & rule_convert["rr"] & rule_convert["dt"])
-canBeatTocMan = rule_convert["sbb"] & rule_convert["fk"]
+canBeatTocMan = rule_convert["sbb"] & rule_convert["rr"] & rule_convert["fk"]
 
 def set_all_rules(world: PMW2RepacWorld) -> None:
     set_entrance_rules(world)
@@ -98,9 +98,9 @@ def set_entrance_rules(world: PMW2RepacWorld) -> None:
                 for rulesType, rules in levelData["Clear"].items():
                     if rulesType == "fm_rules":
                         rules_string += rules
-                    if rulesType == "am_rules" and world.options.logic_difficulty > 0:
+                    if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
                         rules_string += " | " + rules
-                    if rulesType == "ag_rules" and world.options.logic_difficulty == 2:
+                    if rulesType == "ag_rules" and world.options.logic_difficulty == 2 and rules != "":
                         rules_string += " | " + rules
                     if rules_string == "": continue
 
@@ -138,54 +138,58 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
     level_clear_rules = []
     for level, levelData in data.level_data.items():
         for checkSet, checkData in levelData.items():
-            if checkSet == "id" or checkSet == "Clear": continue
+            if checkSet == "id" or (not world.options.gold_medal_checks and checkSet == "Gold Medal"): continue
+            if checkSet == "Clear" or checkSet == "Gold Medal":
+                if level == "Pac-Village": continue
 
-            for check, ruleData in checkData.items():
                 rules_string = ""
-                loc = level + " - "
-                if checkSet == "Collectibles":
-                    loc += check
-                else:
-                    loc += checkSet[:-1] + " - " + check
-
-                is_all_fruits = check == "Collect All Fruits"
-
-                for rulesType, rules in ruleData.items():
-                    if rulesType == "id": continue
+                for rulesType, rules in levelData[checkSet].items():
+                    if rules == "NONE": continue
 
                     if rulesType == "fm_rules":
                         rules_string += rules
-                    if rulesType == "am_rules" and world.options.logic_difficulty > 0:
+                    if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
                         rules_string += " | " + rules
-                    if rulesType == "ag_rules" and world.options.logic_difficulty == 2:
+                    if rulesType == "ag_rules" and world.options.logic_difficulty == 2 and rules != "":
                         rules_string += " | " + rules
                     if rules_string == "": continue
 
                 try:
+                    loc = level + " - " + checkSet
                     location = world.get_location(loc)
-                    world.set_rule(location, create_rule_with_strings(world, rules_string, loc, is_all_fruits))
+                    # print(loc)
+                    world.set_rule(location, create_rule_with_strings(world, rules_string, loc, False))
                 except KeyError:
                     pass
+            else:
+                for check, ruleData in checkData.items():
+                    # ik this is duplicated but who cares
+                    rules_string = ""
+                    loc = level + " - "
+                    if checkSet == "Collectibles":
+                        loc += check
+                    else:
+                        loc += checkSet[:-1] + " - " + check
 
-        if level == "Pac-Village": continue
-        #ik this is duplicated but who cares
-        rules_string = ""
-        for rulesType, rules in levelData["Clear"].items():
+                    is_all_fruits = check == "Collect All Fruits"
 
-            if rulesType == "fm_rules":
-                rules_string += rules
-            if rulesType == "am_rules" and world.options.logic_difficulty > 0:
-                rules_string += " | " + rules
-            if rulesType == "ag_rules" and world.options.logic_difficulty == 2:
-                rules_string += " | " + rules
-            if rules_string == "": continue
+                    for rulesType, rules in ruleData.items():
+                        if rulesType == "id" or rules == "NONE": continue
 
-        try:
-            loc = level + " - Clear"
-            location = world.get_location(loc)
-            world.set_rule(location, create_rule_with_strings(world, rules_string, loc, False))
-        except KeyError:
-            pass
+                        if rulesType == "fm_rules":
+                            rules_string += rules
+                        if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
+                            rules_string += " | " + rules
+                        if rulesType == "ag_rules" and world.options.logic_difficulty == 2 and rules != "":
+                            rules_string += " | " + rules
+                        if rules_string == "": continue
+
+                    try:
+                        location = world.get_location(loc)
+                        #print(loc)
+                        world.set_rule(location, create_rule_with_strings(world, rules_string, loc, is_all_fruits))
+                    except KeyError:
+                        pass
 
 def set_goal(world: PMW2RepacWorld) -> None:
     #Change when we have to collect a goal item
@@ -193,10 +197,14 @@ def set_goal(world: PMW2RepacWorld) -> None:
         world.set_completion_rule(hasAllGoldenFruits)
         if world.options.level_randomizer:
             world.set_completion_rule(Has("Spooky") & hasAllGoldenFruits & canBeatSpooky)
+        else:
+            world.set_completion_rule(hasAllGoldenFruits & canBeatSpooky)
     else:
         world.set_completion_rule(hasAllGoldenFruits & hasAllKeys) #use events for this
         if world.options.level_randomizer:
             world.set_completion_rule(HasAll("Spooky", "Legendary Story", "Flying Dark Shadow") & hasAllGoldenFruits & hasAllKeys & canBeatSpooky & canBeatTocMan)
+        else:
+            world.set_completion_rule(hasAllGoldenFruits & hasAllKeys & canBeatSpooky & canBeatTocMan)
 
 def create_rule_with_strings(world: PMW2RepacWorld, rules_string: str, location: str, is_all_fruits: bool) -> Rule:
 
@@ -223,10 +231,12 @@ def create_rule_with_strings(world: PMW2RepacWorld, rules_string: str, location:
             if move == "": continue
             single_rule = single_rule & rule_convert[move]
 
+
         single_rules.append(single_rule)
 
     #if "NONE" in single_rules: return
     for rule in single_rules:
         final_rule = final_rule | rule
 
+    #print(final_rule)
     return final_rule
