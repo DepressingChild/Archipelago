@@ -5,7 +5,6 @@ KEY_OFFSET = 200
 COSTUME_OFFSET = 300
 FRUIT_SWITCH_OFFSET = 400
 MOVEMENT_OFFSET = 500
-#Some item to collect for goal
 
 TIMETRIAL_OFFSET = 1000
 MISSION_OFFSET = 2000
@@ -18,8 +17,6 @@ APPLE_OFFSET = 8000
 MELON_OFFSET = 9000
 FILLER_OFFSET = 10000
 TRAP_OFFSET = 11000
-
-#Need to figure out how to hash fruits as unique items. Ignoring them for now.
 
 #Level IDs are 1 less in game than here. ex: bear basics = 0
 
@@ -394,7 +391,7 @@ level_data = {
            "Galaxian" :{
                "id": 4,
                 "fm_rules": "bb&rr&as",
-                "am_rules": "bb&fk&f&as | sbb&f&as",
+                "am_rules": "bb&fk&f&as | sbb&f&as | sbb&fk&as",
                 "ag_rules": ""
 
            }
@@ -409,7 +406,7 @@ level_data = {
             "Strawberry Chest": {
                 "id": 11,
                 "fm_rules": "bb&rr&f | bb&rr&dt | sbb&rr",
-                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
+                "am_rules": "bb&rr | bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
                 "ag_rules": ""
             }
         },
@@ -492,7 +489,7 @@ level_data = {
             "Cherry Chest": {
                 "id": 12,
                 "fm_rules": "sbb | fk | dt",
-                "am_rules": "",
+                "am_rules": "rr",
                 "ag_rules": ""
             },
             "Melon Chest": {
@@ -506,13 +503,13 @@ level_data = {
             "Collect All Fruits": {
                 "id": 23,
                 "fm_rules": "sbb&fk | sbb&dt",
-                "am_rules": "bb&fk | bb&dt | sbb",
+                "am_rules": "bb&fk | bb&dt | bb&rr | sbb",
                 "ag_rules": ""
             },
             "Destroy Crates": {
                 "id": 24,
                 "fm_rules": "sbb",
-                "am_rules": "fk | dt",
+                "am_rules": "fk | dt | rr",
                 "ag_rules": ""
             },
             "Time Trial": {
@@ -528,12 +525,12 @@ level_data = {
         "id": 10,
         "Clear": {
             "fm_rules": "bb&rr",
-            "am_rules": "bb&f | bb&dt",
+            "am_rules": "bb",
             "ag_rules": ""
         },
         "Gold Medal": {
             "fm_rules": "bb&rr",
-            "am_rules": "bb&fk&f | bb&fk&dt",
+            "am_rules": "bb&fk",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -545,7 +542,7 @@ level_data = {
            "Galaxian" :{
                "id": 6,
                 "fm_rules": "bb&rr&fk&os | bb&rr&dt&os",
-                "am_rules": "bb&f&fk | bb&dt",
+                "am_rules": "bb&fk&os | bb&dt&os",
                 "ag_rules": ""
            }
         },
@@ -559,7 +556,7 @@ level_data = {
             "Strawberry Chest": {
                 "id": 15,
                 "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "bb&f&fk | bb&dt",
+                "am_rules": "bb&fk&f | bb&dt",
                 "ag_rules": ""
             }
         },
@@ -567,7 +564,7 @@ level_data = {
             "Collect All Fruits": {
                 "id": 26,
                 "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "bb&f&fk | bb&dt",
+                "am_rules": "bb&fk&f | bb&dt",
                 "ag_rules": ""
             },
             "Defeat Enemies": {
@@ -579,7 +576,7 @@ level_data = {
             "Time Trial": {
                 "id": 28,
                 "fm_rules": "bb&rr",
-                "am_rules": "bb&f | bb&dt",
+                "am_rules": "bb",
                 "ag_rules": ""
             }
         }
@@ -679,12 +676,12 @@ level_data = {
         "Clear": {
             "fm_rules": "bb&rr",
             "am_rules": "bb&f",
-            "ag_rules": ""
+            "ag_rules": "bb&fk"
         },
         "Gold Medal": {
             "fm_rules": "bb&rr&fk | bb&rr&dt",
             "am_rules": "bb&fk&f | bb&dt&f",
-            "ag_rules": ""
+            "ag_rules": "bb&fk"
         },
         "Collectibles":{
            #"Cherries" : 0,
@@ -696,7 +693,7 @@ level_data = {
                "id": 8,
                 "fm_rules": "bb&rr",
                 "am_rules": "bb&f",
-                "ag_rules": ""
+                "ag_rules": "bb&fk"
 
            }
         },
@@ -705,33 +702,33 @@ level_data = {
                 "id": 18,
                 "fm_rules": "bb&rr&fk | bb&rr&dt | sbb&rr",
                 "am_rules": "bb&f&fk | bb&f&dt | sbb&f",
-                "ag_rules": ""
+                "ag_rules": "bb&fk"
             },
             "Melon Chest": {
                 "id": 19,
                 "fm_rules": "sbb&rr&fk",
-                "am_rules": "sbb&f&dt | sbb&f&fk | sbb&rr&dt",
-                "ag_rules": ""
+                "am_rules": "sbb&dt&f | sbb&fk&f | sbb&rr&dt",
+                "ag_rules": "sbb&fk"
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 34,
                 "fm_rules": "sbb&rr&fk",
-                "am_rules": "sbb&f&fk | sbb&f&dt | sbb&rr&dt",
-                "ag_rules": ""
+                "am_rules": "sbb&f&fk | sbb&dt&f | sbb&rr&dt",
+                "ag_rules": "sbb&fk"
             },
             "Never hang off an edge": { #Should maybe change to mention only in that one room.
                 "id": 35,
                 "fm_rules": "bb&rr",
                 "am_rules": "bb&f",
-                "ag_rules": ""
+                "ag_rules": "bb&fk"
             },
             "Time Trial": {
                 "id": 36,
                 "fm_rules": "bb&rr",
                 "am_rules": "bb&f",
-                "ag_rules": ""
+                "ag_rules": "bb&fk"
             }
         }
     },
@@ -757,7 +754,7 @@ level_data = {
                "id": 9,
                 "fm_rules": "bb&rr&fk&as | bb&rr&dt&as",
                 "am_rules": "sbb&rr&as | sbb&f&as | bb&fk&f&as",
-                "ag_rules": "rr&fk&as | rr&dt&as | rr&sbb&as"
+                "ag_rules": "rr&as"
 
            }
         },
@@ -826,12 +823,12 @@ level_data = {
             "Strawberry Chest": {
                 "id": 22,
                 "fm_rules": "sbb&fk | sbb&dt",
-                "am_rules": "",
+                "am_rules": "sbb&rr",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 23,
-                "fm_rules": "sbb&fk | sbb&dt",
+                "fm_rules": "sbb",
                 "am_rules": "",
                 "ag_rules": ""
             }
@@ -1885,9 +1882,9 @@ costume_data = {
     "Hunter (Green)": 1,
     "Hunter (Brown)": 2,
     "Hunter (Blue)": 3,
-    "Street (Blue)": 4,
-    "Street (Red)": 5,
-    "Street (Pink)": 6,
+    # "Street (Blue)": 4,
+    # "Street (Red)": 5,
+    # "Street (Pink)": 6,
     "Cowboy (Brown)": 7,
     "Cowboy (Red)": 8,
     "Cowboy (Pink)": 9,
@@ -1908,16 +1905,20 @@ costume_data = {
     "Magician (Purple)": 24,
     "Magician (Green)": 25,
     "Pac-Knight": 26,
-    "Toc-Man": 27, #Do we remove this because you need re-pac 1?
+    #"Toc-Man": 27, #Do we remove this because you need re-pac 1?
     "Pac-Wizard": 28,
     "Orson": 29,
-    "Pac-Land": 30, #Do we remove this because pre-order bonus?
+    #"Pac-Land": 30, #Do we remove this because pre-order bonus?
     "Spooky": 31,
     #No sonic dlc for you
-    "Holiday (Red)": 33,
-    "Holiday (Green)": 34,
-    "Holiday (Blue)": 35,
-    "Birthday Hat": 36
+    # "Holiday (Red)": 33,
+    # "Holiday (Green)": 34,
+    # "Holiday (Blue)": 35,
+    # "Birthday Hat": 36
+}
+
+exc_costumes = {
+    "excluded_costumes": [4, 5, 6, 27, 30, 32, 33, 34, 35, 36],
 }
 
 fruit_switch_data = {
@@ -1945,6 +1946,7 @@ filler_data = {
     "200 Points": 4,
     "500 Points": 5,
     "1000 Points": 6,
+    "Extra Life": 7,
 }
 
 trap_data = {

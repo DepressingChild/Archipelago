@@ -2,7 +2,7 @@ from collections.abc import Mapping
 from typing import Any
 
 from ..AutoWorld import World
-from . import items, locations, regions, rules, web_world
+from . import items, locations, regions, rules, web_world, data
 from . import options as opts
 
 class PMW2RepacWorld(World):
@@ -40,4 +40,6 @@ class PMW2RepacWorld(World):
         return items.get_random_filler_item(self)
 
     def fill_slot_data(self) -> Mapping[str, Any]:
-        return self.options.as_dict("goal_boss", "mission_checks", "gashapon_checks", "galaxian_checks", "gold_medal_checks","level_randomizer", "random_starting_levels", "move_randomizer", "moves_to_randomize", "logic_difficulty", "fruit_switches", "exclude_goal_locations", "pac_dot_weight", "points_weight", "trap_weight")
+        return self.options.as_dict("goal_boss", "gold_medal_checks", "level_randomizer", "random_starting_levels",
+                                    "move_randomizer", "moves_to_randomize", "logic_difficulty", "fruit_switches",
+                                    "exclude_goal_locations", "pac_dot_weight", "points_weight", "trap_weight") | data.exc_costumes

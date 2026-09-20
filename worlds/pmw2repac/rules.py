@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from typing import TYPE_CHECKING
+from collections.abc import Mapping
 
 from BaseClasses import Entrance
 
@@ -95,16 +96,17 @@ def set_entrance_rules(world: PMW2RepacWorld) -> None:
 
             rules_string = ""
             if level != "Pac-Village":
-                for rulesType, rules in levelData["Clear"].items():
-                    if rulesType == "fm_rules":
-                        rules_string += rules
-                    if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
-                        rules_string += " | " + rules
-                    if rulesType == "ag_rules" and world.options.logic_difficulty == 2 and rules != "":
-                        rules_string += " | " + rules
-                    if rules_string == "": continue
+                rules_string = create_rule_string(world, levelData["Clear"].items())
+                # for rulesType, rules in levelData["Clear"].items():
+                #     if rulesType == "fm_rules":
+                #         rules_string += rules
+                #     if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
+                #         rules_string += " | " + rules
+                #     if rulesType == "ag_rules" and world.options.logic_difficulty == 2 and rules != "":
+                #         rules_string += " | " + rules
+                #     if rules_string == "": continue
 
-            clear_rule = create_rule_with_strings(world, rules_string, level + " - Clear", False)
+            clear_rule = create_rule_with_strings(rules_string, level + " - Clear", False)
             level_clear_rules.append(clear_rule)
 
             #clear level_clear_rules once certain areas are reached.
@@ -142,29 +144,29 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
             if checkSet == "Clear" or checkSet == "Gold Medal":
                 if level == "Pac-Village": continue
 
-                rules_string = ""
-                for rulesType, rules in levelData[checkSet].items():
-                    if rules == "NONE": continue
-
-                    if rulesType == "fm_rules":
-                        rules_string += rules
-                    if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
-                        rules_string += " | " + rules
-                    if rulesType == "ag_rules" and world.options.logic_difficulty == 2 and rules != "":
-                        rules_string += " | " + rules
-                    if rules_string == "": continue
+                rules_string = create_rule_string(world, levelData[checkSet].items())
+                # for rulesType, rules in levelData[checkSet].items():
+                #     if rules == "NONE": continue
+                #
+                #     if rulesType == "fm_rules":
+                #         rules_string += rules
+                #     if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
+                #         rules_string += " | " + rules
+                #     if rulesType == "ag_rules" and world.options.logic_difficulty == 2 and rules != "":
+                #         rules_string += " | " + rules
+                #     if rules_string == "": continue
 
                 try:
                     loc = level + " - " + checkSet
                     location = world.get_location(loc)
                     # print(loc)
-                    world.set_rule(location, create_rule_with_strings(world, rules_string, loc, False))
+                    world.set_rule(location, create_rule_with_strings(rules_string, loc, False))
                 except KeyError:
                     pass
             else:
                 for check, ruleData in checkData.items():
                     # ik this is duplicated but who cares
-                    rules_string = ""
+                    rules_string = create_rule_string(world, ruleData.items())
                     loc = level + " - "
                     if checkSet == "Collectibles":
                         loc += check
@@ -173,21 +175,21 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
 
                     is_all_fruits = check == "Collect All Fruits"
 
-                    for rulesType, rules in ruleData.items():
-                        if rulesType == "id" or rules == "NONE": continue
-
-                        if rulesType == "fm_rules":
-                            rules_string += rules
-                        if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
-                            rules_string += " | " + rules
-                        if rulesType == "ag_rules" and world.options.logic_difficulty == 2 and rules != "":
-                            rules_string += " | " + rules
-                        if rules_string == "": continue
+                    # for rulesType, rules in ruleData.items():
+                    #     if rulesType == "id" or rules == "NONE": continue
+                    #
+                    #     if rulesType == "fm_rules":
+                    #         rules_string += rules
+                    #     if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
+                    #         rules_string += " | " + rules
+                    #     if rulesType == "ag_rules" and world.options.logic_difficulty == 2 and rules != "":
+                    #         rules_string += " | " + rules
+                    #     if rules_string == "": continue
 
                     try:
                         location = world.get_location(loc)
                         #print(loc)
-                        world.set_rule(location, create_rule_with_strings(world, rules_string, loc, is_all_fruits))
+                        world.set_rule(location, create_rule_with_strings(rules_string, loc, is_all_fruits))
                     except KeyError:
                         pass
 
@@ -206,7 +208,21 @@ def set_goal(world: PMW2RepacWorld) -> None:
         else:
             world.set_completion_rule(hasAllGoldenFruits & hasAllKeys & canBeatSpooky & canBeatTocMan)
 
-def create_rule_with_strings(world: PMW2RepacWorld, rules_string: str, location: str, is_all_fruits: bool) -> Rule:
+def create_rule_string(world: PMW2RepacWorld, rule_data: Mapping[str, str]) -> str:
+    rules_string = ""
+    for rulesType, rules in rule_data:
+        if rulesType == "id" or rules == "NONE": continue
+
+        if rulesType == "fm_rules":
+            rules_string += rules
+        if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
+            rules_string += " | " + rules
+        if rulesType == "ag_rules" and world.options.logic_difficulty == 2 and rules != "":
+            rules_string += " | " + rules
+
+    return rules_string
+
+def create_rule_with_strings(rules_string: str, location: str, is_all_fruits: bool) -> Rule:
 
     single_rules = []
     final_rule = False_()

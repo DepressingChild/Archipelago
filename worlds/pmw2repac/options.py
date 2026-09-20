@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from Options import Choice, OptionGroup, OptionSet, Range, Toggle, PerGameCommonOptions, DeathLink
+from Options import Choice, OptionGroup, OptionSet, Range, Toggle, DefaultOnToggle, PerGameCommonOptions, DeathLink
 
 class GoalBoss(Choice):
     """
@@ -11,26 +11,28 @@ class GoalBoss(Choice):
     option_spooky = 0
     option_toc_man = 1
 
-class MissionChecks(Toggle):
-    """
-    Debug purposes
-    """
+    default = option_spooky
 
-    display_name = "Mission Checks"
-
-class GashaponChecks(Toggle):
-    """
-    Debug purposes
-    """
-
-    display_name = "Gashapon Checks"
-
-class GalaxianChecks(Toggle):
-    """
-    Debug purposes
-    """
-
-    display_name = "Galaxian Checks"
+# class MissionChecks(Toggle):
+#     """
+#     Debug purposes
+#     """
+#
+#     display_name = "Mission Checks"
+#
+# class GashaponChecks(Toggle):
+#     """
+#     Debug purposes
+#     """
+#
+#     display_name = "Gashapon Checks"
+#
+# class GalaxianChecks(Toggle):
+#     """
+#     Debug purposes
+#     """
+#
+#     display_name = "Galaxian Checks"
 
 class GoldMedalChecks(Toggle):
     """
@@ -90,6 +92,7 @@ class MoveRandomizerLogicDifficulty(Choice):
     option_adventure_mode = 1
     option_anything_goes = 2
 
+    default = option_fairy_mode
 
 class FruitSwitches(Toggle):
     """
@@ -105,7 +108,7 @@ class FruitSwitches(Toggle):
 
     #display_name = "Fruitsanity"
 
-class ExcludeGoalLocations(Toggle):
+class ExcludeGoalLocations(DefaultOnToggle):
     """
     Prevents important items from appearing in locations that require most/all goal items.
     Includes goal level locations and Pac-Village mission with Spooky goal.
@@ -121,7 +124,7 @@ class PacDotWeight(Range):
     display_name = "Pac-Dot Weight"
     range_start = 0
     range_end = 100
-    default = 35
+    default = 30
 
 class PointsWeight(Range):
     """
@@ -131,7 +134,17 @@ class PointsWeight(Range):
     display_name = "Points Weight"
     range_start = 0
     range_end = 100
-    default = 60
+    default = 55
+
+class LivesWeight(Range):
+    """
+    Chance that unfilled locations have extra lives.
+    """
+
+    display_name = "Lives Weight"
+    range_start = 0
+    range_end = 100
+    default = 10
 
 class TrapWeight(Range):
     """
@@ -146,9 +159,9 @@ class TrapWeight(Range):
 @dataclass
 class PMW2RepacOptions(PerGameCommonOptions):
     goal_boss: GoalBoss
-    mission_checks: MissionChecks
-    gashapon_checks: GashaponChecks
-    galaxian_checks: GalaxianChecks
+    # mission_checks: MissionChecks
+    # gashapon_checks: GashaponChecks
+    # galaxian_checks: GalaxianChecks
     gold_medal_checks: GoldMedalChecks
     level_randomizer: LevelRandomizer
     random_starting_levels: RandomStartingLevels
@@ -160,6 +173,7 @@ class PMW2RepacOptions(PerGameCommonOptions):
     exclude_goal_locations: ExcludeGoalLocations
     pac_dot_weight: PacDotWeight
     points_weight: PointsWeight
+    lives_weight: LivesWeight
     trap_weight: TrapWeight
 
 #Stuff below is for the website.

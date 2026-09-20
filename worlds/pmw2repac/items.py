@@ -32,8 +32,6 @@ def define_items() -> None:
     for movement, movement_id in data.movement_data.items():
         items[movement] = movement_id + data.MOVEMENT_OFFSET
 
-    #Add item for goal level unlocks
-
     for filler, filler_id in data.filler_data.items():
         items[filler] = filler_id + data.FILLER_OFFSET
 
@@ -44,8 +42,6 @@ def define_items() -> None:
 def create_item(world: PMW2RepacWorld, name: str) -> PMW2RepacItem:
     item_id = items[name]
 
-    #Once we figure out more items to add, make an offset for them then add them here. The range for if statements is item offset <= item_id < next item offset
-    #Levels are progression
     if data.LEVEL_OFFSET <= item_id < data.GOLDEN_FRUIT_OFFSET: classification = ItemClassification.progression
 
     elif data.GOLDEN_FRUIT_OFFSET <= item_id < data.KEY_OFFSET: classification = ItemClassification.progression
@@ -72,12 +68,6 @@ def create_all_items(world: PMW2RepacWorld) -> None:
 
     if world.options.level_randomizer:
 
-        # For whatever reason, this segment has a chance to create a duplicate level
-        # Running this same segment in a separate Python script does NOT produce these issues. Why? idfk.
-
-        #Exclude levels from random starting levels
-        #beatable_starting_levels = []
-
         if world.options.move_randomizer:
             if world.options.moves_to_randomize.__contains__("Butt Bounce") and world.options.moves_to_randomize.__contains__("Super Butt Bounce"):
                 beatable_starting_levels = ["Ice River Run", "Blade Mountain", "Yellow Pac-Marine", "Whale on a Sub", "Haunted Boardwalk", "Pro Thunder Skater", "Pac-Marine Battle!"]
@@ -91,11 +81,6 @@ def create_all_items(world: PMW2RepacWorld) -> None:
                         excluded_levels.append(level)
             beatable_starting_levels = list(set(data.level_data.keys()) - set(excluded_levels))
 
-        # for level in beatable_starting_levels:
-        #     if world.options.goal_boss == 0 and data.level_data[level]["id"] > data.level_data["Spooky"]["id"]:
-        #         beatable_starting_levels.remove(level)
-
-        # Loop above does not work. idk why.
         world.random.shuffle(beatable_starting_levels)
         i = 0
         for level in beatable_starting_levels:
@@ -141,20 +126,21 @@ def create_all_items(world: PMW2RepacWorld) -> None:
             itempool.append(world.create_item(move))
             number_of_unfilled_locations -= 1
 
-    leftover_costumes = list(data.costume_data.keys())
-    world.random.shuffle(leftover_costumes)
-    for costume in leftover_costumes:
-        if number_of_unfilled_locations <= 0: break
-        itempool.append(world.create_item(costume + " costume"))
-        leftover_costumes.remove(costume)
-        number_of_unfilled_locations -= 1
+    costumes = list(data.costume_data.keys())
+    leftover_costumes = []
+    world.random.shuffle(costumes)
+    costumes_to_add = min(number_of_unfilled_locations, len(costumes))
+    for _ in range(len(costumes)):
+        if _ > costumes_to_add:
+            leftover_costumes.append(costumes[_])
+        else:
+            itempool.append(world.create_item(costumes[_] + " costume"))
+            number_of_unfilled_locations -= 1
 
-    #At the end, add filler.
     itempool += [world.create_filler() for _ in range(number_of_unfilled_locations)]
 
     world.multiworld.itempool += itempool
 
-    #Precollect starting levels
     if world.options.level_randomizer:
         for level in starting_levels:
             world.push_precollected(world.create_item(level))
@@ -213,11 +199,13 @@ def get_random_filler_item(world: PMW2RepacWorld) -> str:
     score500 = world.options.points_weight * .2
     score1000 = world.options.points_weight * .1
 
-    weights = pacdot1 + pacdot5 + pacdot10 + score100 + score200 + score500 + score1000
+    life = world.options.lives_weight
+
+    weights = pacdot1 + pacdot5 + pacdot10 + score100 + score200 + score500 + score1000 + life
 
     # If trap chance fails, send a filler item.
     if weights > 0:
-        return world.random.choices(population=list(data.filler_data.keys()), weights=[pacdot1, pacdot5, pacdot10, score100, score200, score500, score1000], k=1)[0]
+        return world.random.choices(population=list(data.filler_data.keys()), weights=[pacdot1, pacdot5, pacdot10, score100, score200, score500, score1000, life], k=1)[0]
 
 
     # If all chances fail, send nothing.

@@ -62,17 +62,17 @@ def create_locations(world: PMW2RepacWorld) -> None:
                 case "Galaxian":
                     offset = data.GALAXIAN_OFFSET
 
-            if "id" in collectibleData and world.options.galaxian_checks:
+            if "id" in collectibleData: #and world.options.galaxian_checks:
                 location = PMW2RepacLocation(world.player, level + " - " + collectible, collectibleData["id"] + offset, region)
                 region.locations.append(location)
 
         for gashapon, gashaponData in levelData["Gashapons"].items():
-            if "id" in gashaponData and world.options.gashapon_checks:
+            if "id" in gashaponData: #and world.options.gashapon_checks:
                 location = PMW2RepacLocation(world.player, level + " - Gashapon - " + gashapon, gashaponData["id"] + data.GASHAPON_OFFSET, region)
                 region.locations.append(location)
 
         for mission, missionData in levelData["Missions"].items():
-            if "id" in missionData and world.options.mission_checks:
+            if "id" in missionData: #and world.options.mission_checks:
                 location = PMW2RepacLocation(world.player, level + " - Mission - "  + mission, missionData["id"] + data.MISSION_OFFSET, region)
                 region.locations.append(location)
 
@@ -87,16 +87,5 @@ def create_locations(world: PMW2RepacWorld) -> None:
 
 def create_events(world: PMW2RepacWorld) -> None:
     i = 1
-    #spooky = world.get_region("Spooky")
-    #spooky.add_event("Defeat Spooky", "Spooky Defeated", location_type=PMW2RepacLocation, item_type=items.PMW2RepacItem)
-    #spooky2 = world.get_region("Legendary Story")
-    #spooky2.add_event("Defeat Spooky 2", "Spooky 2 Defeated", location_type=PMW2RepacLocation, item_type=items.PMW2RepacItem)
-    # if world.options.level_randomizer == 0:
-    #     for level, levelData in data.level_data.items():
-    #         region = world.get_region(level)
-    #         loc = PMW2RepacLocation(world.player, "Clear " + level, None, region)
-    #         region.locations.append(loc)
-    #
-    #         loc.place_locked_item(items.PMW2RepacItem("Cleared" + level, ItemClassification.progression, None, world.player))
 
 
