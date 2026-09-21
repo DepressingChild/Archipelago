@@ -39,6 +39,8 @@ class GoldMedalChecks(Toggle):
     Makes each gold time trial medal a check. Adds 23 or 36 checks depending on goal.
     """
 
+    display_name = "Gold Medal Checks"
+
 class LevelRandomizer(Toggle):
     """
     Levels get randomized into the item pool instead of unlocking them with Golden Fruits or Keys.

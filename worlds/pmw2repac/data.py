@@ -530,8 +530,8 @@ level_data = {
         },
         "Gold Medal": {
             "fm_rules": "bb&rr",
-            "am_rules": "bb&fk",
-            "ag_rules": ""
+            "am_rules": "bb&fk | bb&dt&f",
+            "ag_rules": "bb&dt"
         },
         "Collectibles":{
            #"Cherries" : 0,
@@ -680,7 +680,7 @@ level_data = {
         },
         "Gold Medal": {
             "fm_rules": "bb&rr&fk | bb&rr&dt",
-            "am_rules": "bb&fk&f | bb&dt&f",
+            "am_rules": "bb&fk&f | bb&dt&f | bb&rr",
             "ag_rules": "bb&fk"
         },
         "Collectibles":{
@@ -1765,8 +1765,8 @@ level_data = {
             "Orange Chest": {
                 "id": 51,
                 "fm_rules": "bb&fk | bb&dt",
-                "am_rules": "sbb",
-                "ag_rules": ""
+                "am_rules": "sbb&f",
+                "ag_rules": "sbb"
             },
             "Apple Chest": {
                 "id": 52,
@@ -1905,10 +1905,10 @@ costume_data = {
     "Magician (Purple)": 24,
     "Magician (Green)": 25,
     "Pac-Knight": 26,
-    #"Toc-Man": 27, #Do we remove this because you need re-pac 1?
+    #"Toc-Man": 27,
     "Pac-Wizard": 28,
     "Orson": 29,
-    #"Pac-Land": 30, #Do we remove this because pre-order bonus?
+    #"Pac-Land": 30,
     "Spooky": 31,
     #No sonic dlc for you
     # "Holiday (Red)": 33,

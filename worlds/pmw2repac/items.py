@@ -113,11 +113,19 @@ def create_all_items(world: PMW2RepacWorld) -> None:
             number_of_unfilled_locations -= 1
 
     if world.options.fruit_switches:
-        for fruit_switch in data.fruit_switch_data.keys():
+        fruit_switches = sorted(data.fruit_switch_data.keys())
+        world.random.shuffle(fruit_switches)
+        world.push_precollected(world.create_item(fruit_switches.pop()))
+
+        for fruit_switch in fruit_switches:
             itempool.append(world.create_item(fruit_switch))
             number_of_unfilled_locations -= 1
+    else:
+        for switch in data.fruit_switch_data.keys():
+            world.push_precollected(world.create_item(switch))
 
     if world.options.move_randomizer:
+
         for move in world.options.moves_to_randomize:
             if move == "Butt Bounce" or move == "Super Butt Bounce":
                 move = "Progressive Butt Bounce"
@@ -171,13 +179,13 @@ def create_all_items(world: PMW2RepacWorld) -> None:
             world.push_precollected(world.create_item("Progressive Dolphin Kick"))
 
 
-    if world.options.fruit_switches:
-        fruit_switches = sorted(data.fruit_switch_data.keys())
-        world.random.shuffle(fruit_switches)
-        world.push_precollected(world.create_item(fruit_switches.pop()))
-    else:
-        for switch in data.fruit_switch_data.keys():
-            world.push_precollected(world.create_item(switch))
+    # if world.options.fruit_switches:
+    #     fruit_switches = sorted(data.fruit_switch_data.keys())
+    #     world.random.shuffle(fruit_switches)
+    #     world.push_precollected(world.create_item(fruit_switches.pop()))
+    # else:
+    #     for switch in data.fruit_switch_data.keys():
+    #         world.push_precollected(world.create_item(switch))
 
     for costume in leftover_costumes:
         world.push_precollected(world.create_item(costume + " costume"))
