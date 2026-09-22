@@ -85,7 +85,7 @@ level_data = {
             },
             "Score 10,000": {
                 "id": 2,
-                "fm_rules": "bb",
+                "fm_rules": "bb&ss | bb&os | bb&as | bb&ms",
                 "am_rules": "",
                 "ag_rules": ""
             },
@@ -297,8 +297,8 @@ level_data = {
             },
             "Score 20,000": {
                 "id": 13,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&fk | bb&dt | bb&f | sbb",
+                "fm_rules": "bb&rr&fk&ms&os | bb&rr&fk&ms&ss&cs | bb&rr&fk&ms&ss&as | sbb&rr&dt&ms&os | sbb&rr&dt&ms&ss&cs | sbb&rr&dt&ms&ss&as | bb&rr&dt&ms&os&cs | bb&rr&dt&ms&os&ss | bb&rr&dt&ms&os&as | bb&rr&dt&ms&ss&cs&as", #Need to find a better way to create rules like this.
+                "am_rules": "bb&fk&ms&os | bb&fk&ms&ss&cs | bb&fk&ms&ss&as | bb&dt&ms&os | bb&dt&ms&ss&cs | bb&dt&ms&ss&as | bb&f&cs&ss&as&ms | bb&f&ss&os&ms | bb&f&os&as&ms | sbb&cs&ss&as&ms | sbb&ss&os&ms | sbb&os&as&ms",
                 "ag_rules": ""
             },
             "Time Trial": {
@@ -374,12 +374,12 @@ level_data = {
         "id": 7,
         "Clear": {
             "fm_rules": "bb&rr",
-            "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
+            "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&fk&dt",
             "ag_rules": ""
         },
         "Gold Medal": {
             "fm_rules": "bb&rr",
-            "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
+            "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&fk&dt",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -400,13 +400,13 @@ level_data = {
             "Melon Chest": {
                 "id": 10,
                 "fm_rules": "bb&rr&fk | bb&rr&fk",
-                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
+                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&fk&dt",
                 "ag_rules": ""
             },
             "Strawberry Chest": {
                 "id": 11,
                 "fm_rules": "bb&rr&f | bb&rr&dt | sbb&rr",
-                "am_rules": "bb&rr | bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
+                "am_rules": "bb&rr | bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&fk&dt",
                 "ag_rules": ""
             }
         },
@@ -414,19 +414,19 @@ level_data = {
             "Collect All Fruits": {
                 "id": 18,
                 "fm_rules": "bb&rr&fk | bb&rr&fk",
-                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
+                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&fk&dt",
                 "ag_rules": ""
             },
             "Defeat Enemies": {
                 "id": 19,
                 "fm_rules": "bb&rr&fk | bb&rr&fk",
-                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&rr",
+                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&rr | sbb&fk&dt",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 20,
                 "fm_rules": "bb&rr",
-                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f",
+                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk& | sbb&fk&dtf",
                 "ag_rules": ""
             }
         }
@@ -1134,9 +1134,9 @@ level_data = {
             },
             "Score 11,000": {
                 "id": 57,
-                "fm_rules": "fk | dt",
-                "am_rules": "sbb&f",
-                "ag_rules": "sbb"
+                "fm_rules": "fk&ms&as | fk&ms&ss | dt&ms&as | dt&ms&ss",
+                "am_rules": "sbb&f&ms&as | sbb&f&ms&ss",
+                "ag_rules": "sbb&ms&as | sbb&ms&ss"
             },
             "Time Trial": {
                 "id": 58,
@@ -1385,12 +1385,12 @@ level_data = {
         "id": 27,
         "Clear": {
             "fm_rules": "bb&rr",
-            "am_rules": "bb&fk&dt&f | sbb&fk&f | sbb&dt&f",
+            "am_rules": "bb&fk&dt&f | sbb&fk&f | sbb&dt&f | sbb&fk&dt",
             "ag_rules": ""
         },
         "Gold Medal": {
             "fm_rules": "bb&rr",
-            "am_rules": "bb&fk&dt&f | sbb&fk&f | sbb&dt&f",
+            "am_rules": "bb&fk&dt&f | sbb&fk&f | sbb&dt&f | sbb&fk&dt",
             "ag_rules": ""
         },
         "Collectibles": {
@@ -1405,19 +1405,19 @@ level_data = {
             "Strawberry Chest": {
                 "id": 39,
                 "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "sbb&fk&f | sbb&dt&f",
+                "am_rules": "bb&rr | sbb&dt&f | sbb&fk&dt | bb&fk&dt&f",
                 "ag_rules": ""
             },
             "Orange Chest": {
                 "id": 40,
                 "fm_rules": "bb&rr",
-                "am_rules": "sbb&fk&f | sbb&dt&f",
+                "am_rules": "sbb&fk&f | sbb&dt&f | sbb&fk&dt & bb&fk&dt&f",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 41,
                 "fm_rules": "sbb&rr&fk | sbb&rr&fk",
-                "am_rules": "sbb&fk&f | sbb&dt&f",
+                "am_rules": "sbb&fk&f | sbb&dt&f | sbb&fk&dt",
                 "ag_rules": ""
             }
         },
@@ -1425,19 +1425,19 @@ level_data = {
             "Collect All Fruits": {
                 "id": 72,
                 "fm_rules": "sbb&rr&fk | sbb&rr&fk",
-                "am_rules": "sbb&fk&f | sbb&dt&f",
+                "am_rules": "sbb&fk&f | sbb&dt&f | sbb&fk&dt",
                 "ag_rules": ""
             },
             "Score 20,000": {
                 "id": 73,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "sbb&rr",
-                "ag_rules": ""
+                "fm_rules": "sbb&rr&fk&ms&ss | sbb&rr&dt&ms&ss | bb&rr&fk&ms&ss&cs | bb&rr&dt&ms&ss&cs | bb&rr&fk&ms&as&os&cs | bb&rr&ms&as&os&cs | sbb&rr&fk&ms&os&cs | sbb&rr&dt&ms&os&cs | sbb&rr&fk&ms&os&as | sbb&rr&dt&ms&os&as",
+                "am_rules": "sbb&fk&dt&ms&ss | sbb&fk&f&ms&ss | sbb&rr&ms&ss&cs | sbb&rr&ms&as&os&cs | sbb&fk&dt&ms&os&cs | sbb&fk&f&ms&os&cs | sbb&dt&f&ms&os&cs | sbb&fk&dt&ms&os&as | sbb&fk&f&ms&os&as | sbb&dt&f&ms&os&as",
+                "ag_rules": "sbb&rr&fk&ms&os | sbb&rr&dt&ms&os | sbb&fk&dt&ms&os | sbb&fk&f&ms&os | sbb&dt&f&ms&os"
             },
             "Time Trial": {
                 "id": 74,
                 "fm_rules": "bb&rr",
-                "am_rules": "sbb&fk&f | sbb&dt&f",
+                "am_rules": "sbb&fk&f | sbb&dt&f | sbb&fk&dt | bb&fk&dt&f",
                 "ag_rules": ""
             },
         }
@@ -1610,8 +1610,8 @@ level_data = {
             },
             "Score 25,000": {
                 "id": 83,
-                "fm_rules": "bb&rr&dt | bb&rr&fk",
-                "am_rules": "bb&rr | sbb&f | bb&fk&f",
+                "fm_rules": "bb&rr&fk&ms&as&ss | bb&rr&fk&ms&os&ss | bb&rr&fk&ms&os&as | bb&rr&dt&ms&as&cs | bb&rr&dt&ms&ss | bb&rr&dt&ms&os",
+                "am_rules": "sbb&dt&f&ms&as&cs | bb&fk&f&ms&as&cs | sbb&dt&f&ms&ss | bb&fk&f&ms&ss | sbb&dt&f&ms&os | bb&fk&f&ms&os",
                 "ag_rules": ""
             },
             "Time Trial": {
@@ -1700,7 +1700,7 @@ level_data = {
             },
             "Score 24,000": {
                 "id": 88,
-                "fm_rules": "dk | fk",
+                "fm_rules": "dk&ms&as&os | dk&ms&os&ss | fk&ms&as&os | fk&ms&os&ss",
                 "am_rules": "",
                 "ag_rules": ""
             },

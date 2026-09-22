@@ -106,7 +106,7 @@ def set_entrance_rules(world: PMW2RepacWorld) -> None:
                 #         rules_string += " | " + rules
                 #     if rules_string == "": continue
 
-            clear_rule = create_rule_with_strings(rules_string, level + " - Clear", False, False)
+            clear_rule = create_rule_with_strings(rules_string, level + " - Clear", False)
             level_clear_rules.append(clear_rule)
 
             #clear level_clear_rules once certain areas are reached.
@@ -160,7 +160,7 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
                     loc = level + " - " + checkSet
                     location = world.get_location(loc)
                     # print(loc)
-                    world.set_rule(location, create_rule_with_strings(rules_string, loc, False, False))
+                    world.set_rule(location, create_rule_with_strings(rules_string, loc, False))
                 except KeyError:
                     pass
             else:
@@ -174,7 +174,6 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
                         loc += checkSet[:-1] + " - " + check
 
                     is_all_fruits = check == "Collect All Fruits"
-                    is_score = check.__contains__("Score")
 
                     # for rulesType, rules in ruleData.items():
                     #     if rulesType == "id" or rules == "NONE": continue
@@ -190,7 +189,7 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
                     try:
                         location = world.get_location(loc)
                         #print(loc)
-                        world.set_rule(location, create_rule_with_strings(rules_string, loc, is_all_fruits, is_score))
+                        world.set_rule(location, create_rule_with_strings(rules_string, loc, is_all_fruits))
                     except KeyError:
                         pass
 
@@ -223,14 +222,14 @@ def create_rule_string(world: PMW2RepacWorld, rule_data: Mapping[str, str]) -> s
 
     return rules_string
 
-def create_rule_with_strings(rules_string: str, location: str, is_all_fruits: bool, is_score: bool) -> Rule:
+def create_rule_with_strings(rules_string: str, location: str, is_all_fruits: bool) -> Rule:
 
     single_rules = []
     final_rule = False_()
     split_rules = rules_string.split(" | ")
     for rule in split_rules:
         single_rule = True_()
-        if is_all_fruits or is_score:
+        if is_all_fruits:
             single_rule = hasAllFruitSwitches
         if location.__contains__("Gashapon"):
             if location.__contains__("Cherry"):

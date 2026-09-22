@@ -110,6 +110,17 @@ class FruitSwitches(Toggle):
 
     #display_name = "Fruitsanity"
 
+# class DeathLinkAmnesty(Range):
+#     """
+#     The amount of deaths required to send a DeathLink.
+#     """
+#
+#     display_name = "Death Link Amnesty"
+#     range_start = 1
+#     range_end = 100
+#     default = 3
+
+
 class ExcludeGoalLocations(DefaultOnToggle):
     """
     Prevents important items from appearing in locations that require most/all goal items.
@@ -172,6 +183,8 @@ class PMW2RepacOptions(PerGameCommonOptions):
     logic_difficulty: MoveRandomizerLogicDifficulty
     fruit_switches: FruitSwitches
     #fruitsanity: Fruitsanity
+    #death_link: DeathLink
+    #death_link_amnesty: DeathLinkAmnesty
     exclude_goal_locations: ExcludeGoalLocations
     pac_dot_weight: PacDotWeight
     points_weight: PointsWeight
