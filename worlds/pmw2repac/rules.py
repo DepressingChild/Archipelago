@@ -231,6 +231,8 @@ def create_rule_with_strings(rules_string: str, location: str, is_all_fruits: bo
         single_rule = True_()
         if is_all_fruits:
             single_rule = hasAllFruitSwitches
+            if location.__contains__("Pac-Village"):
+                single_rule = single_rule & hasAllGoldenFruits
         if location.__contains__("Gashapon"):
             if location.__contains__("Cherry"):
                 rule += "&cs"

@@ -530,8 +530,8 @@ level_data = {
         },
         "Gold Medal": {
             "fm_rules": "bb&rr",
-            "am_rules": "bb&fk | bb&dt&f",
-            "ag_rules": "bb&dt"
+            "am_rules": "bb&fk",
+            "ag_rules": ""
         },
         "Collectibles":{
            #"Cherries" : 0,
@@ -1170,7 +1170,7 @@ level_data = {
             "Melon Chest": {
                 "id": 32,
                 "fm_rules": "sbb&rr&fk | sbb&rr&dt",
-                "am_rules": "bb&rr&fk | bb&dt",
+                "am_rules": "bb&rr&fk | bb&rr&f | bb&dt",
                 "ag_rules": ""
             },
             "Strawberry Chest": {
@@ -1184,7 +1184,7 @@ level_data = {
             "Collect All Fruits": {
                 "id": 59,
                 "fm_rules": "sbb&rr&fk | sbb&rr&dt",
-                "am_rules": "bb&dt | bb&rr&fk",
+                "am_rules": "bb&dt | bb&rr&fk | bb&rr&f",
                 "ag_rules": ""
             },
             "Destroy Crates": {
