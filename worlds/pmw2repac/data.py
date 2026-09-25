@@ -1411,13 +1411,13 @@ level_data = {
             "Orange Chest": {
                 "id": 40,
                 "fm_rules": "bb&rr",
-                "am_rules": "sbb&fk&f | bb&dt&f | sbb&fk&dt & bb&fk&dt&f",
+                "am_rules": "sbb&fk&f | bb&dt&f | sbb&fk&dt",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 41,
                 "fm_rules": "sbb&rr&fk | sbb&rr&fk",
-                "am_rules": "sbb&fk&f | bb&dt&f | sbb&fk&dt",
+                "am_rules": "sbb&fk&f | sbb&dt&f | sbb&fk&dt",
                 "ag_rules": ""
             }
         },
@@ -1431,13 +1431,13 @@ level_data = {
             "Score 20,000": {
                 "id": 73,
                 "fm_rules": "sbb&rr&fk&ms&ss | sbb&rr&dt&ms&ss | bb&rr&fk&ms&ss&cs | bb&rr&dt&ms&ss&cs | bb&rr&fk&ms&as&os&cs | bb&rr&ms&as&os&cs | sbb&rr&fk&ms&os&cs | sbb&rr&dt&ms&os&cs | sbb&rr&fk&ms&os&as | sbb&rr&dt&ms&os&as",
-                "am_rules": "sbb&fk&dt&ms&ss | sbb&fk&f&ms&ss | sbb&rr&ms&ss&cs | sbb&rr&ms&as&os&cs | sbb&fk&dt&ms&os&cs | sbb&fk&f&ms&os&cs | sbb&dt&f&ms&os&cs | sbb&fk&dt&ms&os&as | sbb&fk&f&ms&os&as | sbb&dt&f&ms&os&as",
+                "am_rules": "sbb&fk&dt&ms&ss | sbb&fk&f&ms&ss | sbb&rr&ms&ss&cs | sbb&rr&ms&as&os&cs | sbb&fk&dt&ms&os&cs | sbb&fk&f&ms&os&cs | sbb&dt&f&ms&os&cs | sbb&fk&dt&ms&os&as | sbb&fk&f&ms&os&as | sbb&dt&f&ms&os&as | bb&dt&f&ms&ss&cs | bb&dt&f&ms&as&ss | bb&dt&f&ms&as&os&cs | bb&dt&f&ms&os&ss",
                 "ag_rules": "sbb&rr&fk&ms&os | sbb&rr&dt&ms&os | sbb&fk&dt&ms&os | sbb&fk&f&ms&os | sbb&dt&f&ms&os"
             },
             "Time Trial": {
                 "id": 74,
                 "fm_rules": "bb&rr",
-                "am_rules": "sbb&fk&f | sbb&dt&f | sbb&fk&dt | bb&fk&dt&f",
+                "am_rules": "sbb&fk&f | bb&dt&f | sbb&fk&dt",
                 "ag_rules": ""
             },
         }
