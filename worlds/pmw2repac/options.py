@@ -99,9 +99,21 @@ class MoveRandomizerLogicDifficulty(Choice):
 class FruitSwitches(Toggle):
     """
     Adds fruit switches to the items pool. Disables fruit of that type until the respective switch is found.
-    1 fruit switch will be enabled at the start.
     """
+
     display_name = "Fruit Switches"
+
+class StartingFruitSwitches(Range):
+    """
+    Choose how many fruit switches are given at the start.
+
+    Does nothing if fruit switches are disabled.
+    """
+
+    display_name = "Starting Fruit Switches"
+    range_start = 1
+    range_end = 5
+    default = 2
 
 #class Fruitsanity(Toggle):
     #"""
@@ -182,6 +194,7 @@ class PMW2RepacOptions(PerGameCommonOptions):
     moves_to_randomize: MovesToRandomize
     logic_difficulty: MoveRandomizerLogicDifficulty
     fruit_switches: FruitSwitches
+    starting_fruit_switches: StartingFruitSwitches
     #fruitsanity: Fruitsanity
     #death_link: DeathLink
     #death_link_amnesty: DeathLinkAmnesty

@@ -115,7 +115,8 @@ def create_all_items(world: PMW2RepacWorld) -> None:
     if world.options.fruit_switches:
         fruit_switches = sorted(data.fruit_switch_data.keys())
         world.random.shuffle(fruit_switches)
-        world.push_precollected(world.create_item(fruit_switches.pop()))
+        for _ in range(world.options.starting_fruit_switches):
+            world.push_precollected(world.create_item(fruit_switches.pop()))
 
         for fruit_switch in fruit_switches:
             itempool.append(world.create_item(fruit_switch))
@@ -198,9 +199,9 @@ def get_random_filler_item(world: PMW2RepacWorld) -> str:
 
     #Could change to make these individual option choices
 
-    pacdot1 = world.options.pac_dot_weight * 0.5
-    pacdot5 = world.options.pac_dot_weight * 0.3
-    pacdot10 = world.options.pac_dot_weight * 0.2
+    pacdot1 = world.options.pac_dot_weight * 0.15
+    pacdot5 = world.options.pac_dot_weight * 0.55
+    pacdot10 = world.options.pac_dot_weight * 0.3
 
     score100 = world.options.points_weight * .4
     score200 = world.options.points_weight * .3

@@ -426,7 +426,7 @@ level_data = {
             "Time Trial": {
                 "id": 20,
                 "fm_rules": "bb&rr",
-                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk& | sbb&fk&dtf",
+                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&fk&dt",
                 "ag_rules": ""
             }
         }
