@@ -374,12 +374,12 @@ level_data = {
         "id": 7,
         "Clear": {
             "fm_rules": "bb&rr",
-            "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&fk&dt",
+            "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt",
             "ag_rules": ""
         },
         "Gold Medal": {
             "fm_rules": "bb&rr",
-            "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&fk&dt",
+            "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt",
             "ag_rules": ""
         },
         "Collectibles":{
@@ -391,7 +391,7 @@ level_data = {
            "Galaxian" :{
                "id": 4,
                 "fm_rules": "bb&rr&as",
-                "am_rules": "bb&fk&f&as | sbb&f&as | sbb&fk&as",
+                "am_rules": "bb&f&as | sbb&fk&as",
                 "ag_rules": ""
 
            }
@@ -400,13 +400,13 @@ level_data = {
             "Melon Chest": {
                 "id": 10,
                 "fm_rules": "bb&rr&fk | bb&rr&fk",
-                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&fk&dt",
+                "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt",
                 "ag_rules": ""
             },
             "Strawberry Chest": {
                 "id": 11,
                 "fm_rules": "bb&rr&f | bb&rr&dt | sbb&rr",
-                "am_rules": "bb&rr | bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&fk&dt",
+                "am_rules": "bb&rr | bb&dt&f | sbb&fk&f | sbb&fk&dt",
                 "ag_rules": ""
             }
         },
@@ -414,19 +414,19 @@ level_data = {
             "Collect All Fruits": {
                 "id": 18,
                 "fm_rules": "bb&rr&fk | bb&rr&fk",
-                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&fk&dt",
+                "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt",
                 "ag_rules": ""
             },
             "Defeat Enemies": {
                 "id": 19,
                 "fm_rules": "bb&rr&fk | bb&rr&fk",
-                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&rr | sbb&fk&dt",
+                "am_rules": "bb&dt&f | sbb&fk&f | sbb&rr | sbb&fk&dt",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 20,
                 "fm_rules": "bb&rr",
-                "am_rules": "bb&fk&dt&f | sbb&dt&f | sbb&fk&f | sbb&fk&dt",
+                "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt",
                 "ag_rules": ""
             }
         }
@@ -1385,12 +1385,12 @@ level_data = {
         "id": 27,
         "Clear": {
             "fm_rules": "bb&rr",
-            "am_rules": "bb&fk&dt&f | sbb&fk&f | sbb&dt&f | sbb&fk&dt",
+            "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt",
             "ag_rules": ""
         },
         "Gold Medal": {
             "fm_rules": "bb&rr",
-            "am_rules": "bb&fk&dt&f | sbb&fk&f | sbb&dt&f | sbb&fk&dt",
+            "am_rules": "sbb&fk&f | bb&dt&f | sbb&fk&dt",
             "ag_rules": ""
         },
         "Collectibles": {
@@ -1405,19 +1405,19 @@ level_data = {
             "Strawberry Chest": {
                 "id": 39,
                 "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "bb&rr | sbb&dt&f | sbb&fk&dt | bb&fk&dt&f",
+                "am_rules": "bb&rr | sbb&fk&f | sbb&fk&dt | bb&dt&f",
                 "ag_rules": ""
             },
             "Orange Chest": {
                 "id": 40,
                 "fm_rules": "bb&rr",
-                "am_rules": "sbb&fk&f | sbb&dt&f | sbb&fk&dt & bb&fk&dt&f",
+                "am_rules": "sbb&fk&f | bb&dt&f | sbb&fk&dt & bb&fk&dt&f",
                 "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 41,
                 "fm_rules": "sbb&rr&fk | sbb&rr&fk",
-                "am_rules": "sbb&fk&f | sbb&dt&f | sbb&fk&dt",
+                "am_rules": "sbb&fk&f | bb&dt&f | sbb&fk&dt",
                 "ag_rules": ""
             }
         },
