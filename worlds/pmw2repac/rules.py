@@ -57,14 +57,9 @@ def set_entrance_rules(world: PMW2RepacWorld) -> None:
             if world.options.goal_boss == 0 and levelData["id"] > data.level_data["Spooky"]["id"]:
                 break
 
-            # if level == "Spooky" or level == "Legendary Story" or level == "Flying Dark Shadow":
-            #     continue
-
-            # print("Not level randomizer")
             item_rule = True_()
             if levelData["id"] > data.level_data["Legendary Story"]["id"]:
                 i = 0
-                #world.set_rule(entrance, Has(""))
             elif levelData["id"] > data.level_data["Pac-Marine Battle!"]["id"]:
                 item_rule = Has("Ghost Island Key")
             elif levelData["id"] > data.level_data["Burning-Hot Beats"]["id"]:
@@ -97,14 +92,6 @@ def set_entrance_rules(world: PMW2RepacWorld) -> None:
             rules_string = ""
             if level != "Pac-Village":
                 rules_string = create_rule_string(world, levelData["Clear"].items())
-                # for rulesType, rules in levelData["Clear"].items():
-                #     if rulesType == "fm_rules":
-                #         rules_string += rules
-                #     if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
-                #         rules_string += " | " + rules
-                #     if rulesType == "ag_rules" and world.options.logic_difficulty == 2 and rules != "":
-                #         rules_string += " | " + rules
-                #     if rules_string == "": continue
 
             clear_rule = create_rule_with_strings(rules_string, level + " - Clear", False)
             level_clear_rules.append(clear_rule)
@@ -145,16 +132,6 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
                 if level == "Pac-Village": continue
 
                 rules_string = create_rule_string(world, levelData[checkSet].items())
-                # for rulesType, rules in levelData[checkSet].items():
-                #     if rules == "NONE": continue
-                #
-                #     if rulesType == "fm_rules":
-                #         rules_string += rules
-                #     if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
-                #         rules_string += " | " + rules
-                #     if rulesType == "ag_rules" and world.options.logic_difficulty == 2 and rules != "":
-                #         rules_string += " | " + rules
-                #     if rules_string == "": continue
 
                 try:
                     loc = level + " - " + checkSet
@@ -175,17 +152,6 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
 
                     is_all_fruits = check == "Collect All Fruits"
 
-                    # for rulesType, rules in ruleData.items():
-                    #     if rulesType == "id" or rules == "NONE": continue
-                    #
-                    #     if rulesType == "fm_rules":
-                    #         rules_string += rules
-                    #     if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
-                    #         rules_string += " | " + rules
-                    #     if rulesType == "ag_rules" and world.options.logic_difficulty == 2 and rules != "":
-                    #         rules_string += " | " + rules
-                    #     if rules_string == "": continue
-
                     try:
                         location = world.get_location(loc)
                         #print(loc)
@@ -204,7 +170,7 @@ def set_goal(world: PMW2RepacWorld) -> None:
     else:
         world.set_completion_rule(hasAllGoldenFruits & hasAllKeys) #use events for this
         if world.options.level_randomizer:
-            world.set_completion_rule(HasAll("Spooky", "Legendary Story", "Flying Dark Shadow") & hasAllGoldenFruits & hasAllKeys & canBeatSpooky & canBeatTocMan)
+            world.set_completion_rule(HasAll("Spooky", "Flying Dark Shadow") & hasAllGoldenFruits & hasAllKeys & canBeatSpooky & canBeatTocMan)
         else:
             world.set_completion_rule(hasAllGoldenFruits & hasAllKeys & canBeatSpooky & canBeatTocMan)
 

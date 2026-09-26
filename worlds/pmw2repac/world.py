@@ -41,5 +41,5 @@ class PMW2RepacWorld(World):
 
     def fill_slot_data(self) -> Mapping[str, Any]:
         return self.options.as_dict("goal_boss", "gold_medal_checks", "level_randomizer", "random_starting_levels",
-                                    "move_randomizer", "moves_to_randomize", "logic_difficulty", "fruit_switches",
+                                    "move_randomizer", "moves_to_randomize", "logic_difficulty", "fruit_switches", "starting_fruit_switches",
                                     "exclude_goal_locations", "pac_dot_weight", "points_weight", "trap_weight") | data.exc_costumes

@@ -196,7 +196,7 @@ class PMW2RepacOptions(PerGameCommonOptions):
     fruit_switches: FruitSwitches
     starting_fruit_switches: StartingFruitSwitches
     #fruitsanity: Fruitsanity
-    #death_link: DeathLink
+    #death_link: DeathLink # You. Yes you. I see you reading this. These commented options do not work. Do not enable them. Please and thank you. :)
     #death_link_amnesty: DeathLinkAmnesty
     exclude_goal_locations: ExcludeGoalLocations
     pac_dot_weight: PacDotWeight
