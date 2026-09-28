@@ -22,7 +22,7 @@ def define_locations() -> None:
         if levelData["id"] > 0:
             locations[level + " - Clear"] = levelData["id"] + data.LEVEL_OFFSET
 
-            if levelData["id"] != data.level_data["Yellow Pac-Marine"]["id"]:
+            if levelData["id"] != data.level_data["Yellow Pac-Marine"]["id"] :
                 locations[level + " - Gold Medal"] = levelData["id"] + data.TIMETRIAL_OFFSET
 
         for collectible, collectibleData in levelData["Collectibles"].items():
@@ -52,7 +52,7 @@ def create_locations(world: PMW2RepacWorld) -> None:
             location = PMW2RepacLocation(world.player, level + " - Clear", levelData["id"] + data.LEVEL_OFFSET, region)
             region.locations.append(location)
 
-            if levelData["id"] != data.level_data["Yellow Pac-Marine"]["id"]:
+            if levelData["id"] != data.level_data["Yellow Pac-Marine"]["id"] and world.options.gold_medal_checks:
                 location = PMW2RepacLocation(world.player, level + " - Gold Medal", levelData["id"] + data.TIMETRIAL_OFFSET, region)
                 region.locations.append(location)
 
