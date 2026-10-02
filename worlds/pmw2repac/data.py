@@ -782,7 +782,7 @@ level_data = {
             "Defeat Enemies": {
                 "id": 38,
                 "fm_rules": "bb&rr&dt",
-                "am_rules": "sbb&f | bb&fk&f",
+                "am_rules": "sbb&f | bb&fk&f | bb&rr",
                 "ag_rules": ""
             },
             "Time Trial": {
