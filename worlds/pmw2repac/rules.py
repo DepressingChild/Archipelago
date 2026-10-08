@@ -39,6 +39,7 @@ canBeatTocMan = rule_convert["sbb"] & rule_convert["rr"] & rule_convert["fk"]
 def set_all_rules(world: PMW2RepacWorld) -> None:
     set_entrance_rules(world)
     set_specific_entrance_rules(world)
+    set_checkpoint_entrance_rules(world)
     set_location_rules(world)
     set_goal(world)
 
@@ -114,25 +115,48 @@ def set_specific_entrance_rules(world: PMW2RepacWorld) -> None:
 
     if world.options.goal_boss == 1:
         if world.options.level_randomizer:
-            world.set_rule(world.get_entrance("World Map to Legendary Story"), hasAllGoldenFruits & Has("Legendary Story"))
-            world.set_rule(world.get_entrance("World Map to Flying Dark Shadow"), hasAllGoldenFruits & Has("Flying Dark Shadow"))
+            world.set_rule(world.get_entrance("World Map to Legendary Story"), hasAllKeys & Has("Legendary Story"))
+            world.set_rule(world.get_entrance("World Map to Flying Dark Shadow"), hasAllGoldenFruits & hasAllKeys & Has("Flying Dark Shadow"))
         else:
-            world.set_rule(world.get_entrance("World Map to Legendary Story"), hasAllGoldenFruits)
-            world.set_rule(world.get_entrance("World Map to Flying Dark Shadow"), hasAllGoldenFruits)
+            world.set_rule(world.get_entrance("World Map to Legendary Story"), hasAllKeys)
+            world.set_rule(world.get_entrance("World Map to Flying Dark Shadow"), hasAllGoldenFruits & hasAllKeys)
 
-        world.set_rule(world.get_entrance("World Map to Legendary Story"), hasAllKeys)
-        world.set_rule(world.get_entrance("World Map to Flying Dark Shadow"), hasAllGoldenFruits & hasAllKeys)
+def set_checkpoint_entrance_rules(world: PMW2RepacWorld) -> None:
+    for level, levelData in data.level_data.items():
+        if world.options.goal_boss == 0 and levelData["id"] > data.level_data["Spooky"]["id"]:  # we hate pac-village
+            break
+        if levelData["id"] == 0:
+            continue
+
+        for checkSet, checkData in levelData.items():
+            if checkSet == "Checkpoints":
+                num_checkpoints = len(checkData.keys())
+                for i in range(num_checkpoints):
+                    ent_str: str
+                    if i == 0:
+                        ent_str = level + " to Checkpoint 1"
+                    else:
+                        ent_str = level + " Checkpoint " + str(i) + " to Checkpoint " + str(i + 1)
+
+                    rule_string = create_rule_string(world, checkData[i + 1].items())
+
+                    rule = create_rule_with_strings(rule_string, ent_str, False)
+                    entrance = world.get_entrance(ent_str)
+
+                    # print(ent_str)
+                    # print(rule)
+                    world.set_rule(entrance, rule)
 
 def set_location_rules(world: PMW2RepacWorld) -> None:
     level_clear_rules = []
     for level, levelData in data.level_data.items():
         for checkSet, checkData in levelData.items():
-            if checkSet == "id" or (not world.options.gold_medal_checks and checkSet == "Gold Medal"): continue
+            if checkSet == "id" or checkSet == "Checkpoints" or (not world.options.gold_medal_checks and checkSet == "Gold Medal"): continue
             if checkSet == "Clear" or checkSet == "Gold Medal":
                 if level == "Pac-Village": continue
 
                 rules_string = create_rule_string(world, levelData[checkSet].items())
-
+                
                 try:
                     loc = level + " - " + checkSet
                     location = world.get_location(loc)
@@ -148,7 +172,7 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
                     if checkSet == "Collectibles":
                         loc += check
                     else:
-                        loc += checkSet[:-1] + " - " + check
+                        loc += checkSet[:-1] + " - " + str(check)
 
                     is_all_fruits = check == "Collect All Fruits"
 
@@ -177,8 +201,9 @@ def set_goal(world: PMW2RepacWorld) -> None:
 def create_rule_string(world: PMW2RepacWorld, rule_data: Mapping[str, str]) -> str:
     rules_string = ""
     for rulesType, rules in rule_data:
-        if rulesType == "id" or rules == "NONE": continue
+        if rulesType == "id" or rules == "checkpoint": continue
 
+        if rules == "NONE": continue
         if rulesType == "fm_rules":
             rules_string += rules
         if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":

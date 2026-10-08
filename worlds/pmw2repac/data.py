@@ -43,15 +43,18 @@ level_data = {
     },
     "The Bear Basics": {
         "id": 1,
+        "Checkpoints": {
+            1: {},
+            2: {
+                "fm_rules": "bb",
+            },
+            3: {},
+        },
         "Clear": {
-            "fm_rules": "bb",
-            "am_rules": "",
-            "ag_rules": ""
+            "checkpoint": 3,
         },
         "Gold Medal": {
-            "fm_rules": "bb",
-            "am_rules": "",
-            "ag_rules": ""
+            "checkpoint": 3,
         },
         "Collectibles": {
            #"Cherries" : 4,
@@ -64,36 +67,31 @@ level_data = {
         "Gashapons": {
             "Orange Chest": {
                 "id": 0,
-                "fm_rules": "bb",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 2,
             },
             "Melon Chest": {
                 "id": 1,
+                "checkpoint": 3,
                 "fm_rules": "sbb&fk | sbb&dt",
-                "am_rules": "bb&fk | bb&dt | bb&rr",
-                "ag_rules": ""
+                "am_rules": "fk | dt | rr",
             }
         },
         "Missions": {
              #might need reworking
             "Clear Stage": {
                 "id": 1,
-                "fm_rules": "bb",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 3,
             },
             "Score 10,000": {
                 "id": 2,
-                "fm_rules": "bb&ss | bb&os | bb&as | bb&ms",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 3,
+                "fm_rules": "ss | os | as | ms",
             },
             "Collect All Fruits": {
                 "id": 3,
+                "checkpoint": 3,
                 "fm_rules": "sbb&fk | sbb&dt",
-                "am_rules": "bb&fk | bb&dt | bb&rr",
-                "ag_rules": ""
+                "am_rules": "fk | dt | rr",
             }
         }
     },
@@ -583,15 +581,9 @@ level_data = {
     },
     "Blade Mountain": {
         "id": 11,
-        "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
-            "ag_rules": ""
-        },
+        "Clear": {},
         "Gold Medal": {
             "fm_rules": "fk | dt",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Collectibles":{
            #"Cherries" : 0,
@@ -602,43 +594,29 @@ level_data = {
            "Galaxian" :{
                "id": 7,
                 "fm_rules": "fk&ms | dt&ms",
-                "am_rules": "",
-                "ag_rules": ""
-
            }
         },
         "Gashapons": {
             "Orange Chest": {
                 "id": 16,
                 "fm_rules": "fk | dt",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Strawberry Chest": {
                 "id": 17,
                 "fm_rules": "fk | dt",
-                "am_rules": "",
-                "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 29,
                 "fm_rules": "fk | dt",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Destroy Crates": {
                 "id": 30,
                 "fm_rules": "fk | dt",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 31,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
             }
         }
     },

@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from . import data, items
-from BaseClasses import ItemClassification, Location
+from BaseClasses import ItemClassification, Location, Region
 
 if TYPE_CHECKING:
     from .world import PMW2RepacWorld
@@ -44,11 +44,13 @@ def create_locations(world: PMW2RepacWorld) -> None:
     for level, levelData in data.level_data.items():
         if world.options.goal_boss == 0 and levelData["id"] > data.level_data["Spooky"]["id"]:
             break
-
+        print(level)
         region = world.get_region(level)
 
         if levelData["id"] > 0:
 
+            if "checkpoint" in levelData["Clear"]:
+                region = world.get_region(level + " Checkpoint " + str(levelData["Clear"]["checkpoint"]))
             location = PMW2RepacLocation(world.player, level + " - Clear", levelData["id"] + data.LEVEL_OFFSET, region)
             region.locations.append(location)
 
@@ -63,16 +65,22 @@ def create_locations(world: PMW2RepacWorld) -> None:
                     offset = data.GALAXIAN_OFFSET
 
             if "id" in collectibleData: #and world.options.galaxian_checks:
+                if "checkpoint" in collectibleData:
+                    region = world.get_region(level + " Checkpoint " + str(collectibleData["checkpoint"]))
                 location = PMW2RepacLocation(world.player, level + " - " + collectible, collectibleData["id"] + offset, region)
                 region.locations.append(location)
 
         for gashapon, gashaponData in levelData["Gashapons"].items():
             if "id" in gashaponData: #and world.options.gashapon_checks:
+                if "checkpoint" in gashaponData:
+                    region = world.get_region(level + " Checkpoint " + str(gashaponData["checkpoint"]))
                 location = PMW2RepacLocation(world.player, level + " - Gashapon - " + gashapon, gashaponData["id"] + data.GASHAPON_OFFSET, region)
                 region.locations.append(location)
 
         for mission, missionData in levelData["Missions"].items():
             if "id" in missionData: #and world.options.mission_checks:
+                if "checkpoint" in missionData:
+                    region = world.get_region(level + " Checkpoint " + str(missionData["checkpoint"]))
                 location = PMW2RepacLocation(world.player, level + " - Mission - "  + mission, missionData["id"] + data.MISSION_OFFSET, region)
                 region.locations.append(location)
 
