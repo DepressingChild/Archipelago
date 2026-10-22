@@ -78,7 +78,7 @@ def create_locations(world: PMW2RepacWorld) -> None:
                 region.locations.append(location)
 
         for mission, missionData in levelData["Missions"].items():
-            if "id" in missionData: #and world.options.mission_checks:
+            if "id" in missionData and world.options.mission_checks:
                 if "checkpoint" in missionData:
                     region = world.get_region(level + " Checkpoint " + str(missionData["checkpoint"]))
                 location = PMW2RepacLocation(world.player, level + " - Mission - "  + mission, missionData["id"] + data.MISSION_OFFSET, region)

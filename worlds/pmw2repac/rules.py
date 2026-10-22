@@ -40,6 +40,7 @@ def set_all_rules(world: PMW2RepacWorld) -> None:
     set_entrance_rules(world)
     set_specific_entrance_rules(world)
     set_checkpoint_entrance_rules(world)
+    set_specific_checkpoint_entrance_rules(world)
     set_location_rules(world)
     set_goal(world)
 
@@ -146,6 +147,12 @@ def set_checkpoint_entrance_rules(world: PMW2RepacWorld) -> None:
                     # print(ent_str)
                     # print(rule)
                     world.set_rule(entrance, rule)
+
+def set_specific_checkpoint_entrance_rules(world: PMW2RepacWorld) -> None:
+    if world.options.logic_difficulty == 2:
+        rule = rule_convert["rr"]
+        world.set_rule(world.get_entrance("Volcanic Panic Checkpoint 0 to Checkpoint 8"), rule)
+        world.set_rule(world.get_entrance("Hot! Fire Trouble Checkpoint 0 to Checkpoint 7"), rule)
 
 def set_location_rules(world: PMW2RepacWorld) -> None:
     level_clear_rules = []

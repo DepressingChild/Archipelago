@@ -24,8 +24,7 @@ class PMW2RepacWorld(World):
     origin_region_name =  "World Map"
 
     def create_regions(self) -> None:
-        regions.create_regions(self)
-        regions.create_checkpoint_regions(self)
+        regions.create_and_connect_all_regions(self)
         locations.create_all_locations(self)
 
     def set_rules(self) -> None:
@@ -41,6 +40,7 @@ class PMW2RepacWorld(World):
         return items.get_random_filler_item(self)
 
     def fill_slot_data(self) -> Mapping[str, Any]:
-        return self.options.as_dict("goal_boss", "gold_medal_checks", "level_randomizer", "random_starting_levels",
-                                    "move_randomizer", "moves_to_randomize", "logic_difficulty", "fruit_switches", "starting_fruit_switches",
+        return self.options.as_dict("goal_boss", "gold_medal_checks", "level_randomizer",
+                                    "random_starting_levels", "move_randomizer", "moves_to_randomize", "logic_difficulty",
+                                    "fruit_switches", "starting_fruit_switches", "death_link", "death_link_amnesty",
                                     "exclude_goal_locations", "pac_dot_weight", "points_weight", "trap_weight") | data.exc_costumes

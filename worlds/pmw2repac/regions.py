@@ -8,6 +8,11 @@ from BaseClasses import Region, Entrance
 if TYPE_CHECKING:
     from world import PMW2RepacWorld
 
+def create_and_connect_all_regions(world: PMW2RepacWorld) -> None:
+    create_regions(world)
+    create_checkpoint_regions(world)
+    connect_specific_regions(world)
+
 def create_regions(world: PMW2RepacWorld) -> None:
 
     world_map = Region("World Map", world.player, world.multiworld)
@@ -53,3 +58,13 @@ def recursive_connect_checkpoints(world: PMW2RepacWorld, level: str, num_checkpo
         reg += " Checkpoint " + str(idx)
     world.get_region(reg).connect(region, entrance)
     recursive_connect_checkpoints(world, level, num_checkpoints, idx + 1)
+
+def connect_specific_regions(world: PMW2RepacWorld) -> None:
+    if world.options.logic_difficulty == 2:
+        vp_c0 = world.get_region("Volcanic Panic")
+        vp_c8 = world.get_region("Volcanic Panic Checkpoint 8")
+        vp_c0.connect(vp_c8, "Volcanic Panic Checkpoint 0 to Checkpoint 8")
+
+        hft_c0 = world.get_region("Hot! Fire Trouble")
+        hft_c7 = world.get_region("Hot! Fire Trouble Checkpoint 7")
+        hft_c0.connect(hft_c7, "Hot! Fire Trouble Checkpoint 0 to Checkpoint 7")

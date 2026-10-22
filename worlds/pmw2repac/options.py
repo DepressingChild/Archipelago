@@ -13,13 +13,13 @@ class GoalBoss(Choice):
 
     default = option_spooky
 
-# class MissionChecks(Toggle):
-#     """
-#     Debug purposes
-#     """
-#
-#     display_name = "Mission Checks"
-#
+class MissionChecks(Toggle):
+    """
+    Makes each mission a check. Adds up to 99 checks depending on goal.
+    """
+
+    display_name = "Mission Checks"
+
 # class GashaponChecks(Toggle):
 #     """
 #     Debug purposes
@@ -36,7 +36,7 @@ class GoalBoss(Choice):
 
 class GoldMedalChecks(Toggle):
     """
-    Makes each gold time trial medal a check. Adds 23 or 36 checks depending on goal.
+    Makes each gold time trial medal a check. Adds up to 36 checks depending on goal.
     """
 
     display_name = "Gold Medal Checks"
@@ -117,20 +117,20 @@ class StartingFruitSwitches(Range):
 
 #class Fruitsanity(Toggle):
     #"""
-    #Every fruit is a check. Adds x checks
+    #Makes each fruit a check. Adds x checks depending on settings.
     #"""
 
     #display_name = "Fruitsanity"
 
-# class DeathLinkAmnesty(Range):
-#     """
-#     The amount of deaths required to send a DeathLink.
-#     """
-#
-#     display_name = "Death Link Amnesty"
-#     range_start = 1
-#     range_end = 100
-#     default = 3
+class DeathLinkAmnesty(Range):
+    """
+    The amount of deaths required to send a DeathLink.
+    """
+
+    display_name = "Death Link Amnesty"
+    range_start = 1
+    range_end = 100
+    default = 3
 
 
 class ExcludeGoalLocations(DefaultOnToggle):
@@ -184,7 +184,7 @@ class TrapWeight(Range):
 @dataclass
 class PMW2RepacOptions(PerGameCommonOptions):
     goal_boss: GoalBoss
-    # mission_checks: MissionChecks
+    mission_checks: MissionChecks
     # gashapon_checks: GashaponChecks
     # galaxian_checks: GalaxianChecks
     gold_medal_checks: GoldMedalChecks
@@ -196,8 +196,8 @@ class PMW2RepacOptions(PerGameCommonOptions):
     fruit_switches: FruitSwitches
     starting_fruit_switches: StartingFruitSwitches
     #fruitsanity: Fruitsanity
-    #death_link: DeathLink # You. Yes you. I see you reading this. These commented options do not work. Do not enable them. Please and thank you. :)
-    #death_link_amnesty: DeathLinkAmnesty
+    death_link: DeathLink
+    death_link_amnesty: DeathLinkAmnesty
     exclude_goal_locations: ExcludeGoalLocations
     pac_dot_weight: PacDotWeight
     points_weight: PointsWeight

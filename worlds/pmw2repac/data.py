@@ -24,12 +24,12 @@ level_data = {
     "Pac-Village": {
         "id": 0,
         "Collectibles": {
-           #"Cherries" : 26,
-           #"Strawberries" : 29,
-           #"Oranges" : 17,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian": {}
+            #"Cherries" : 26,
+            #"Strawberries" : 29,
+            #"Oranges" : 17,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian": {}
         },
         "Gashapons": {},
         "Missions": {
@@ -57,12 +57,12 @@ level_data = {
             "checkpoint": 3,
         },
         "Collectibles": {
-           #"Cherries" : 4,
-           #"Strawberries" : 7,
-           #"Oranges" : 3,
-           #"Apples" : 7,
-           #"Melons" : 4,
-           "Galaxian": {}
+            #"Cherries" : 4,
+            #"Strawberries" : 7,
+            #"Oranges" : 3,
+            #"Apples" : 7,
+            #"Melons" : 4,
+            "Galaxian": {}
         },
         "Gashapons": {
             "Orange Chest": {
@@ -97,123 +97,122 @@ level_data = {
     },
     "Canyon Chaos": {
         "id": 2,
+        "Checkpoints": {
+            1: {},
+            2: {},
+        },
         "Clear": {
+            "checkpoint": 2,
             "fm_rules": "bb | fk | dt | rr",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Gold Medal": {
+            "checkpoint": 2,
             "fm_rules": "bb&fk | bb&dt",
             "am_rules": "bb&rr",
-            "ag_rules": ""
         },
         "Collectibles":{
-           #"Cherries" : 4,
-           #"Strawberries" : 2,
-           #"Oranges" : 3,
-           #"Apples" : 4,
-           #"Melons" : 6,
-           "Galaxian" : {
-               "id": 0,
+            #"Cherries" : 4,
+            #"Strawberries" : 2,
+            #"Oranges" : 3,
+            #"Apples" : 4,
+            #"Melons" : 6,
+            "Galaxian" : {
+                "id": 0,
+                "checkpoint": 1,
                 "fm_rules": "fk | rr | dt",
                 "am_rules": "sbb",
-                "ag_rules": ""
-
-           }
+            }
         },
         "Gashapons": {
             "Orange Chest": {
                 "id": 2,
+                "checkpoint": 1,
                 "fm_rules": "bb | fk | dt",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 3,
+                "checkpoint": 2,
                 "fm_rules": "sbb&fk | sbb&dt",
                 "am_rules": "bb&fk | bb&dt | bb&rr | bb&f | sbb",
-                "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 4,
+                "checkpoint": 2,
                 "fm_rules": "sbb&fk | sbb&dt",
                 "am_rules": "bb&fk | sbb",
-                "ag_rules": ""
             },
             "Destroy Bear Traps": {
                 "id": 5,
+                "checkpoint": 2,
                 "fm_rules": "bb&fk | bb&dt | sbb",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 6,
+                "checkpoint": 2,
                 "fm_rules": "bb | fk | dt | rr",
-                "am_rules": "",
-                "ag_rules": ""
             }
         }
     },
     "Pac-Dot Pond": {
         "id": 3,
-        "Clear": {
-            "fm_rules": "bb&rr",
-            "am_rules": "sbb",
-            "ag_rules": ""
-        },
-        "Gold Medal": {
-            "fm_rules": "bb&rr",
-            "am_rules": "sbb",
-            "ag_rules": ""
-        },
-        "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
-               "id": 1,
+        "Checkpoints": {
+            1: {
                 "fm_rules": "bb&rr",
                 "am_rules": "sbb",
-                "ag_rules": ""
+            },
+            2: {},
+        },
+        "Clear": {
+            "checkpoint": 2,
+        },
+        "Gold Medal": {
+            "checkpoint": 2,
+        },
+        "Collectibles":{
+            #"Cherries" : 0,
+            #"Strawberries" : 0,
+            #"Oranges" : 0,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian" :{
+               "id": 1,
+                "checkpoint": 1,
 
-           }
+            }
         },
         "Gashapons":{
             "Apple Chest": {
                 "id": 4,
-                "fm_rules": "bb&rr&fk | bb&rr&fk",
+                "checkpoint": 1,
+                "fm_rules": "fk | dt",
                 "am_rules": "sbb",
-                "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 5,
-                "fm_rules": "bb&rr&fk | bb&rr&fk",
+                "checkpoint": 2,
+                "fm_rules": "fk | dt",
                 "am_rules": "sbb",
-                "ag_rules": ""
             }
         },
         "Missions":{
             "Collect All Fruits": {
                 "id": 7,
-                "fm_rules": "bb&rr&fk | bb&rr&fk",
+                "checkpoint": 2,
+                "fm_rules": "fk | dt",
                 "am_rules": "sbb",
                 "ag_rules": ""
             },
             "Defeat All Enemies": {
                 "id": 8,
-                "fm_rules": "bb&rr&fk | bb&rr&fk",
-                "am_rules": "sbb",
-                "ag_rules": ""
+                "checkpoint": 2,
+                "fm_rules": "fk | dt",
+                "am_rules": "rr | sbb",
             },
             "Time Trial": {
                 "id": 9,
-                "fm_rules": "bb&rr",
-                "am_rules": "sbb",
-                "ag_rules": ""
+                "checkpoint": 2,
             }
         }
     },
@@ -221,13 +220,9 @@ level_data = {
         "id": 4,
         "Clear": {
             "fm_rules": "bb | fk | dt | rr",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Gold Medal": {
             "fm_rules": "bb | fk | dt | rr",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Collectibles":{},
         "Gashapons":{},
@@ -235,197 +230,202 @@ level_data = {
             "Don't Die": {
                 "id": 10,
                 "fm_rules": "bb | fk | dt | rr",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Clear Stage": {
                 "id": 11,
                 "fm_rules": "bb | fk | dt | rr",
-                "am_rules": "",
-                "ag_rules": ""
             }
         }
     },
     "B-Doing Woods": {
         "id": 5,
+        "Checkpoints": {
+            1: {
+                "fm_rules": "bb",
+            },
+            2: {},
+            3: {
+                "fm_rules": "rr",
+                "am_rules": "fk | dt | f | sbb"
+            },
+            4: {},
+            5: {},
+        },
         "Clear": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&fk | bb&dt | bb&f | sbb",
-            "ag_rules": ""
+            "checkpoint": 5,
         },
         "Gold Medal": {
-            "fm_rules": "bb&rr&fk",
-            "am_rules": "sbb&f | bb&dt",
-            "ag_rules": ""
+            "checkpoint": 5,
+            "fm_rules": "fk",
+            "am_rules": "sbb&f | dt | rr",
         },
         "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
+            #"Cherries" : 0,
+            #"Strawberries" : 0,
+            #"Oranges" : 0,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian" :{
                "id": 2,
-               "fm_rules": "bb&rr&as",
-               "am_rules": "bb&fk&as | bb&dt&as | bb&f&as | sbb&as",
-                "ag_rules": ""
-
-           }
+               "checkpoint": 3,
+               "fm_rules": "as",
+            }
         },
         "Gashapons":{
             "Strawberry Chest": {
                 "id": 6,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "bb&fk | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 4,
+                "fm_rules": "fk | dt",
             },
             "Melon Chest": {
                 "id": 7,
-                "fm_rules": "bb&rr&fk | sbb&rr&dt",
-                "am_rules": "bb&fk | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 5,
+                "fm_rules": "fk | sbb&dt",
+                "am_rules": "dt",
             }
         },
         "Missions":{
             "Collect All Fruits": {
                 "id": 12,
-                "fm_rules": "bb&rr&fk | sbb&rr&dt",
-                "am_rules": "bb&fk | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 5,
+                "fm_rules": "fk | sbb&dt",
+                "am_rules": "dt",
             },
             "Score 20,000": {
                 "id": 13,
-                "fm_rules": "bb&rr&fk&ms&os | bb&rr&fk&ms&ss&cs | bb&rr&fk&ms&ss&as | sbb&rr&dt&ms&os | sbb&rr&dt&ms&ss&cs | sbb&rr&dt&ms&ss&as | bb&rr&dt&ms&os&cs | bb&rr&dt&ms&os&ss | bb&rr&dt&ms&os&as | bb&rr&dt&ms&ss&cs&as", #Need to find a better way to create rules like this.
-                "am_rules": "bb&fk&ms&os | bb&fk&ms&ss&cs | bb&fk&ms&ss&as | bb&dt&ms&os | bb&dt&ms&ss&cs | bb&dt&ms&ss&as | bb&f&cs&ss&as&ms | bb&f&ss&os&ms | bb&f&os&as&ms | sbb&cs&ss&as&ms | sbb&ss&os&ms | sbb&os&as&ms",
+                "checkpoint": 5,
+                "fm_rules": "fk&ms&os | fk&ms&ss&cs | fk&ms&ss&as | sbb&rr&dt&ms&os | sbb&rr&dt&ms&ss&cs | sbb&rr&dt&ms&ss&as | rr&dt&ms&os&cs | rr&dt&ms&os&ss | rr&dt&ms&os&as | rr&dt&ms&ss&cs&as", #Need to find a better way to create rules like this.
+                "am_rules": "dt&ms&os | dt&ms&ss&cs | dt&ms&ss&as | f&cs&ss&as&ms | f&ss&os&ms | f&os&as&ms | sbb&cs&ss&as&ms | sbb&ss&os&ms | sbb&os&as&ms",
                 "ag_rules": ""
             },
             "Time Trial": {
                 "id": 14,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&fk | bb&dt | bb&f | sbb",
-                "ag_rules": ""
+                "checkpoint": 5,
             }
         }
     },
     "Treewood Forest": {
         "id": 6,
+        "Checkpoints": {
+            1: {
+                "fm_rules": "bb",
+            },
+            2: {},
+            3: {
+                "fm_rules": "rr",
+                "am_rules": "fk | dt | sbb&f",
+            },
+            4: {},
+            5: {},
+            6: {},
+        },
         "Clear": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&fk&f | bb&dt",
-            "ag_rules": ""
+            "checkpoint": 6,
         },
         "Gold Medal": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&fk&f | bb&dt",
-            "ag_rules": ""
+            "checkpoint": 6,
         },
         "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
+            #"Cherries" : 0,
+            #"Strawberries" : 0,
+            #"Oranges" : 0,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian" :{
                "id": 3,
-               "fm_rules": "bb&rr&os",
-               "am_rules": "bb&fk&os | bb&dt&os",
-                "ag_rules": ""
-
-           }
+               "checkpoint": 4,
+               "fm_rules": "os",
+            }
         },
         "Gashapons": {
             "Cherry Chest": {
                 "id": 8,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&fk&f | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 5,
             },
             "Melon Chest": {
                 "id": 9,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&fk&f | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 6,
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 15,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&fk&f | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 6,
             },
             "Destroy Crates": {
                 "id": 16,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&fk&f | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 6,
             },
             "Time Trial": {
                 "id": 17,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&fk&f | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 6,
             }
         }
     },
     "Butane Pain": {
         "id": 7,
+        "Checkpoints": {
+            1: {},
+            2: {
+                "fm_rules": "bb&rr",
+                "am_rules": "rr | bb&f | sbb&fk",
+            },
+            3:{
+                "am_rules": "bb",
+            },
+            4: {},
+            5: {
+                "am_rules": "dt | sbb&fk&f"
+            },
+            6: {},
+        },
         "Clear": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt",
-            "ag_rules": ""
+            "checkpoint": 6,
         },
         "Gold Medal": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt",
-            "ag_rules": ""
+            "checkpoint": 6,
         },
         "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
-               "id": 4,
+            #"Cherries" : 0,
+            #"Strawberries" : 0,
+            #"Oranges" : 0,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian" :{
+                "id": 4,
+                "checkpoint": 1,
                 "fm_rules": "bb&rr&as",
                 "am_rules": "bb&f&as | sbb&fk&as",
-                "ag_rules": ""
-
-           }
+            }
         },
         "Gashapons": {
             "Melon Chest": {
                 "id": 10,
-                "fm_rules": "bb&rr&fk | bb&rr&fk",
-                "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt",
-                "ag_rules": ""
+                "checkpoint": 6,
+                "fm_rules": "fk | dt",
             },
             "Strawberry Chest": {
                 "id": 11,
-                "fm_rules": "bb&rr&f | bb&rr&dt | sbb&rr",
-                "am_rules": "bb&rr | bb&dt&f | sbb&fk&f | sbb&fk&dt",
-                "ag_rules": ""
+                "checkpoint": 5,
+                "fm_rules": "f | dt | sbb",
+                "am_rules": "NONE",
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 18,
-                "fm_rules": "bb&rr&fk | bb&rr&fk",
-                "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt",
-                "ag_rules": ""
+                "checkpoint": 6,
+                "fm_rules": "fk | dt",
             },
             "Defeat Enemies": {
                 "id": 19,
-                "fm_rules": "bb&rr&fk | bb&rr&fk",
-                "am_rules": "bb&dt&f | sbb&fk&f | sbb&rr | sbb&fk&dt",
-                "ag_rules": ""
+                "checkpoint": 6,
+                "fm_rules": "fk | dt",
+                "am_rules": "sbb&rr",
             },
             "Time Trial": {
                 "id": 20,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt",
-                "ag_rules": ""
+                "checkpoint": 6,
             }
         }
     },
@@ -434,12 +434,10 @@ level_data = {
         "Clear": {
             "fm_rules": "bb&fk",
             "am_rules": "sbb&dt",
-            "ag_rules": ""
         },
         "Gold Medal": {
             "fm_rules": "bb&fk",
             "am_rules": "sbb&dt",
-            "ag_rules": ""
         },
         "Collectibles":{},
         "Gashapons": {},
@@ -448,340 +446,394 @@ level_data = {
                 "id": 21,
                 "fm_rules": "bb&fk",
                 "am_rules": "sbb&dt",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 22,
                 "fm_rules": "bb&fk",
                 "am_rules": "sbb&dt",
-                "ag_rules": ""
             }
         }
     },
     "Ice River Run": {
         "id": 9,
+        "Checkpoints": {
+            1: {},
+            2: {},
+            3: {},
+            4: {},
+            5: {},
+            6: {},
+            7: {},
+            8: {},
+            9: {},
+            10: {},
+        },
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
-            "ag_rules": ""
+            "checkpoint": 10,
         },
         "Gold Medal": {
+            "checkpoint": 10,
             "fm_rules": "rr",
             "am_rules": "NONE",
-            "ag_rules": ""
         },
         "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
-               "id": 5,
+            #"Cherries" : 0,
+            #"Strawberries" : 0,
+            #"Oranges" : 0,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian" :{
+                "id": 5,
+                "checkpoint": 1,
                 "fm_rules": "bb&fk | bb&dt | bb&rr",
                 "am_rules": "sbb",
-                "ag_rules": ""
-           }
+            }
         },
         "Gashapons": {
             "Cherry Chest": {
                 "id": 12,
+                "checkpoint": 6,
                 "fm_rules": "sbb | fk | dt",
                 "am_rules": "rr",
-                "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 13,
+                "checkpoint": 10,
                 "fm_rules": "sbb&fk | sbb&dt | sbb&rr",
                 "am_rules": "bb&fk | bb&dt | bb&rr | sbb",
-                "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 23,
+                "checkpoint": 10,
                 "fm_rules": "sbb&fk | sbb&dt",
                 "am_rules": "bb&fk | bb&dt | bb&rr | sbb",
-                "ag_rules": ""
             },
             "Destroy Crates": {
                 "id": 24,
+                "checkpoint": 10,
                 "fm_rules": "sbb",
                 "am_rules": "fk | dt | rr",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 25,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 10,
 
             }
         }
     },
     "Avalanche Alley": {
         "id": 10,
+        "Checkpoints": {
+            1: {},
+            2: {},
+            3: {
+                "fm_rules": "bb",
+            },
+            4: {
+                "fm_rules": "rr",
+                "am_rules": "NONE",
+            },
+            5: {},
+            6: {},
+        },
         "Clear": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb",
-            "ag_rules": ""
+            "checkpoint": 6,
         },
         "Gold Medal": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&fk",
-            "ag_rules": ""
+            "checkpoint": 6,
+            "am_rules": "fk",
         },
         "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
-               "id": 6,
-                "fm_rules": "bb&rr&fk&os | bb&rr&dt&os",
-                "am_rules": "bb&fk&os | bb&dt&os",
-                "ag_rules": ""
-           }
+            #"Cherries" : 0,
+            #"Strawberries" : 0,
+            #"Oranges" : 0,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian" :{
+                "id": 6,
+                "checkpoint": 4,
+                "fm_rules": "fk&os | dt&os",
+            }
         },
         "Gashapons": {
             "Melon Chest": {
                 "id": 14,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "bb&f&fk | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 6,
+                "fm_rules": "fk | dt",
             },
             "Strawberry Chest": {
                 "id": 15,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "bb&fk&f | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 5,
+                "fm_rules": "fk | dt",
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 26,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "bb&fk&f | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 6,
+                "fm_rules": "fk | dt",
             },
             "Defeat Enemies": {
                 "id": 27,
-                "fm_rules": "bb&rr&fk",
-                "am_rules": "bb&f&fk",
-                "ag_rules": ""
+                "checkpoint": 6,
+                "fm_rules": "rr&fk",
+                "am_rules": "fk&f | fk&dt",
             },
             "Time Trial": {
                 "id": 28,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb",
-                "ag_rules": ""
+                "checkpoint": 6,
             }
         }
     },
     "Blade Mountain": {
         "id": 11,
-        "Clear": {},
+        "Checkpoints": {
+            1: {},
+            2: {},
+            3: {},
+            4: {},
+            5: {},
+            6: {},
+        },
+        "Clear": {
+            "checkpoint": 6,
+        },
         "Gold Medal": {
+            "checkpoint": 6,
             "fm_rules": "fk | dt",
         },
         "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
-               "id": 7,
+            #"Cherries" : 0,
+            #"Strawberries" : 0,
+            #"Oranges" : 0,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian" :{
+                "id": 7,
+                "checkpoint": 6,
                 "fm_rules": "fk&ms | dt&ms",
-           }
+            }
         },
         "Gashapons": {
             "Orange Chest": {
                 "id": 16,
+                "checkpoint": 6,
                 "fm_rules": "fk | dt",
             },
             "Strawberry Chest": {
                 "id": 17,
+                "checkpoint": 6,
                 "fm_rules": "fk | dt",
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 29,
+                "checkpoint": 6,
                 "fm_rules": "fk | dt",
             },
             "Destroy Crates": {
                 "id": 30,
+                "checkpoint": 6,
                 "fm_rules": "fk | dt",
             },
             "Time Trial": {
                 "id": 31,
+                "checkpoint": 6,
             }
         }
     },
     "Pinky's Revenge": {
         "id": 12,
+        "Checkpoints": {
+            1: {},
+        },
         "Clear": {
+            "checkpoint": 1,
             "fm_rules": "bb&fk",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Gold Medal": {
+            "checkpoint": 1,
             "fm_rules": "bb&fk",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Collectibles":{},
         "Gashapons": {},
         "Missions": {
             "Don't Die": {
                 "id": 32,
+                "checkpoint": 1,
                 "fm_rules": "bb&fk",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 33,
+                "checkpoint": 1,
                 "fm_rules": "bb&fk",
-                "am_rules": "",
-                "ag_rules": ""
             }
         }
     },
     "Into the Volcano!": {
         "id": 13,
+        "Checkpoints": {
+            1: {},
+            2: {},
+            3: {},
+            4: {
+                "fm_rules": "rr",
+                "am_rules": "f",
+                "ag_rules": "fk",
+            },
+            5: {},
+            6: {},
+            7: {
+                "fm_rules": "bb",
+            },
+            8: {},
+        },
         "Clear": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&f",
-            "ag_rules": "bb&fk"
+            "checkpoint": 8,
         },
         "Gold Medal": {
-            "fm_rules": "bb&rr&fk | bb&rr&dt",
-            "am_rules": "bb&fk&f | bb&dt&f | bb&rr",
-            "ag_rules": "bb&fk"
+            "checkpoint": 8,
+            "fm_rules": "fk | dt",
+            "am_rules": "rr",
         },
         "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
-               "id": 8,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&f",
-                "ag_rules": "bb&fk"
-
-           }
+            #"Cherries" : 0,
+            #"Strawberries" : 0,
+            #"Oranges" : 0,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian" :{
+                "id": 8,
+                "checkpoint": 7,
+            }
         },
         "Gashapons": {
             "Strawberry Chest": {
                 "id": 18,
-                "fm_rules": "bb&rr&fk | bb&rr&dt | sbb&rr",
-                "am_rules": "bb&f&fk | bb&f&dt | sbb&f",
-                "ag_rules": "bb&fk"
+                "checkpoint": 7,
+                "fm_rules": "fk | dt | sbb",
             },
             "Melon Chest": {
                 "id": 19,
-                "fm_rules": "sbb&rr&fk",
-                "am_rules": "sbb&dt&f | sbb&fk&f | sbb&rr&dt",
-                "ag_rules": "sbb&fk"
+                "checkpoint": 8,
+                "fm_rules": "sbb&fk | sbb&dt&f",
+                "am_rules": "sbb&dt",
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 34,
-                "fm_rules": "sbb&rr&fk",
-                "am_rules": "sbb&f&fk | sbb&dt&f | sbb&rr&dt",
-                "ag_rules": "sbb&fk"
+                "checkpoint": 8,
+                "fm_rules": "sbb&fk | sbb&dt&f",
+                "am_rules": "sbb&dt",
             },
             "Never hang off an edge": { #Should maybe change to mention only in that one room.
                 "id": 35,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&f",
-                "ag_rules": "bb&fk"
+                "checkpoint": 8,
             },
             "Time Trial": {
                 "id": 36,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&f",
-                "ag_rules": "bb&fk"
+                "checkpoint": 8,
             }
         }
     },
     "Volcanic Panic": {
         "id": 14,
+        "Checkpoints": {
+            1: {},
+            2: {},
+            3: {
+                "fm_rules": "rr",
+                "am_rules": "fk&f | sbb&f",
+            },
+            4: {},
+            5: {
+                "fm_rules": "bb",
+            },
+            6: {},
+            7: {},
+            8: {},
+            9: {},
+            10: {},
+            11: {
+                "ag_rules": "bb",
+            },
+        },
         "Clear": {
-            "fm_rules": "bb&rr",
-            "am_rules": "sbb&f | bb&fk&f",
-            "ag_rules": ""
+            "checkpoint": 11,
         },
         "Gold Medal": {
-            "fm_rules": "bb&rr",
-            "am_rules": "sbb&f | bb&fk&f",
-            "ag_rules": ""
+            "checkpoint": 11,
         },
         "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
-               "id": 9,
-                "fm_rules": "bb&rr&fk&as | bb&rr&dt&as",
-                "am_rules": "sbb&rr&as | sbb&f&as | bb&fk&f&as",
-                "ag_rules": "rr&as"
-
-           }
+            #"Cherries" : 0,
+            #"Strawberries" : 0,
+            #"Oranges" : 0,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian" :{
+                "id": 9,
+                "checkpoint": 10,
+                "fm_rules": "as",
+            }
         },
         "Gashapons": {
             "Cherry Chest": {
                 "id": 20,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "bb&fk&f | sbb&dt&f",
-                "ag_rules": ""
+                "checkpoint": 7,
+                "fm_rules": "fk | dt",
             },
             "Melon Chest": {
                 "id": 21,
-                "fm_rules": "sbb&rr&fk | sbb&rr&dt | bb&rr&dt&f",
-                "am_rules": "bb&rr&fk | bb&fk&f | sbb&dt&f",
-                "ag_rules": ""
+                "checkpoint": 11,
+                "fm_rules": "sbb&fk | sbb&dt | fk&f | dt&f",
+                "am_rules": "fk",
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 37,
-                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
-                "am_rules": "sbb&dt&f | bb&fk&f",
+                "checkpoint": 11,
+                "fm_rules": "sbb&fk | sbb&dt | fk&f",
+                "am_rules": "fk",
                 "ag_rules": ""
             },
             "Defeat Enemies": {
                 "id": 38,
-                "fm_rules": "bb&rr&dt",
-                "am_rules": "sbb&f | bb&fk&f | bb&rr",
-                "ag_rules": ""
+                "checkpoint": 11,
+                "fm_rules": "dt",
+                "am_rules": "NONE",
             },
             "Time Trial": {
                 "id": 39,
-                "fm_rules": "bb&rr",
-                "am_rules": "sbb&f | bb&fk&f",
-                "ag_rules": ""
+                "checkpoint": 11,
             }
         }
     },
     "Magma Opus": {
         "id": 15,
+        "Checkpoints": {
+            1: {},
+            2: {},
+            3: {
+                "fm_rules": "sbb",
+                "am_rules": "bb&fk",
+            },
+            4: {},
+            5: {},
+            6: {},
+            7: {},
+            8: {},
+            9: {},
+        },
         "Clear": {
-            "fm_rules": "sbb",
-            "am_rules": "",
-            "ag_rules": ""
+            "checkpoint": 9,
         },
         "Gold Medal": {
-            "fm_rules": "sbb",
-            "am_rules": "",
-            "ag_rules": ""
+            "checkpoint": 9,
         },
         "Collectibles":{
            #"Cherries" : 0,
@@ -791,44 +843,33 @@ level_data = {
            #"Melons" : 0,
            "Galaxian" :{
                "id": 10,
-                "fm_rules": "sbb&fk&cs | sbb&dt&cs",
-                "am_rules": "",
-                "ag_rules": ""
-
+                "fm_rules": "fk&cs | dt&cs",
            }
         },
         "Gashapons": {
             "Strawberry Chest": {
                 "id": 22,
-                "fm_rules": "sbb&fk | sbb&dt",
-                "am_rules": "sbb&rr",
-                "ag_rules": ""
+                "checkpoint": 9,
+                "fm_rules": "fk | dt",
             },
             "Melon Chest": {
                 "id": 23,
-                "fm_rules": "sbb",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 9,
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 40,
-                "fm_rules": "sbb&fk | sbb&dt",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 9,
+                "fm_rules": "fk | dt",
             },
             "Never fall down a slope": {
                 "id": 41,
-                "fm_rules": "sbb",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 9,
             },
             "Time Trial": {
                 "id": 42,
-                "fm_rules": "sbb",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 9,
             }
         }
     },
@@ -836,13 +877,10 @@ level_data = {
         "id": 16,
         "Clear": {
             "fm_rules": "bb",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Gold Medal": {
             "fm_rules": "bb&rr",
             "am_rules": "bb",
-            "ag_rules": ""
         },
         "Collectibles": {},
         "Gashapons": {},
@@ -850,254 +888,215 @@ level_data = {
             "Don't Die": {
                 "id": 43,
                 "fm_rules": "bb",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 44,
                 "fm_rules": "bb",
-                "am_rules": "",
-                "ag_rules": ""
             }
         }
     },
     "Scuba Duba": {
         "id": 17,
+        "Checkpoints": {
+            1: {},
+            2: {},
+            3: {
+                "fm_rules": "dk",
+            },
+            4: {},
+            5: {},
+        },
         "Clear": {
-            "fm_rules": "dk",
-            "am_rules": "",
-            "ag_rules": ""
+            "checkpoint": 5,
         },
         "Gold Medal": {
-            "fm_rules": "dk",
-            "am_rules": "",
-            "ag_rules": ""
+            "checkpoint": 5,
         },
         "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
-               "id": 11,
-                "fm_rules": "dk&as",
-                "am_rules": "",
-                "ag_rules": ""
-
-           }
+            #"Cherries" : 0,
+            #"Strawberries" : 0,
+            #"Oranges" : 0,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian" :{
+                "id": 11,
+                "checkpoint": 4,
+                "fm_rules": "as",
+            }
         },
         "Gashapons": {
             "Strawberry Chest": {
                 "id": 24,
-                "fm_rules": "dk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 4,
             },
             "Melon Chest": {
                 "id": 25,
-                "fm_rules": "dk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 5,
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 45,
-                "fm_rules": "dk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 5,
             },
             "Destroy Crates": {
                 "id": 46,
-                "fm_rules": "dk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 5,
             },
             "Time Trial": {
                 "id": 47,
-                "fm_rules": "dk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 5,
             }
         }
     },
     "Shark Attack": {
         "id": 18,
+        "Checkpoints": {
+            1: {},
+            2: {
+                "fm_rules": "dk | fk",
+            },
+            3: {},
+            4: {},
+            5: {},
+            6: {},
+            7: {},
+        },
         "Clear": {
             "fm_rules": "fk | dk",
             "am_rules": "",
             "ag_rules": ""
         },
         "Gold Medal": {
-            "fm_rules": "fk | dk",
-            "am_rules": "",
-            "ag_rules": ""
+            "checkpoint": 7,
         },
         "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
-               "id": 12,
-                "fm_rules": "fk&os | dk&os",
-                "am_rules": "",
-                "ag_rules": ""
+            #"Cherries" : 0,
+            #"Strawberries" : 0,
+            #"Oranges" : 0,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian" :{
+                "id": 12,
+                "checkpoint": 3,
+                "fm_rules": "os | os",
 
-           }
+            }
         },
         "Gashapons": {
             "Strawberry Chest": {
                 "id": 26,
-                "fm_rules": "fk | dk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 5,
             },
             "Melon Chest": {
                 "id": 27,
-                "fm_rules": "fk | dk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 7,
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 48,
-                "fm_rules": "fk | dk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 7,
             },
             "Never get caught by the Wild Shark": {
                 "id": 49,
-                "fm_rules": "fk | dk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 7,
             },
             "Time Trial": {
                 "id": 50,
-                "fm_rules": "fk | dk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 7,
             }
         }
     },
     "Yellow Pac-Marine": {
         "id": 19,
-        "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
-            "ag_rules": ""
-        },
+        "Clear": {},
         "Gold Medal": {},
         "Collectibles":{
-           #"Cherries" : 4,
-           #"Strawberries" : 7,
-           #"Oranges" : 3,
-           #"Apples" : 7,
-           #"Melons" : 4,
-           "Galaxian" : {}
+            #"Cherries" : 4,
+            #"Strawberries" : 7,
+            #"Oranges" : 3,
+            #"Apples" : 7,
+            #"Melons" : 4,
+            "Galaxian" : {}
         },
         "Gashapons": {
             "Purple": {
                 "id": 28,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Red": {
                 "id": 29,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 51,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Defeat Enemies": {
                 "id": 52,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Don't Die": {
                 "id": 53,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
             }
         }
     },
     "Whale on a Sub": {
         "id": 20,
-        "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
-            "ag_rules": ""
-        },
-        "Gold Medal": {
-            "fm_rules": "",
-            "am_rules": "",
-            "ag_rules": ""
-        },
+        "Clear": {},
+        "Gold Medal": {},
         "Collectibles": {},
         "Gashapons": {},
         "Missions": {
             "Don't Die": {
                 "id": 54,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 55,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
             }
         }
     },
     "Haunted Boardwalk": {
         "id": 21,
+        "Checkpoints": {
+            1: {},
+            2: {},
+            3: {},
+            4: {},
+            5: {},
+            6: {},
+        },
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
-            "ag_rules": ""
+            "checkpoint": 6,
         },
         "Gold Medal": {
-            "fm_rules": "",
-            "am_rules": "",
-            "ag_rules": ""
+            "checkpoint": 6,
         },
         "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
-               "id": 13,
+            #"Cherries" : 0,
+            #"Strawberries" : 0,
+            #"Oranges" : 0,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian" :{
+                "id": 13,
+                "checkpoint": 6,
                 "fm_rules": "fk&ss | dt&ss",
                 "am_rules": "sbb&f&ss",
                 "ag_rules": "sbb&ss"
 
-           }
+            }
         },
         "Gashapons": {
             "Apple Chest": {
                 "id": 30,
+                "checkpoint": 6,
                 "fm_rules": "fk | dt",
                 "am_rules": "sbb&f",
                 "ag_rules": "sbb"
             },
             "Melon Chest": {
                 "id": 31,
+                "checkpoint": 6,
                 "fm_rules": "fk | dt",
                 "am_rules": "sbb&f",
                 "ag_rules": "sbb"
@@ -1106,35 +1105,50 @@ level_data = {
         "Missions": {
             "Collect All Fruits": {
                 "id": 56,
+                "checkpoint": 6,
                 "fm_rules": "fk | dt",
                 "am_rules": "sbb&f",
                 "ag_rules": "sbb"
             },
             "Score 11,000": {
                 "id": 57,
+                "checkpoint": 6,
                 "fm_rules": "fk&ms&as | fk&ms&ss | dt&ms&as | dt&ms&ss",
                 "am_rules": "sbb&f&ms&as | sbb&f&ms&ss",
                 "ag_rules": "sbb&ms&as | sbb&ms&ss"
             },
             "Time Trial": {
                 "id": 58,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 6,
             }
         }
     },
     "Night Crawling": {
         "id": 22,
+        "Checkpoints": {
+            1: {},
+            2: {
+                "fm_rules": "bb",
+                "am_rules": "rr",
+            },
+            3: {},
+            4: {},
+            5: {
+                "fm_rules": "bb",
+            },
+            6: {
+                "fm_rules": "rr",
+                "am_rules": "dt",
+            },
+            7: {},
+            8: {},
+            9: {},
+        },
         "Clear": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&dt",
-            "ag_rules": ""
+            "checkpoint": 9,
         },
         "Gold Medal": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&dt",
-            "ag_rules": ""
+            "checkpoint": 9,
         },
         "Collectibles": {
             # "Cherries" : 4,
@@ -1147,96 +1161,111 @@ level_data = {
         "Gashapons": {
             "Melon Chest": {
                 "id": 32,
-                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
-                "am_rules": "bb&rr&fk | bb&rr&f | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 9,
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "fk | f | dt",
             },
             "Strawberry Chest": {
                 "id": 33,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "bb&dt | sbb&rr",
-                "ag_rules": ""
+                "checkpoint": 8,
+                "fm_rules": "fk | dt",
+                "am_rules": "sbb",
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 59,
-                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
-                "am_rules": "bb&dt | bb&rr&fk | bb&rr&f",
-                "ag_rules": ""
+                "checkpoint": 9,
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "dt | fk | f",
             },
             "Destroy Crates": {
                 "id": 60,
-                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
-                "am_rules": "bb&dt | bb&rr&fk",
-                "ag_rules": ""
+                "checkpoint": 9,
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "dt | fk",
             },
             "Time Trial": {
                 "id": 61,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&dt",
-                "ag_rules": ""
+                "checkpoint": 9,
             }
         }
     },
     "Ghost Bayou": {
         "id": 23,
+        "Checkpoints": {
+            1: {},
+            2: {},
+            3: {},
+            4: {
+                "fm_rules": "bb",
+            },
+            5: {},
+            6: {},
+            7: {},
+            8: {},
+            9: {},
+            10: {
+                "fm_rules": "rr | f",
+                "am_rules": "fk | dt | sbb",
+            },
+            11: {},
+            12: {},
+            13: {
+                "fm_rules": "rr",
+                "am_rules": "dt",
+            },
+        },
         "Clear": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&dt",
-            "ag_rules": ""
+            "checkpoint": 13,
         },
         "Gold Medal": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&dt",
-            "ag_rules": ""
+            "checkpoint": 13,
         },
         "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
-               "id": 14,
-                "fm_rules": "bb&fk&os | bb&dt&os",
-                "am_rules": "",
-                "ag_rules": ""
-
-           }
+            #"Cherries" : 0,
+            #"Strawberries" : 0,
+            #"Oranges" : 0,
+            #"Apples" : 0,
+            #"Melons" : 0,
+            "Galaxian" :{
+                "id": 14,
+                "checkpoint": 5,
+                "fm_rules": "fk&os | dt&os",
+            }
         },
         "Gashapons": {
             "Apple Chest": {
                 "id": 34,
-                "fm_rules": "bb&rr&fk | bb&rr&dt | bb&fk&f | bb&dt&f",
-                "am_rules": "bb&fk | sbb | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 12,
+                "fm_rules": "fk | dt",
+                "am_rules": "sbb",
             },
             "Melon Chest": {
                 "id": 35,
-                "fm_rules": "sbb&rr&fk | sbb&rr&dt&f",
-                "am_rules": "bb&dt | bb&fk",
+                "checkpoint": 13,
+                "fm_rules": "sbb&fk&f | sbb&dt&f",
+                "am_rules": "dt | fk",
                 "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 62,
-                "fm_rules": "sbb&rr&fk | sbb&rr&dt&f",
-                "am_rules": "bb&rr&fk",
-                "ag_rules": "bb&dt"
+                "checkpoint": 13,
+                "fm_rules": "sbb&fk&f | sbb&dt&f",
+                "am_rules": "fk",
+                "ag_rules": "dt"
             },
             "Defeat Enemies": {
                 "id": 63,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "sbb&rr",
-                "ag_rules": "bb&dt"
+                "checkpoint": 13,
+                "fm_rules": "fk | dt",
+                "am_rules": "sbb",
             },
             "Time Trial": {
                 "id": 64,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&dt",
-                "ag_rules": ""
+                "checkpoint": 13,
             }
         }
     },
@@ -1244,13 +1273,9 @@ level_data = {
         "id": 24,
         "Clear": {
             "fm_rules": "sbb&fk&rr | sbb&dt&rr",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Gold Medal": {
             "fm_rules": "sbb&fk&rr | sbb&dt&rr",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Collectibles": {},
         "Gashapons": {},
@@ -1258,28 +1283,34 @@ level_data = {
             "Don't Die": {
                 "id": 65,
                 "fm_rules": "sbb&fk&rr | sbb&dt&rr",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 66,
                 "fm_rules": "sbb&fk&rr | sbb&dt&rr",
-                "am_rules": "",
-                "ag_rules": ""
             }
         }
     },
     "Deadly Poisonous Meadows": {
         "id": 25,
+        "Checkpoints": {
+            1: {},
+            2: {
+                "fm_rules": "bb",
+                "am_rules": "rr",
+            },
+            3: {},
+            4: {
+                "fm_rules": "rr",
+                "am_rules": "NONE",
+            },
+            5: {},
+            6: {},
+        },
         "Clear": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb | rr",
-            "ag_rules": ""
+            "checkpoint": 6,
         },
         "Gold Medal": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb | rr",
-            "ag_rules": ""
+            "checkpoint": 6,
         },
         "Collectibles": {
             # "Cherries" : 4,
@@ -1292,41 +1323,38 @@ level_data = {
         "Gashapons": {
             "Apple Chest": {
                 "id": 36,
+                "checkpoint": 1,
                 "fm_rules": "bb&fk | bb&dt | rr&fk | rr&dt",
                 "am_rules": "sbb&f | rr",
-                "ag_rules": ""
             },
             "Orange Chest": {
                 "id": 37,
-                "fm_rules": "bb&fk | bb&dt | bb&rr",
-                "am_rules": "sbb",
-                "ag_rules": ""
+                "checkpoint": 3,
+                "fm_rules": "fk | dt | rr | sbb",
             },
             "Melon Chest": {
                 "id": 38,
-                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
-                "am_rules": "bb&fk | bb&dt",
-                "ag_rules": ""
+                "checkpoint": 6,
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "fk | dt",
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 67,
-                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
-                "am_rules": "bb&fk | bb&dt",
+                "checkpoint": 6,
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "fk | dt",
                 "ag_rules": ""
             },
             "Destroy Bear Traps": {
                 "id": 68,
-                "fm_rules": "bb&fk | bb&dt | sbb",
-                "am_rules": "rr&fk | rr&dt",
-                "ag_rules": ""
+                "checkpoint": 6,
+                "fm_rules": "fk | dt | sbb",
             },
             "Time Trial": {
                 "id": 69,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb | rr",
-                "ag_rules": ""
+                "checkpoint": 6,
             }
         }
     },
@@ -1334,13 +1362,9 @@ level_data = {
         "id": 26,
         "Clear": {
             "fm_rules": "bb | rr | fk",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Gold Medal": {
             "fm_rules": "bb | rr | fk",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Collectibles": {},
         "Gashapons": {},
@@ -1348,28 +1372,35 @@ level_data = {
             "Don't Die": {
                 "id": 70,
                 "fm_rules": "bb | rr | fk",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 71,
                 "fm_rules": "bb | rr | fk",
-                "am_rules": "",
-                "ag_rules": ""
             }
         }
     },
     "Harsh Harsh Winds": {
         "id": 27,
+        "Checkpoints": {
+            1: {},
+            2: {
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&f | sbb&fk",
+            },
+            3: {},
+            4: {},
+            5: {},
+            6: {
+                "am_rules": "dt&f | sbb&fk&f | sbb&fk&dt"
+            },
+            7: {},
+            8: {},
+        },
         "Clear": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt",
-            "ag_rules": ""
+            "checkpoint": 8,
         },
         "Gold Medal": {
-            "fm_rules": "bb&rr",
-            "am_rules": "sbb&fk&f | bb&dt&f | sbb&fk&dt",
-            "ag_rules": ""
+            "checkpoint": 8,
         },
         "Collectibles": {
             # "Cherries" : 4,
@@ -1382,41 +1413,37 @@ level_data = {
         "Gashapons": {
             "Strawberry Chest": {
                 "id": 39,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "bb&rr | sbb&fk&f | sbb&fk&dt | bb&dt&f",
+                "checkpoint": 6,
+                "fm_rules": "fk | dt",
+                "am_rules": "NONE",
                 "ag_rules": ""
             },
             "Orange Chest": {
                 "id": 40,
-                "fm_rules": "bb&rr",
-                "am_rules": "sbb&fk&f | bb&dt&f | sbb&fk&dt",
-                "ag_rules": ""
+                "checkpoint": 5,
+                "am_rules": "dt&f | sbb&fk&f | sbb&fk&dt",
             },
             "Melon Chest": {
                 "id": 41,
-                "fm_rules": "sbb&rr&fk | sbb&rr&fk",
-                "am_rules": "sbb&fk&f | sbb&dt&f | sbb&fk&dt",
-                "ag_rules": ""
+                "checkpoint": 8,
+                "fm_rules": "sbb&fk | sbb&dt",
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 72,
-                "fm_rules": "sbb&rr&fk | sbb&rr&fk",
-                "am_rules": "sbb&fk&f | sbb&dt&f | sbb&fk&dt",
-                "ag_rules": ""
+                "checkpoint": 8,
+                "fm_rules": "sbb&fk | sbb&dt",
             },
             "Score 20,000": {
                 "id": 73,
-                "fm_rules": "sbb&rr&fk&ms&ss | sbb&rr&dt&ms&ss | bb&rr&fk&ms&ss&cs | bb&rr&dt&ms&ss&cs | bb&rr&fk&ms&as&os&cs | bb&rr&ms&as&os&cs | sbb&rr&fk&ms&os&cs | sbb&rr&dt&ms&os&cs | sbb&rr&fk&ms&os&as | sbb&rr&dt&ms&os&as",
+                "fm_rules": "sbb&rr&fk&ms&ss | sbb&rr&dt&ms&ss | bb&rr&fk&ms&ss&cs | bb&rr&dt&ms&ss&cs | bb&rr&fk&ms&as&os&cs | bb&rr&dt&ms&as&os&cs | sbb&rr&fk&ms&os&cs | sbb&rr&dt&ms&os&cs | sbb&rr&fk&ms&os&as | sbb&rr&dt&ms&os&as",
                 "am_rules": "sbb&fk&dt&ms&ss | sbb&fk&f&ms&ss | sbb&rr&ms&ss&cs | sbb&rr&ms&as&os&cs | sbb&fk&dt&ms&os&cs | sbb&fk&f&ms&os&cs | sbb&dt&f&ms&os&cs | sbb&fk&dt&ms&os&as | sbb&fk&f&ms&os&as | sbb&dt&f&ms&os&as | bb&dt&f&ms&ss&cs | bb&dt&f&ms&as&ss | bb&dt&f&ms&as&os&cs | bb&dt&f&ms&os&ss",
                 "ag_rules": "sbb&rr&fk&ms&os | sbb&rr&dt&ms&os | sbb&fk&dt&ms&os | sbb&fk&f&ms&os | sbb&dt&f&ms&os"
             },
             "Time Trial": {
                 "id": 74,
-                "fm_rules": "bb&rr",
-                "am_rules": "sbb&fk&f | bb&dt&f | sbb&fk&dt",
-                "ag_rules": ""
+                "checkpoint": 8,
             },
         }
     },
@@ -1425,12 +1452,10 @@ level_data = {
         "Clear": {
             "fm_rules": "bb&fk",
             "am_rules": "sbb&dt",
-            "ag_rules": ""
         },
         "Gold Medal": {
             "fm_rules": "bb&fk",
             "am_rules": "sbb&dt",
-            "ag_rules": ""
         },
         "Collectibles": {},
         "Gashapons": {},
@@ -1439,27 +1464,30 @@ level_data = {
                 "id": 75,
                 "fm_rules": "bb&fk",
                 "am_rules": "sbb&dt",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 76,
                 "fm_rules": "bb&fk",
                 "am_rules": "sbb&dt",
-                "ag_rules": ""
             }
         }
     },
     "Pro Thunder Skater": {
         "id": 29,
+        "Checkpoints": {
+            1: {},
+            2: {},
+            3: {},
+            4: {},
+            5: {},
+            6: {},
+        },
         "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
-            "ag_rules": ""
+            "checkpoint": 6,
         },
         "Gold Medal": {
+            "checkpoint": 6,
             "fm_rules": "fk | dt",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Collectibles": {
             # "Cherries" : 4,
@@ -1472,84 +1500,92 @@ level_data = {
         "Gashapons": {
             "Strawberry Chest": {
                 "id": 42,
+                "checkpoint": 6,
                 "fm_rules": "fk | dt",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Orange Chest": {
                 "id": 43,
+                "checkpoint": 6,
                 "fm_rules": "fk | dt",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Melon Chest": {
                 "id": 44,
+                "checkpoint": 6,
                 "fm_rules": "fk | dt",
-                "am_rules": "",
-                "ag_rules": ""
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 77,
+                "checkpoint": 6,
                 "fm_rules": "fk | dt",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Destroy Crates": {
                 "id": 78,
+                "checkpoint": 6,
                 "fm_rules": "fk | dt",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 79,
+                "checkpoint": 6,
                 "fm_rules": "fk | dt",
-                "am_rules": "",
-                "ag_rules": ""
             }
         }
     },
     "Boom! Boom! Clap!": {
         "id": 30,
+        "Checkpoints": {
+            1: {},
+        },
         "Clear": {
+            "checkpoint": 1,
             "fm_rules": "bb&fk",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Gold Medal": {
+            "checkpoint": 1,
             "fm_rules": "bb&fk",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Collectibles": {},
         "Gashapons": {},
         "Missions": {
             "Don't Die": {
                 "id": 80,
+                "checkpoint": 1,
                 "fm_rules": "bb&fk",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 81,
+                "checkpoint": 1,
                 "fm_rules": "bb&fk",
-                "am_rules": "",
-                "ag_rules": ""
             }
         }
     },
     "Hot! Fire Trouble": {
         "id": 31,
+        "Checkpoints": {
+            1: {},
+            2: {},
+            3: {
+                "fm_rules": "rr",
+                "am_rules": "fk&f | sbb&f",
+            },
+            4: {},
+            5: {
+                "fm_rules": "bb",
+            },
+            6: {},
+            7: {},
+            8: {},
+            9: {},
+            10: {
+                "ag_rules": "bb",
+            },
+        },
         "Clear": {
-            "fm_rules": "bb&rr",
-            "am_rules": "sbb&f | bb&fk&f",
-            "ag_rules": ""
+            "checkpoint": 10,
         },
         "Gold Medal": {
-            "fm_rules": "bb&rr",
-            "am_rules": "sbb&f | bb&fk&f",
-            "ag_rules": ""
+            "checkpoint": 10,
         },
         "Collectibles": {
             # "Cherries" : 4,
@@ -1562,41 +1598,35 @@ level_data = {
         "Gashapons": {
             "Cherry Chest": {
                 "id": 45,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "sbb&dt&f | bb&fk&f",
-                "ag_rules": ""
+                "checkpoint": 6,
+                "fm_rules": "fk | dt",
             },
             "Apple Chest": {
                 "id": 46,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "sbb&dt&f | bb&fk&f",
-                "ag_rules": "rr&fk | rr&dt"
+                "checkpoint": 9,
+                "fm_rules": "fk | dt",
             },
             "Melon Chest": {
                 "id": 47,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "sbb&dt&f | bb&fk&f",
-                "ag_rules": ""
+                "checkpoint": 10,
+                "fm_rules": "fk | dt",
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 82,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "sbb&dt&f | bb&fk&f",
-                "ag_rules": ""
+                "checkpoint": 10,
+                "fm_rules": "fk | dt",
             },
             "Score 25,000": {
                 "id": 83,
+                "checkpoint": 10,
                 "fm_rules": "bb&rr&fk&ms&as&ss | bb&rr&fk&ms&os&ss | bb&rr&fk&ms&os&as | bb&rr&dt&ms&as&cs | bb&rr&dt&ms&ss | bb&rr&dt&ms&os",
                 "am_rules": "sbb&dt&f&ms&as&cs | bb&fk&f&ms&as&cs | sbb&dt&f&ms&ss | bb&fk&f&ms&ss | sbb&dt&f&ms&os | bb&fk&f&ms&os",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 84,
-                "fm_rules": "bb&rr",
-                "am_rules": "sbb&f | bb&fk&f",
-                "ag_rules": ""
+                "checkpoint": 10,
             }
         }
     },
@@ -1604,13 +1634,10 @@ level_data = {
         "id": 32,
         "Clear": {
             "fm_rules": "bb",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Gold Medal": {
             "fm_rules": "bb&rr",
             "am_rules": "bb",
-            "ag_rules": ""
         },
         "Collectibles": {},
         "Gashapons": {},
@@ -1618,28 +1645,30 @@ level_data = {
             "Don't Die": {
                 "id": 85,
                 "fm_rules": "bb",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 86,
                 "fm_rules": "bb",
-                "am_rules": "",
-                "ag_rules": ""
             }
         }
     },
     "Sharks Everywhere": {
         "id": 33,
+        "Checkpoints": {
+            1: {},
+            2: {
+                "fm_rules": "dk | fk",
+            },
+            3: {},
+            4: {},
+            5: {},
+            6: {},
+        },
         "Clear": {
-            "fm_rules": "dk | fk",
-            "am_rules": "",
-            "ag_rules": ""
+            "checkpoint": 6,
         },
         "Gold Medal": {
-            "fm_rules": "dk | fk",
-            "am_rules": "",
-            "ag_rules": ""
+            "checkpoint": 6,
         },
         "Collectibles": {
             # "Cherries" : 4,
@@ -1652,84 +1681,78 @@ level_data = {
         "Gashapons": {
             "Orange Chest": {
                 "id": 48,
-                "fm_rules": "dk | fk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 3,
             },
             "Strawberry Chest": {
                 "id": 49,
-                "fm_rules": "dk | fk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 4,
             },
             "Melon Chest": {
                 "id": 50,
-                "fm_rules": "dk | fk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 6,
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 87,
-                "fm_rules": "dk | fk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 6,
             },
             "Score 24,000": {
                 "id": 88,
-                "fm_rules": "dk&ms&as&os | dk&ms&os&ss | fk&ms&as&os | fk&ms&os&ss",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 6,
+                "fm_rules": "ms&as&os | ms&os&ss",
             },
             "Time Trial": {
                 "id": 89,
-                "fm_rules": "dk | fk",
-                "am_rules": "",
-                "ag_rules": ""
+                "checkpoint": 6,
             }
         }
     },
     "Pac-Marine Battle!": {
         "id": 34,
-        "Clear": {
-            "fm_rules": "",
-            "am_rules": "",
-            "ag_rules": ""
-        },
-        "Gold Medal": {
-            "fm_rules": "",
-            "am_rules": "",
-            "ag_rules": ""
-        },
+        "Clear": {},
+        "Gold Medal": {},
         "Collectibles": {},
         "Gashapons": {},
         "Missions": {
             "Don't Die": {
                 "id": 90,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
             },
             "Time Trial": {
                 "id": 91,
-                "fm_rules": "",
-                "am_rules": "",
-                "ag_rules": ""
             }
         }
     },
     "Clumsy Bayou": {
         "id": 35,
+        "Checkpoints": {
+            1: {},
+            2: {},
+            3: {},
+            4: {
+                "fm_rules": "bb",
+            },
+            5: {},
+            6: {},
+            7: {},
+            8: {},
+            9: {},
+            10: {
+                "fm_rules": "rr | f",
+                "am_rules": "fk | dt | sbb",
+            },
+            11: {},
+            12: {},
+            13: {
+                "fm_rules": "rr",
+                "am_rules": "dt",
+            },
+        },
         "Clear": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&dt",
-            "ag_rules": ""
+            "checkpoint": 13,
         },
         "Gold Medal": {
-            "fm_rules": "bb&rr",
-            "am_rules": "bb&dt",
-            "ag_rules": ""
+            "checkpoint": 13,
         },
         "Collectibles": {
             # "Cherries" : 4,
@@ -1742,41 +1765,42 @@ level_data = {
         "Gashapons": {
             "Orange Chest": {
                 "id": 51,
-                "fm_rules": "bb&fk | bb&dt",
+                "checkpoint": 5,
+                "fm_rules": "fk | dt",
                 "am_rules": "sbb&f",
                 "ag_rules": "sbb"
             },
             "Apple Chest": {
                 "id": 52,
-                "fm_rules": "bb&rr&fk | bb&rr&dt",
-                "am_rules": "bb&fk | bb&dt&f | sbb&dt",
-                "ag_rules": "bb&dt"
+                "checkpoint": 12,
+                "fm_rules": "fk | dt",
             },
             "Melon Chest": {
                 "id": 53,
-                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
-                "am_rules": "bb&rr&fk | bb&rr&dt&f",
-                "ag_rules": "bb&dt"
+                "checkpoint": 13,
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "rr&fk | rr&dt&f",
+                "ag_rules": "dt"
             }
         },
         "Missions": {
             "Collect All Fruits": {
                 "id": 92,
-                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
-                "am_rules": "bb&rr&fk | bb&rr&dt&f",
-                "ag_rules": "bb&dt"
+                "checkpoint": 13,
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "rr&fk | rr&dt&f",
+                "ag_rules": "dt"
             },
             "Defeat Enemies": {
                 "id": 93,
-                "fm_rules": "sbb&rr&fk | sbb&rr&dt",
-                "am_rules": "bb&rr&fk | bb&rr&dt&f",
-                "ag_rules": "bb&dt"
+                "checkpoint": 13,
+                "fm_rules": "sbb&fk | sbb&dt",
+                "am_rules": "rr&fk | rr&dt&f",
+                "ag_rules": "dt"
             },
             "Time Trial": {
                 "id": 94,
-                "fm_rules": "bb&rr",
-                "am_rules": "bb&dt",
-                "ag_rules": ""
+                "checkpoint": 13,
             }
         }
     },
