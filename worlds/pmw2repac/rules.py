@@ -8,7 +8,7 @@ from BaseClasses import Entrance
 from . import data
 
 from rule_builder.options import OptionFilter
-from rule_builder.rules import Has, HasAll, Rule, True_, False_
+from rule_builder.rules import Has, HasAll, Rule, True_, False_, CanReachLocation, CanReachRegion
 
 if TYPE_CHECKING:
     from .world import PMW2RepacWorld
@@ -53,7 +53,7 @@ def set_entrance_rules(world: PMW2RepacWorld) -> None:
             entrance = world.get_entrance("World Map to " + level)
             world.set_rule(entrance, Has(level))
     else:
-        level_clear_rules = []
+        prev_level = ""
         for level, levelData in data.level_data.items():
 
             if world.options.goal_boss == 0 and levelData["id"] > data.level_data["Spooky"]["id"]:
@@ -85,26 +85,26 @@ def set_entrance_rules(world: PMW2RepacWorld) -> None:
             elif levelData["id"] > data.level_data["Clyde's Frog"]["id"]:
                 item_rule = Has("Golden Cherry")
 
-            for rule in level_clear_rules:
-                item_rule = item_rule & rule
             entrance = world.get_entrance("World Map to " + level)
 
-            world.set_rule(entrance, item_rule)
-
-            rules_string = ""
-            if level != "Pac-Village":
-                rules_string = create_rule_string(world, levelData["Clear"].items())
-
-            clear_rule = create_rule_with_strings(rules_string, level + " - Clear", False)
-            level_clear_rules.append(clear_rule)
+            if prev_level != "":
+                reg_str = prev_level
+                prev_level_checkpoints = len(data.level_data[prev_level]["Checkpoints"].keys())
+                if prev_level_checkpoints != 0:
+                    reg_str += " Checkpoint " + str(prev_level_checkpoints)
+                world.set_rule(entrance, CanReachLocation(prev_level + " - Clear", reg_str) & item_rule)
+            else:
+                world.set_rule(entrance, item_rule)
 
             #clear level_clear_rules once certain areas are reached.
             if levelData["id"] % 4 == 0 and levelData["id"] < data.level_data["Spooky"]["id"]:
-                level_clear_rules.clear()
-            if levelData["id"] == data.level_data["Ghost Bayou"]["id"]:
-                level_clear_rules.clear()
-            if levelData["id"] % 2 == 0 and levelData["id"] > data.level_data["A Long Poisonous Tongue"]["id"]:
-                level_clear_rules.clear()
+                prev_level = ""
+            elif levelData["id"] == data.level_data["Ghost Bayou"]["id"]:
+                prev_level = ""
+            elif levelData["id"] % 2 == 0 and levelData["id"] >= data.level_data["A Long Poisonous Tongue"]["id"]:
+                prev_level = ""
+            else:
+                prev_level = level
 
 def set_specific_entrance_rules(world: PMW2RepacWorld) -> None:
     world.set_rule(world.get_entrance("World Map to Spooky"), hasAllGoldenFruits)
@@ -210,8 +210,8 @@ def create_rule_string(world: PMW2RepacWorld, rule_data: Mapping[str, str]) -> s
     for rulesType, rules in rule_data:
         if rulesType == "id" or rules == "checkpoint": continue
 
-        if rules == "NONE": continue
-        if rulesType == "fm_rules":
+        #if rules == "NONE": continue
+        if rulesType == "fm_rules" and rules != "":
             rules_string += rules
         if rulesType == "am_rules" and world.options.logic_difficulty > 0 and rules != "":
             rules_string += " | " + rules
@@ -227,6 +227,9 @@ def create_rule_with_strings(rules_string: str, location: str, is_all_fruits: bo
     split_rules = rules_string.split(" | ")
     for rule in split_rules:
         single_rule = True_()
+        if rule == "NONE":
+            single_rules.append(single_rule)
+            continue
         if is_all_fruits:
             single_rule = hasAllFruitSwitches
             if location.__contains__("Pac-Village"):
@@ -247,10 +250,8 @@ def create_rule_with_strings(rules_string: str, location: str, is_all_fruits: bo
             if move == "": continue
             single_rule = single_rule & rule_convert[move]
 
-
         single_rules.append(single_rule)
 
-    #if "NONE" in single_rules: return
     for rule in single_rules:
         final_rule = final_rule | rule
 

@@ -179,7 +179,6 @@ def create_all_items(world: PMW2RepacWorld) -> None:
             world.push_precollected(world.create_item("Progressive Butt Bounce"))
             world.push_precollected(world.create_item("Progressive Dolphin Kick"))
 
-
     # if world.options.fruit_switches:
     #     fruit_switches = sorted(data.fruit_switch_data.keys())
     #     world.random.shuffle(fruit_switches)

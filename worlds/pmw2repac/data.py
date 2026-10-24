@@ -23,6 +23,7 @@ TRAP_OFFSET = 11000
 level_data = {
     "Pac-Village": {
         "id": 0,
+        "Checkpoints": {},
         "Collectibles": {
             #"Cherries" : 26,
             #"Strawberries" : 29,
@@ -119,8 +120,7 @@ level_data = {
             "Galaxian" : {
                 "id": 0,
                 "checkpoint": 1,
-                "fm_rules": "fk | rr | dt",
-                "am_rules": "sbb",
+                "fm_rules": "bb | fk | rr | dt",
             }
         },
         "Gashapons": {
@@ -202,13 +202,12 @@ level_data = {
                 "checkpoint": 2,
                 "fm_rules": "fk | dt",
                 "am_rules": "sbb",
-                "ag_rules": ""
             },
             "Defeat All Enemies": {
                 "id": 8,
                 "checkpoint": 2,
                 "fm_rules": "fk | dt",
-                "am_rules": "rr | sbb",
+                "am_rules": "NONE",
             },
             "Time Trial": {
                 "id": 9,
@@ -218,6 +217,7 @@ level_data = {
     },
     "Clyde's Frog": {
         "id": 4,
+        "Checkpoints": {},
         "Clear": {
             "fm_rules": "bb | fk | dt | rr",
         },
@@ -371,11 +371,12 @@ level_data = {
                 "am_rules": "rr | bb&f | sbb&fk",
             },
             3:{
-                "am_rules": "bb",
+                "fm_rules": "bb",
             },
             4: {},
             5: {
-                "am_rules": "dt | sbb&fk&f"
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt"
             },
             6: {},
         },
@@ -407,7 +408,7 @@ level_data = {
             "Strawberry Chest": {
                 "id": 11,
                 "checkpoint": 5,
-                "fm_rules": "f | dt | sbb",
+                "fm_rules": "fk | dt | sbb",
                 "am_rules": "NONE",
             }
         },
@@ -431,6 +432,7 @@ level_data = {
     },
     "Inky's Whimsy": {
         "id": 8,
+        "Checkpoints": {},
         "Clear": {
             "fm_rules": "bb&fk",
             "am_rules": "sbb&dt",
@@ -875,6 +877,7 @@ level_data = {
     },
     "Blinky in the Caldera": {
         "id": 16,
+        "Checkpoints": {},
         "Clear": {
             "fm_rules": "bb",
         },
@@ -1010,6 +1013,7 @@ level_data = {
     },
     "Yellow Pac-Marine": {
         "id": 19,
+        "Checkpoints": {},
         "Clear": {},
         "Gold Medal": {},
         "Collectibles":{
@@ -1042,6 +1046,7 @@ level_data = {
     },
     "Whale on a Sub": {
         "id": 20,
+        "Checkpoints": {},
         "Clear": {},
         "Gold Medal": {},
         "Collectibles": {},
@@ -1271,6 +1276,7 @@ level_data = {
     },
     "Spooky": {
         "id": 24,
+        "Checkpoints": {},
         "Clear": {
             "fm_rules": "sbb&fk&rr | sbb&dt&rr",
         },
@@ -1360,6 +1366,7 @@ level_data = {
     },
     "A Long Poisonous Tongue": {
         "id": 26,
+        "Checkpoints": {},
         "Clear": {
             "fm_rules": "bb | rr | fk",
         },
@@ -1391,7 +1398,8 @@ level_data = {
             4: {},
             5: {},
             6: {
-                "am_rules": "dt&f | sbb&fk&f | sbb&fk&dt"
+                "fm_rules": "bb&rr",
+                "am_rules": "bb&dt&f | sbb&fk&f | sbb&fk&dt"
             },
             7: {},
             8: {},
@@ -1416,7 +1424,6 @@ level_data = {
                 "checkpoint": 6,
                 "fm_rules": "fk | dt",
                 "am_rules": "NONE",
-                "ag_rules": ""
             },
             "Orange Chest": {
                 "id": 40,
@@ -1449,6 +1456,7 @@ level_data = {
     },
     "Hunter of Darkness": {
         "id": 28,
+        "Checkpoints": {},
         "Clear": {
             "fm_rules": "bb&fk",
             "am_rules": "sbb&dt",
@@ -1632,6 +1640,7 @@ level_data = {
     },
     "Burning-Hot Beats": {
         "id": 32,
+        "Checkpoints": {},
         "Clear": {
             "fm_rules": "bb",
         },
@@ -1710,6 +1719,7 @@ level_data = {
     },
     "Pac-Marine Battle!": {
         "id": 34,
+        "Checkpoints": {},
         "Clear": {},
         "Gold Medal": {},
         "Collectibles": {},
@@ -1806,6 +1816,7 @@ level_data = {
     },
     "Legendary Story": {
         "id": 36,
+        "Checkpoints": {},
         "Clear": {
             "fm_rules": "sbb&fk&rr | sbb&dt&rr",
             "am_rules": "",
@@ -1835,6 +1846,7 @@ level_data = {
     },
     "Flying Dark Shadow": {
         "id": 37,
+        "Checkpoints": {},
         "Clear": {
             "fm_rules": "sbb&rr&fk",
             "am_rules": "",

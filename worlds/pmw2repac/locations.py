@@ -44,7 +44,7 @@ def create_locations(world: PMW2RepacWorld) -> None:
     for level, levelData in data.level_data.items():
         if world.options.goal_boss == 0 and levelData["id"] > data.level_data["Spooky"]["id"]:
             break
-        print(level)
+        #print(level)
         region = world.get_region(level)
 
         if levelData["id"] > 0:
