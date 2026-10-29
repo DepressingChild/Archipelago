@@ -25,11 +25,417 @@ level_data = {
         "id": 0,
         "Checkpoints": {},
         "Collectibles": {
-            #"Cherries" : 26,
-            #"Strawberries" : 29,
-            #"Oranges" : 17,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {
+                "Tree 1": {
+                    "id": 1,
+                },
+                "Tree 2": {
+                    "id": 2,
+                },
+                "Tree 3": {
+                    "id": 3,
+                },
+                "Tree 4": {
+                    "id": 4,
+                },
+                "Tree 5": {
+                    "id": 5,
+                },
+                "Tree 6": {
+                    "id": 6,
+                },
+                "Tree 7": {
+                    "id": 7,
+                },
+                "Tree 8": {
+                    "id": 8,
+                },
+                "Tree 9": {
+                    "id": 9,
+                },
+                "Tree 10": {
+                    "id": 10,
+                },
+                "Tree 11": {
+                    "id": 11,
+                },
+                "Tree 12": {
+                    "id": 12,
+                },
+                "Tree 13": {
+                    "id": 13,
+                },
+                "Tree 14": {
+                    "id": 14,
+                },
+                "Tree 15": {
+                    "id": 15,
+                },
+                "Tree 16": {
+                    "id": 16,
+                },
+                "Tree 17": {
+                    "id": 17,
+                },
+                "Tree 18": {
+                    "id": 18,
+                },
+                "Tree 19": {
+                    "id": 19,
+                },
+                "Tree 20": {
+                    "id": 20,
+                },
+                "Tree 21": {
+                    "id": 21,
+                },
+                "Tree 22": {
+                    "id": 22,
+                },
+                "Tree 23": {
+                    "id": 23,
+                },
+                "Tree 24": {
+                    "id": 24,
+                },
+                "On yellow house": {
+                    "id": 25,
+                },
+                "Floating box behind orange house": {
+                    "id": 26,
+                    "fm_rules": "fk&f | dt&f",
+                    "am_rules": "rr | fk | dt",
+                },
+            },
+            "Strawberry": {
+                "Field 1": {
+                    "id": 1,
+                },
+                "Field 2": {
+                    "id": 2,
+                },
+                "Field 3": {
+                    "id": 3,
+                },
+                "Field 4": {
+                    "id": 4,
+                },
+                "Field 5": {
+                    "id": 5,
+                },
+                "Field 6": {
+                    "id": 6,
+                },
+                "Field 7": {
+                    "id": 7,
+                },
+                "Field 8": {
+                    "id": 8,
+                },
+                "Field 9": {
+                    "id": 9,
+                },
+                "Field 10": {
+                    "id": 10,
+                },
+                "Field 11": {
+                    "id": 11,
+                },
+                "Field 12": {
+                    "id": 12,
+                },
+                "Field 13": {
+                    "id": 13,
+                },
+                "Field 14": {
+                    "id": 14,
+                },
+                "Field 15": {
+                    "id": 15,
+                },
+                "Field 16": {
+                    "id": 16,
+                },
+                "Field 17": {
+                    "id": 17,
+                },
+                "Field 18": {
+                    "id": 18,
+                },
+                "Field 19": {
+                    "id": 19,
+                },
+                "Field 20": {
+                    "id": 20,
+                },
+                "Field 21": {
+                    "id": 21,
+                },
+                "Field 22": {
+                    "id": 22,
+                },
+                "Field 23": {
+                    "id": 23,
+                },
+                "Field 24": {
+                    "id": 24,
+                },
+                "Field 25": {
+                    "id": 25,
+                },
+                "Wood platform": {
+                    "id": 26,
+                },
+                "Box by windmill": {
+                    "id": 27,
+                    "fm_rules": "bb | rr | fk | dt",
+                },
+                "On arcade": {
+                    "id": 28,
+                    "fm_rules": "sbb",
+                    "am_rules": "NONE",
+                },
+                "On orange house": {
+                    "id": 29
+                }
+            },
+            "Orange": {
+                "Tree 1": {
+                    "id": 1,
+                },
+                "Tree 2": {
+                    "id": 2,
+                },
+                "Tree 3": {
+                    "id": 3,
+                },
+                "Tree 4": {
+                    "id": 4,
+                },
+                "Tree 5": {
+                    "id": 5,
+                },
+                "Tree 6": {
+                    "id": 6,
+                },
+                "Tree 7": {
+                    "id": 7,
+                },
+                "Tree 8": {
+                    "id": 8,
+                },
+                "Tree 9": {
+                    "id": 9,
+                },
+                "Tree 10": {
+                    "id": 10,
+                },
+                "Tree 11": {
+                    "id": 11,
+                },
+                "Tree 12": {
+                    "id": 12,
+                },
+                "Box behind Prof. Pac house": {
+                    "id": 13,
+                    "fm_rules": "bb | rr | fk | dt"
+                },
+                "Box behind wood platform": {
+                    "id": 14,
+                    "fm_rules": "bb | rr | fk | dt"
+                },
+                "Prof. Pac house chimney": {
+                    "id": 15,
+                },
+                "Floating box near pink house": {
+                    "id": 16,
+                    "fm_rules": "sbb&fk | sbb&dt | sbb&f",
+                    "am_rules": "rr | fk | dt",
+                },
+                "Floating box behind green house": {
+                    "id": 17,
+                    "fm_rules": "sbb&fk | sbb&dt",
+                    "am_rules": "rr | fk | dt",
+                },
+            },
+            "Apple": {
+                "Tree 1": {
+                    "id": 1,
+                },
+                "Tree 2": {
+                    "id": 2,
+                },
+                "Tree 3": {
+                    "id": 3,
+                },
+                "Tree 4": {
+                    "id": 4,
+                },
+                "Tree 5": {
+                    "id": 5,
+                },
+                "Tree 6": {
+                    "id": 6,
+                },
+                "Tree 7": {
+                    "id": 7,
+                },
+                "Tree 8": {
+                    "id": 8,
+                },
+                "Tree 9": {
+                    "id": 9,
+                },
+                "Tree 10": {
+                    "id": 10,
+                },
+                "Tree 11": {
+                    "id": 11,
+                },
+                "Tree 12": {
+                    "id": 12,
+                },
+                "Tree 13": {
+                    "id": 13,
+                },
+                "Tree 14": {
+                    "id": 14,
+                },
+                "Tree 15": {
+                    "id": 15,
+                },
+                "Tree 16": {
+                    "id": 16,
+                },
+                "Box behind arcade": {
+                    "id": 17,
+                    "fm_rules": "bb | rr | fk | dt",
+                },
+                "Above well": {
+                    "id": 18,
+                },
+                "On light blue house": {
+                    "id": 19,
+                },
+                "Floating box behind Prof. Pac house": {
+                    "id": 20,
+                    "fm_rules": "sbb",
+                },
+                "Floating box by costume house": {
+                    "id": 21,
+                    "fm_rules": "bb&fk | bb&dt",
+                    "am_rules": "rr | fk | dt",
+                },
+                "Floating box by exit": {
+                    "id": 22,
+                    "fm_rules": "sbb&fk | sbb&dt",
+                    "am_rules": "sbb&rr",
+                },
+            },
+            "Melon": {
+                "Field 1": {
+                    "id": 1,
+                },
+                "Field 2": {
+                    "id": 2,
+                },
+                "Field 3": {
+                    "id": 3,
+                },
+                "Field 4": {
+                    "id": 4,
+                },
+                "Field 5": {
+                    "id": 5,
+                },
+                "Field 6": {
+                    "id": 6,
+                },
+                "Field 7": {
+                    "id": 7,
+                },
+                "Field 8": {
+                    "id": 8,
+                },
+                "Field 9": {
+                    "id": 9,
+                },
+                "Field 10": {
+                    "id": 10,
+                },
+                "Field 11": {
+                    "id": 11,
+                },
+                "Field 12": {
+                    "id": 12,
+                },
+                "Field 13": {
+                    "id": 13,
+                },
+                "Field 14": {
+                    "id": 14,
+                },
+                "Field 15": {
+                    "id": 15,
+                },
+                "Field 16": {
+                    "id": 16,
+                },
+                "Field 17": {
+                    "id": 17,
+                },
+                "Field 18": {
+                    "id": 18,
+                },
+                "Field 19": {
+                    "id": 19,
+                },
+                "Field 20": {
+                    "id": 20,
+                },
+                "Field 21": {
+                    "id": 21,
+                },
+                "Field 22": {
+                    "id": 22,
+                },
+                "Field 23": {
+                    "id": 23,
+                },
+                "Field 24": {
+                    "id": 24,
+                },
+                "Field 25": {
+                    "id": 25,
+                },
+                "Under bridge": {
+                    "id": 26,
+                },
+                "On windmill": {
+                    "id": 27,
+                },
+                "On costume house": {
+                    "id": 28,
+                },
+                "Prof. Pac house telescope": {
+                    "id": 29,
+                },
+                "On pink house": {
+                    "id": 30,
+                    "fm_rules": "sbb",
+                    "am_rules": "NONE",
+                },
+                "Green house chimney": {
+                    "id": 31,
+                    "fm_rules": "sbb",
+                    "am_rules": "NONE",
+                },
+                "Floating box by windmill": {
+                    "id": 32,
+                    "fm_rules": "fk | dt",
+                    "am_rules": "bb&f | rr"
+                },
+            },
             "Galaxian": {}
         },
         "Gashapons": {},
@@ -58,11 +464,11 @@ level_data = {
             "checkpoint": 3,
         },
         "Collectibles": {
-            #"Cherries" : 4,
-            #"Strawberries" : 7,
-            #"Oranges" : 3,
-            #"Apples" : 7,
-            #"Melons" : 4,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian": {}
         },
         "Gashapons": {
@@ -112,15 +518,17 @@ level_data = {
             "am_rules": "bb&rr",
         },
         "Collectibles":{
-            #"Cherries" : 4,
-            #"Strawberries" : 2,
-            #"Oranges" : 3,
-            #"Apples" : 4,
-            #"Melons" : 6,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" : {
-                "id": 0,
-                "checkpoint": 1,
-                "fm_rules": "bb | fk | rr | dt",
+                "Pac-Bear": {
+                    "id": 0,
+                    "checkpoint": 1,
+                    "fm_rules": "bb | fk | rr | dt",
+                },
             }
         },
         "Gashapons": {
@@ -171,15 +579,16 @@ level_data = {
             "checkpoint": 2,
         },
         "Collectibles":{
-            #"Cherries" : 0,
-            #"Strawberries" : 0,
-            #"Oranges" : 0,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" :{
-               "id": 1,
-                "checkpoint": 1,
-
+                "Underwater box": {
+                    "id": 1,
+                    "checkpoint": 1,
+                },
             }
         },
         "Gashapons":{
@@ -260,15 +669,16 @@ level_data = {
             "am_rules": "sbb&f | dt | rr",
         },
         "Collectibles":{
-            #"Cherries" : 0,
-            #"Strawberries" : 0,
-            #"Oranges" : 0,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" :{
-               "id": 2,
-               "checkpoint": 3,
-               "fm_rules": "as",
+                "Apple Chest": {
+                    "id": 2,
+                    "checkpoint": 3,
+                },
             }
         },
         "Gashapons":{
@@ -326,15 +736,16 @@ level_data = {
             "checkpoint": 6,
         },
         "Collectibles":{
-            #"Cherries" : 0,
-            #"Strawberries" : 0,
-            #"Oranges" : 0,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" :{
-               "id": 3,
-               "checkpoint": 4,
-               "fm_rules": "os",
+                "Orange Chest": {
+                    "id": 3,
+                    "checkpoint": 4,
+                },
             }
         },
         "Gashapons": {
@@ -387,16 +798,18 @@ level_data = {
             "checkpoint": 6,
         },
         "Collectibles":{
-            #"Cherries" : 0,
-            #"Strawberries" : 0,
-            #"Oranges" : 0,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" :{
-                "id": 4,
-                "checkpoint": 1,
-                "fm_rules": "bb&rr&as",
-                "am_rules": "bb&f&as | sbb&fk&as",
+                "Apple Chest": {
+                    "id": 4,
+                    "checkpoint": 1,
+                    "fm_rules": "bb&rr",
+                    "am_rules": "bb&f | sbb&fk",
+                },
             }
         },
         "Gashapons": {
@@ -479,16 +892,18 @@ level_data = {
             "am_rules": "NONE",
         },
         "Collectibles":{
-            #"Cherries" : 0,
-            #"Strawberries" : 0,
-            #"Oranges" : 0,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" :{
-                "id": 5,
-                "checkpoint": 1,
-                "fm_rules": "bb&fk | bb&dt | bb&rr",
-                "am_rules": "sbb",
+                "Shrink Pellet Pac-Bear": {
+                    "id": 5,
+                    "checkpoint": 1,
+                    "fm_rules": "bb&fk | bb&dt | bb&rr",
+                    "am_rules": "sbb",
+                },
             }
         },
         "Gashapons": {
@@ -548,15 +963,17 @@ level_data = {
             "am_rules": "fk",
         },
         "Collectibles":{
-            #"Cherries" : 0,
-            #"Strawberries" : 0,
-            #"Oranges" : 0,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" :{
-                "id": 6,
-                "checkpoint": 4,
-                "fm_rules": "fk&os | dt&os",
+                "Orange Chest": {
+                    "id": 6,
+                    "checkpoint": 4,
+                    "fm_rules": "fk | dt",
+                },
             }
         },
         "Gashapons": {
@@ -607,15 +1024,17 @@ level_data = {
             "fm_rules": "fk | dt",
         },
         "Collectibles":{
-            #"Cherries" : 0,
-            #"Strawberries" : 0,
-            #"Oranges" : 0,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" :{
-                "id": 7,
-                "checkpoint": 6,
-                "fm_rules": "fk&ms | dt&ms",
+                "Melon Chest": {
+                    "id": 7,
+                    "checkpoint": 6,
+                    "fm_rules": "fk | dt",
+                },
             }
         },
         "Gashapons": {
@@ -702,14 +1121,16 @@ level_data = {
             "am_rules": "rr",
         },
         "Collectibles":{
-            #"Cherries" : 0,
-            #"Strawberries" : 0,
-            #"Oranges" : 0,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" :{
-                "id": 8,
-                "checkpoint": 7,
+                "Second stony room": {
+                    "id": 8,
+                    "checkpoint": 7,
+                },
             }
         },
         "Gashapons": {
@@ -771,15 +1192,16 @@ level_data = {
             "checkpoint": 11,
         },
         "Collectibles":{
-            #"Cherries" : 0,
-            #"Strawberries" : 0,
-            #"Oranges" : 0,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" :{
-                "id": 9,
-                "checkpoint": 10,
-                "fm_rules": "as",
+                "Apple Chest": {
+                    "id": 9,
+                    "checkpoint": 10,
+                },
             }
         },
         "Gashapons": {
@@ -838,15 +1260,17 @@ level_data = {
             "checkpoint": 9,
         },
         "Collectibles":{
-           #"Cherries" : 0,
-           #"Strawberries" : 0,
-           #"Oranges" : 0,
-           #"Apples" : 0,
-           #"Melons" : 0,
-           "Galaxian" :{
-               "id": 10,
-                "fm_rules": "fk&cs | dt&cs",
-           }
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
+            "Galaxian" :{
+                "Cherry Chest": {
+                    "id": 10,
+                    "fm_rules": "fk | dt",
+                },
+            }
         },
         "Gashapons": {
             "Strawberry Chest": {
@@ -916,15 +1340,16 @@ level_data = {
             "checkpoint": 5,
         },
         "Collectibles":{
-            #"Cherries" : 0,
-            #"Strawberries" : 0,
-            #"Oranges" : 0,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" :{
-                "id": 11,
-                "checkpoint": 4,
-                "fm_rules": "as",
+                "Apple Chest": {
+                    "id": 11,
+                    "checkpoint": 4,
+                },
             }
         },
         "Gashapons": {
@@ -967,23 +1392,21 @@ level_data = {
         },
         "Clear": {
             "fm_rules": "fk | dk",
-            "am_rules": "",
-            "ag_rules": ""
         },
         "Gold Medal": {
             "checkpoint": 7,
         },
         "Collectibles":{
-            #"Cherries" : 0,
-            #"Strawberries" : 0,
-            #"Oranges" : 0,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" :{
-                "id": 12,
-                "checkpoint": 3,
-                "fm_rules": "os | os",
-
+                "Orange Chest": {
+                    "id": 12,
+                    "checkpoint": 3,
+                },
             }
         },
         "Gashapons": {
@@ -1017,11 +1440,11 @@ level_data = {
         "Clear": {},
         "Gold Medal": {},
         "Collectibles":{
-            #"Cherries" : 4,
-            #"Strawberries" : 7,
-            #"Oranges" : 3,
-            #"Apples" : 7,
-            #"Melons" : 4,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" : {}
         },
         "Gashapons": {
@@ -1077,18 +1500,19 @@ level_data = {
             "checkpoint": 6,
         },
         "Collectibles":{
-            #"Cherries" : 0,
-            #"Strawberries" : 0,
-            #"Oranges" : 0,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" :{
-                "id": 13,
-                "checkpoint": 6,
-                "fm_rules": "fk&ss | dt&ss",
-                "am_rules": "sbb&f&ss",
-                "ag_rules": "sbb&ss"
-
+                "Strawberry Chest": {
+                    "id": 13,
+                    "checkpoint": 6,
+                    "fm_rules": "fk | dt",
+                    "am_rules": "sbb&f",
+                    "ag_rules": "sbb"
+                }
             }
         },
         "Gashapons": {
@@ -1156,11 +1580,11 @@ level_data = {
             "checkpoint": 9,
         },
         "Collectibles": {
-            # "Cherries" : 4,
-            # "Strawberries" : 7,
-            # "Oranges" : 3,
-            # "Apples" : 7,
-            # "Melons" : 4,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian": {}
         },
         "Gashapons": {
@@ -1228,15 +1652,17 @@ level_data = {
             "checkpoint": 13,
         },
         "Collectibles":{
-            #"Cherries" : 0,
-            #"Strawberries" : 0,
-            #"Oranges" : 0,
-            #"Apples" : 0,
-            #"Melons" : 0,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian" :{
-                "id": 14,
-                "checkpoint": 5,
-                "fm_rules": "fk&os | dt&os",
+                "Orange Chest": {
+                    "id": 14,
+                    "checkpoint": 5,
+                    "fm_rules": "fk | dt",
+                },
             }
         },
         "Gashapons": {
@@ -1319,11 +1745,11 @@ level_data = {
             "checkpoint": 6,
         },
         "Collectibles": {
-            # "Cherries" : 4,
-            # "Strawberries" : 7,
-            # "Oranges" : 3,
-            # "Apples" : 7,
-            # "Melons" : 4,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian": {}
         },
         "Gashapons": {
@@ -1411,11 +1837,11 @@ level_data = {
             "checkpoint": 8,
         },
         "Collectibles": {
-            # "Cherries" : 4,
-            # "Strawberries" : 7,
-            # "Oranges" : 3,
-            # "Apples" : 7,
-            # "Melons" : 4,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian": {}
         },
         "Gashapons": {
@@ -1498,11 +1924,11 @@ level_data = {
             "fm_rules": "fk | dt",
         },
         "Collectibles": {
-            # "Cherries" : 4,
-            # "Strawberries" : 7,
-            # "Oranges" : 3,
-            # "Apples" : 7,
-            # "Melons" : 4,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian": {}
         },
         "Gashapons": {
@@ -1596,11 +2022,11 @@ level_data = {
             "checkpoint": 10,
         },
         "Collectibles": {
-            # "Cherries" : 4,
-            # "Strawberries" : 7,
-            # "Oranges" : 3,
-            # "Apples" : 7,
-            # "Melons" : 4,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian": {}
         },
         "Gashapons": {
@@ -1680,11 +2106,11 @@ level_data = {
             "checkpoint": 6,
         },
         "Collectibles": {
-            # "Cherries" : 4,
-            # "Strawberries" : 7,
-            # "Oranges" : 3,
-            # "Apples" : 7,
-            # "Melons" : 4,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian": {}
         },
         "Gashapons": {
@@ -1765,11 +2191,11 @@ level_data = {
             "checkpoint": 13,
         },
         "Collectibles": {
-            # "Cherries" : 4,
-            # "Strawberries" : 7,
-            # "Oranges" : 3,
-            # "Apples" : 7,
-            # "Melons" : 4,
+            "Cherry": {},
+            "Strawberry": {},
+            "Orange": {},
+            "Apple": {},
+            "Melon": {},
             "Galaxian": {}
         },
         "Gashapons": {

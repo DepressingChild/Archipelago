@@ -115,12 +115,12 @@ class StartingFruitSwitches(Range):
     range_end = 5
     default = 2
 
-#class Fruitsanity(Toggle):
-    #"""
-    #Makes each fruit a check. Adds x checks depending on settings.
-    #"""
+class Fruitsanity(Toggle):
+    """
+    Makes each fruit a check. Adds up to x checks depending on settings.
+    """
 
-    #display_name = "Fruitsanity"
+    display_name = "Fruitsanity"
 
 class DeathLinkAmnesty(Range):
     """
@@ -195,7 +195,7 @@ class PMW2RepacOptions(PerGameCommonOptions):
     logic_difficulty: MoveRandomizerLogicDifficulty
     fruit_switches: FruitSwitches
     starting_fruit_switches: StartingFruitSwitches
-    #fruitsanity: Fruitsanity
+    fruitsanity: Fruitsanity
     death_link: DeathLink
     death_link_amnesty: DeathLinkAmnesty
     exclude_goal_locations: ExcludeGoalLocations

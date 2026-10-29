@@ -25,14 +25,28 @@ def define_locations() -> None:
             if levelData["id"] != data.level_data["Yellow Pac-Marine"]["id"] :
                 locations[level + " - Gold Medal"] = levelData["id"] + data.TIMETRIAL_OFFSET
 
-        for collectible, collectibleData in levelData["Collectibles"].items():
+        for collectibleSet, collectibles in levelData["Collectibles"].items():
             offset = 0
-            match collectible:
+            match collectibleSet:
+                case "Cherry":
+                    offset = data.CHERRY_OFFSET + (10 * levelData["id"])
+                case "Strawberry":
+                    offset = data.STRAWBERRY_OFFSET + (10 * levelData["id"])
+                case "Orange":
+                    offset = data.ORANGE_OFFSET + (10 * levelData["id"])
+                case "Apple":
+                    offset = data.APPLE_OFFSET + (10 * levelData["id"])
+                case "Melon":
+                    offset = data.MELON_OFFSET + (10 * levelData["id"])
                 case "Galaxian":
                     offset = data.GALAXIAN_OFFSET
 
-            if "id" in collectibleData:
-                locations[level + " - " + collectible] = collectibleData["id"] + offset
+            if collectibleSet != "Galaxian" and level != "Pac-Village":
+                offset += 40
+
+            for collectibleLocation, collectibleData in collectibles.items():
+                if "id" in collectibleData:
+                    locations[level + " - " + collectibleSet + " - " + collectibleLocation] = collectibleData["id"] + offset
 
         for gashapon, gashaponData in levelData["Gashapons"].items():
             locations[level + " - Gashapon - " + gashapon] = gashaponData["id"] + data.GASHAPON_OFFSET
@@ -58,17 +72,29 @@ def create_locations(world: PMW2RepacWorld) -> None:
                 location = PMW2RepacLocation(world.player, level + " - Gold Medal", levelData["id"] + data.TIMETRIAL_OFFSET, region)
                 region.locations.append(location)
 
-        for collectible, collectibleData in levelData["Collectibles"].items():
+        for collectibleSet, collectibles in levelData["Collectibles"].items():
             offset = 0
-            match collectible:
+            match collectibleSet:
+                case "Cherry":
+                    offset = data.CHERRY_OFFSET + (10 * levelData["id"])
+                case "Strawberry":
+                    offset = data.STRAWBERRY_OFFSET + (10 * levelData["id"])
+                case "Orange":
+                    offset = data.ORANGE_OFFSET + (10 * levelData["id"])
+                case "Apple":
+                    offset = data.APPLE_OFFSET + (10 * levelData["id"])
+                case "Melon":
+                    offset = data.MELON_OFFSET + (10 * levelData["id"])
                 case "Galaxian":
                     offset = data.GALAXIAN_OFFSET
-
-            if "id" in collectibleData: #and world.options.galaxian_checks:
-                if "checkpoint" in collectibleData:
-                    region = world.get_region(level + " Checkpoint " + str(collectibleData["checkpoint"]))
-                location = PMW2RepacLocation(world.player, level + " - " + collectible, collectibleData["id"] + offset, region)
-                region.locations.append(location)
+            if collectibleSet != "Galaxian" and world.options.fruitsanity == 0:
+                continue
+            for collectibleLocation, collectibleData in collectibles.items():
+                if "id" in collectibleData: #and world.options.galaxian_checks:
+                    if "checkpoint" in collectibleData:
+                        region = world.get_region(level + " Checkpoint " + str(collectibleData["checkpoint"]))
+                    location = PMW2RepacLocation(world.player, level + " - " + collectibleSet + " - " + collectibleLocation, collectibleData["id"] + offset, region)
+                    region.locations.append(location)
 
         for gashapon, gashaponData in levelData["Gashapons"].items():
             if "id" in gashaponData: #and world.options.gashapon_checks:

@@ -174,13 +174,22 @@ def set_location_rules(world: PMW2RepacWorld) -> None:
             else:
                 for check, ruleData in checkData.items():
                     # ik this is duplicated but who cares
-                    rules_string = create_rule_string(world, ruleData.items())
-                    loc = level + " - "
+                    loc = ""
                     if checkSet == "Collectibles":
-                        loc += check
-                    else:
-                        loc += checkSet[:-1] + " - " + str(check)
+                        for collectibleLocation, collectibleData in ruleData.items(): #yes this is hard to understand but ruleData is the dicts for each collectible type here
+                            loc = level + " - " + check + " - " + collectibleLocation
+                            rules_string = create_rule_string(world, collectibleData.items())
 
+                            try:
+                                location = world.get_location(loc)
+                                # print(loc)
+                                world.set_rule(location, create_rule_with_strings(rules_string, loc, False))
+                            except KeyError:
+                                pass
+                    else:
+                        loc = level + " - " + checkSet[:-1] + " - " + check
+
+                    rules_string = create_rule_string(world, ruleData.items())
                     is_all_fruits = check == "Collect All Fruits"
 
                     try:
@@ -234,17 +243,7 @@ def create_rule_with_strings(rules_string: str, location: str, is_all_fruits: bo
             single_rule = hasAllFruitSwitches
             if location.__contains__("Pac-Village"):
                 single_rule = single_rule & hasAllGoldenFruits
-        if location.__contains__("Gashapon"):
-            if location.__contains__("Cherry"):
-                rule += "&cs"
-            elif location.__contains__("Strawberry"):
-                rule += "&ss"
-            elif location.__contains__("Orange"):
-                rule += "&os"
-            elif location.__contains__("Apple"):
-                rule += "&as"
-            elif location.__contains__("Melon"):
-                rule += "&ms"
+
         moves = rule.split("&")
         for move in moves:
             if move == "": continue
@@ -255,5 +254,25 @@ def create_rule_with_strings(rules_string: str, location: str, is_all_fruits: bo
     for rule in single_rules:
         final_rule = final_rule | rule
 
-    #print(final_rule)
+    if location.__contains__("Cherry"):
+        final_rule = final_rule & rule_convert["cs"]
+        if location.__contains__("Cherry - Tree"):
+            final_rule = final_rule & Has("Golden Cherry")
+    elif location.__contains__("Strawberry"):
+        final_rule = final_rule & rule_convert["ss"]
+        if location.__contains__("Strawberry - Field"):
+            final_rule = final_rule & Has("Golden Strawberry")
+    elif location.__contains__("Orange"):
+        final_rule = final_rule & rule_convert["os"]
+        if location.__contains__("Orange - Tree"):
+            final_rule = final_rule & Has("Golden Orange")
+    elif location.__contains__("Apple"):
+        final_rule = final_rule & rule_convert["as"]
+        if location.__contains__("Apple - Tree"):
+            final_rule = final_rule & Has("Golden Apple")
+    elif location.__contains__("Melon"):
+        final_rule = final_rule & rule_convert["ms"]
+        if location.__contains__("Melon - Field"):
+            final_rule = final_rule & Has("Golden Melon")
+
     return final_rule
